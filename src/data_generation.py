@@ -34,10 +34,11 @@ def image_loader(image_name):
     image = loader(image).unsqueeze(0)
     return image.to(device, torch.float)
 
+batch_size = 64
 ds = deeplake.load('hub://activeloop/wiki-art')
 train_loader = ds.dataloader()\
     .transform({'images': loader, 'labels': None})\
-    .batch(4)\
+    .batch(batch_size)\
     .shuffle()
 
 data = next(iter(train_loader))
@@ -342,7 +343,7 @@ def save_im(inp_im, fname):
     im = Image.fromarray(im)
     im.save(f"{fname}.jpg")
 
-glazed_output = run_glazing(content_img, output, num_steps=400, fweight=5, mweight=0.5)
-for i in range(4):
+glazed_output = run_glazing(content_img, output, num_steps=400, fweight=5, mweight=0.05)
+for i in range(batch_size):
     save_im(content_img[i].squeeze(), f"{i}_og.jpg")
     save_im(glazed_output[i].squeeze(), f"{i}_encrypted.jpg")
