@@ -20,7 +20,7 @@ print("SETTING DEVICE AS", device)
 torch.set_default_device(device)
 
 # desired size of the output image
-imsize = 512 if torch.cuda.is_available() else 128  # use small size if no GPU
+imsize = 256 if torch.cuda.is_available() else 128  # use small size if no GPU
 
 loader = transforms.Compose([
     transforms.ToTensor(),  # transform it into a torch tensor
@@ -34,7 +34,7 @@ def image_loader(image_name):
     image = loader(image).unsqueeze(0)
     return image.to(device, torch.float)
 
-batch_size = 64
+batch_size = 32
 ds = deeplake.load('hub://activeloop/wiki-art')
 train_loader = ds.dataloader()\
     .transform({'images': loader, 'labels': None})\

@@ -1,0 +1,4 @@
+cpu-bind=MASK - gpu19-1.drl, task  0  0 [1274660]: mask 0x1 set
+Thu May  9 02:11:18 PM EDT 2024
+Running my job on gpu19-1.drl
+/var/lib/slurm/slurmd/job281401/slurm_script: line 11: python: command not found
