@@ -11,6 +11,8 @@ from torchvision.models import vgg19, VGG19_Weights, vgg16
 
 import copy
 import deeplake
+from tqdm import tqdm
+import numpy as np
 
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -37,14 +39,16 @@ train_loader = ds.dataloader()\
     .batch(4)\
     .shuffle()
 
-sample_batch = next(iter(train_loader))
+data = next(iter(train_loader))
+images = torch.stack([i["images"] for i in data])
+print(images.shape)
 
-print(sample_batch)
+sample_batch = images
+
 content_img = sample_batch
 style_img = image_loader("../style_library/picasso.jpg")
 
-
-assert style_img.size() == content_img.size(), \
+assert style_img[0].size() == content_img[0].size(), \
     "we need to import style and content images of the same size"
 
 class ContentLoss(nn.Module):
@@ -66,13 +70,13 @@ def gram_matrix(input):
     # b=number of feature maps
     # (c,d)=dimensions of a f. map (N=c*d)
 
-    features = input.view(a * b, c * d)  # resize F_XL into \hat F_XL
+    features = input.view(a, b, c * d)  # resize F_XL into \hat F_XL
 
-    G = torch.mm(features, features.t())  # compute the gram product
+    G = torch.bmm(features, torch.transpose(features, 2, 1))  # compute the gram product
 
     # we 'normalize' the values of the gram matrix
     # by dividing by the number of element in each feature maps.
-    return G.div(a * b * c * d)
+    return G.div(b * c * d)
 
 class StyleLoss(nn.Module):
 
@@ -167,3 +171,176 @@ def get_style_model_and_losses(cnn, normalization_mean, normalization_std,
 
     return model, style_losses, content_losses
 
+def get_input_optimizer(input_img):
+    # this line to show that input is a parameter that requires a gradient
+    optimizer = optim.LBFGS([input_img])
+    return optimizer
+
+def run_style_transfer(cnn, normalization_mean, normalization_std,
+                       content_img, style_img, input_img, num_steps=300,
+                       style_weight=5000, content_weight=1):
+    """Run the style transfer."""
+    print('Building the style transfer model..')
+    model, style_losses, content_losses = get_style_model_and_losses(cnn,
+        normalization_mean, normalization_std, style_img, content_img)
+
+    # We want to optimize the input and not the model parameters so we
+    # update all the requires_grad fields accordingly
+    input_img.requires_grad_(True)
+    # We also put the model in evaluation mode, so that specific layers 
+    # such as dropout or batch normalization layers behave correctly. 
+    model.eval()
+    model.requires_grad_(False)
+
+    optimizer = get_input_optimizer(input_img)
+
+    print('Optimizing..')
+    run = [0]
+    while run[0] <= num_steps:
+        print(run[0])
+        def closure():
+            # correct the values of updated input image
+            with torch.no_grad():
+                input_img.clamp_(0, 1)
+
+            optimizer.zero_grad()
+            model(input_img)
+            style_score = 0
+            content_score = 0
+
+            for sl in style_losses:
+                style_score += sl.loss
+            for cl in content_losses:
+                content_score += cl.loss
+
+            style_score *= style_weight
+            content_score *= content_weight
+
+            loss = style_score + content_score
+            loss.backward()
+
+            run[0] += 1
+            if run[0] % 50 == 0:
+                print("run {}:".format(run))
+                print('Style Loss : {:4f} Content Loss: {:4f}'.format(
+                    style_score.item(), content_score.item()))
+                print()
+
+            return style_score + content_score
+
+        optimizer.step(closure)
+
+    # a last correction...
+    with torch.no_grad():
+        input_img.clamp_(0, 1)
+
+    return input_img
+
+input_img = content_img.clone()
+output = run_style_transfer(cnn, cnn_normalization_mean, cnn_normalization_std,
+                            content_img, style_img, input_img)
+
+# define feature extractor
+vgg16_model = vgg16(pretrained=True)
+vgg16_model.classifier = vgg16_model.classifier[:-1]
+vgg16_model.eval()
+vgg16_model.requires_grad_(False)
+
+# define feature loss
+class FeatureLoss(nn.Module):
+
+    def __init__(self, target,):
+        super(FeatureLoss, self).__init__()
+        # we 'detach' the target content from the tree used
+        # to dynamically compute the gradient: this is a stated value,
+        # not a variable. Otherwise the forward method of the criterion
+        # will throw an error.
+        self.target = target.detach()
+
+    def forward(self, input):
+        self.loss = F.mse_loss(input, self.target)
+        return self.loss
+    
+# define input loss
+class MSEInputLoss(nn.Module):
+
+    def __init__(self, target,):
+        super(MSEInputLoss, self).__init__()
+        # we 'detach' the target content from the tree used
+        # to dynamically compute the gradient: this is a stated value,
+        # not a variable. Otherwise the forward method of the criterion
+        # will throw an error.
+        self.target = target.detach()
+
+    def forward(self, input):
+        self.loss = F.mse_loss(input, self.target)
+        return self.loss
+
+
+# create new optimizer that minimizes feature loss between original and style-transferred target and perceptual loss (keep perceptual loss below a constant)
+def get_glaze_optimizer(delta_x):
+    # this line to show that input is a parameter that requires a gradient
+    optimizer = optim.LBFGS([delta_x])
+    return optimizer
+
+def run_glazing(content_img, target_img, num_steps=300, fweight=1.0, mweight=1.0):
+
+    # We want to optimize the input and not the model parameters so we
+    # update all the requires_grad fields accordingly
+    # We also put the model in evaluation mode, so that specific layers 
+    # such as dropout or batch normalization layers behave correctly. 
+    #delta_x = torch.zeros(inp_img.shape)
+    #delta_x.requires_grad_(True)
+    new_img = content_img.cpu().clone()
+    new_img.requires_grad_(True)
+    optimizer = get_glaze_optimizer(new_img)
+
+    feature_loss = FeatureLoss(vgg16_model(target_img))
+    mse = MSEInputLoss(content_img.cpu().clone())
+    print('Optimizing..')
+    run = [0]
+    while run[0] <= num_steps:
+
+        def closure():
+            # correct the values of updated input image
+            with torch.no_grad():
+                new_img.clamp_(0, 1)
+
+            optimizer.zero_grad()
+            new_features = vgg16_model(new_img)
+            
+            floss = fweight*feature_loss(new_features)
+            mloss = mweight*mse(new_img)
+            loss = floss + mloss
+            loss.backward()
+
+            run[0] += 1
+            if run[0] % 25 == 0:
+                print("run {}:".format(run))
+                print('Loss : {:4f}, Floss: {:4f}, Mloss {:4f}'.format(
+                    loss.item(), floss.item(), mloss.item()) ,)
+                print()
+
+            return loss.item()
+
+        optimizer.step(closure)
+
+    # a last correction...
+    with torch.no_grad():
+        new_img.clamp_(0, 1)
+
+
+    return new_img
+
+def save_im(inp_im, fname):
+    im = inp_im.detach().squeeze().cpu().numpy() * 255
+    im = im.astype(np.uint8)
+    im = np.transpose(im, (1, 2, 0))
+    print(im.shape)
+    im = Image.fromarray(im)
+    im.save(f"{fname}.jpg")
+
+glazed_output = run_glazing(content_img, output, num_steps=400, fweight=5, mweight=0.5)
+for i in range(4):
+    save_im(content_img[i].squeeze(), f"{i}_og.jpg")
+    save_im(glazed_output[i].squeeze(), f"{i}_encrypted.jpg")
