@@ -293,12 +293,12 @@ def run_glazing(content_img, target_img, num_steps=300, fweight=1.0, mweight=1.0
     # such as dropout or batch normalization layers behave correctly. 
     #delta_x = torch.zeros(inp_img.shape)
     #delta_x.requires_grad_(True)
-    new_img = content_img.cpu().clone()
+    new_img = content_img.cpu().clone().to(device)
     new_img.requires_grad_(True)
     optimizer = get_glaze_optimizer(new_img)
 
     feature_loss = FeatureLoss(vgg16_model(target_img))
-    mse = MSEInputLoss(content_img.cpu().clone())
+    mse = MSEInputLoss(content_img.cpu().clone().to(device))
     print('Optimizing..')
     run = [0]
     while run[0] <= num_steps:
