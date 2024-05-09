@@ -1,0 +1,242 @@
+/Users/sadhana/miniconda3/lib/python3.10/site-packages/deeplake/util/check_latest_version.py:32: UserWarning: A newer version of deeplake (3.9.4) is available. It's recommended that you update to the latest version using `pip install -U deeplake`.
+  warnings.warn(
+/ - \ | / - \ | / Opening dataset in read-only mode as you don't have write permissions.
+This dataset can be visualized in Jupyter Notebook by ds.visualize() or at https://app.activeloop.ai/activeloop/wiki-art
+
+- \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ hub://activeloop/wiki-art loaded successfully.
+
+/Users/sadhana/miniconda3/lib/python3.10/site-packages/deeplake/integrations/pytorch/common.py:137: UserWarning: Decode method for tensors ['images'] is defaulting to numpy. Please consider specifying a decode_method in .pytorch() that maximizes the data preprocessing speed based on your transformation.
+  warnings.warn(
+Please wait, filling up the shuffle buffer with samples.:   0%|          | 0.00/2.00G [00:00<?, ?B/s]Please wait, filling up the shuffle buffer with samples.:   1%|          | 15.3M/2.00G [00:02<05:52, 6.05MB/s]Please wait, filling up the shuffle buffer with samples.:   7%|▋         | 138M/2.00G [00:02<00:28, 69.4MB/s] Please wait, filling up the shuffle buffer with samples.:   9%|▉         | 185M/2.00G [00:06<01:13, 26.5MB/s]Please wait, filling up the shuffle buffer with samples.:  15%|█▌        | 310M/2.00G [00:10<00:58, 30.9MB/s]Please wait, filling up the shuffle buffer with samples.:  22%|██▏       | 456M/2.00G [00:10<00:28, 58.8MB/s]Please wait, filling up the shuffle buffer with samples.:  25%|██▌       | 516M/2.00G [00:16<00:53, 30.0MB/s]Please wait, filling up the shuffle buffer with samples.:  27%|██▋       | 562M/2.00G [00:16<00:42, 36.3MB/s]Please wait, filling up the shuffle buffer with samples.:  34%|███▎      | 690M/2.00G [00:17<00:27, 51.2MB/s]Please wait, filling up the shuffle buffer with samples.:  37%|███▋      | 751M/2.00G [00:17<00:21, 64.7MB/s]Please wait, filling up the shuffle buffer with samples.:  38%|███▊      | 787M/2.00G [00:24<00:54, 24.1MB/s]Please wait, filling up the shuffle buffer with samples.:  42%|████▏     | 859M/2.00G [00:24<00:35, 34.7MB/s]Please wait, filling up the shuffle buffer with samples.:  46%|████▋     | 952M/2.00G [00:29<00:41, 27.7MB/s]Please wait, filling up the shuffle buffer with samples.:  53%|█████▎    | 1.06G/2.00G [00:36<00:42, 23.9MB/s]Please wait, filling up the shuffle buffer with samples.:  58%|█████▊    | 1.16G/2.00G [00:40<00:38, 23.7MB/s]Please wait, filling up the shuffle buffer with samples.:  61%|██████▏   | 1.23G/2.00G [00:48<00:46, 17.9MB/s]Please wait, filling up the shuffle buffer with samples.:  67%|██████▋   | 1.34G/2.00G [00:48<00:26, 27.1MB/s]Please wait, filling up the shuffle buffer with samples.:  76%|███████▋  | 1.53G/2.00G [00:48<00:10, 50.6MB/s]Please wait, filling up the shuffle buffer with samples.:  80%|████████  | 1.61G/2.00G [00:58<00:17, 24.1MB/s]Please wait, filling up the shuffle buffer with samples.:  83%|████████▎ | 1.66G/2.00G [01:03<00:17, 20.9MB/s]Please wait, filling up the shuffle buffer with samples.:  87%|████████▋ | 1.74G/2.00G [01:13<00:19, 14.6MB/s]Please wait, filling up the shuffle buffer with samples.:  95%|█████████▌| 1.91G/2.00G [01:21<00:05, 18.0MB/s]Please wait, filling up the shuffle buffer with samples.: 100%|█████████▉| 2.00G/2.00G [01:21<00:00, 26.4MB/s]
+/Users/sadhana/miniconda3/lib/python3.10/site-packages/torchvision/transforms/functional.py:1603: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  warnings.warn(
+/Users/sadhana/miniconda3/lib/python3.10/site-packages/torch/utils/_device.py:62: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return func(*args, **kwargs)
+/Users/sadhana/miniconda3/lib/python3.10/site-packages/torch/utils/_device.py:62: UserWarning: Using a target size (torch.Size([1, 64, 64])) that is different to the input size (torch.Size([4, 64, 64])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return func(*args, **kwargs)
+/Users/sadhana/miniconda3/lib/python3.10/site-packages/torch/utils/_device.py:62: UserWarning: Using a target size (torch.Size([1, 128, 128])) that is different to the input size (torch.Size([4, 128, 128])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return func(*args, **kwargs)
+/Users/sadhana/miniconda3/lib/python3.10/site-packages/torch/utils/_device.py:62: UserWarning: Using a target size (torch.Size([4, 128, 64, 64])) that is different to the input size (torch.Size([1, 128, 64, 64])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return func(*args, **kwargs)
+/Users/sadhana/miniconda3/lib/python3.10/site-packages/torch/utils/_device.py:62: UserWarning: Using a target size (torch.Size([1, 256, 256])) that is different to the input size (torch.Size([4, 256, 256])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return func(*args, **kwargs)
+/Users/sadhana/miniconda3/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/Users/sadhana/miniconda3/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=VGG16_Weights.IMAGENET1K_V1`. You can also use `weights=VGG16_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Shuffle buffer filling is complete.
+torch.Size([4, 3, 128, 128])
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 2.733108 Content Loss: 10.573860
+
+60
+80
+run [100]:
+Style Loss : 2.483034 Content Loss: 10.310255
+
+100
+120
+140
+run [150]:
+Style Loss : 2.362394 Content Loss: 10.202471
+
+160
+180
+run [200]:
+Style Loss : 2.260923 Content Loss: 10.138946
+
+200
+220
+240
+run [250]:
+Style Loss : 2.178147 Content Loss: 10.107721
+
+260
+280
+run [300]:
+Style Loss : 2.124983 Content Loss: 10.097859
+
+300
+Optimizing..
+run [25]:
+Loss : 0.016212, Floss: 0.016075, Mloss 0.000137
+
+run [50]:
+Loss : 0.004652, Floss: 0.004451, Mloss 0.000201
+
+run [75]:
+Loss : 0.002494, Floss: 0.002266, Mloss 0.000228
+
+run [100]:
+Loss : 0.001668, Floss: 0.001418, Mloss 0.000250
+
+run [125]:
+Loss : 0.001253, Floss: 0.000994, Mloss 0.000258
+
+run [150]:
+Loss : 0.001004, Floss: 0.000743, Mloss 0.000262
+
+run [175]:
+Loss : 0.000860, Floss: 0.000598, Mloss 0.000261
+
+run [200]:
+Loss : 0.000759, Floss: 0.000502, Mloss 0.000258
+
+run [225]:
+Loss : 0.000683, Floss: 0.000428, Mloss 0.000255
+
+run [250]:
+Loss : 0.000618, Floss: 0.000366, Mloss 0.000252
+
+run [275]:
+Loss : 0.000569, Floss: 0.000322, Mloss 0.000246
+
+run [300]:
+Loss : 0.000528, Floss: 0.000286, Mloss 0.000242
+
+run [325]:
+Loss : 0.000499, Floss: 0.000261, Mloss 0.000238
+
+run [350]:
+Loss : 0.000467, Floss: 0.000233, Mloss 0.000234
+
+run [375]:
+Loss : 0.000435, Floss: 0.000204, Mloss 0.000231
+
+run [400]:
+Loss : 0.000412, Floss: 0.000184, Mloss 0.000228
+
+(128, 128, 3)
+(128, 128, 3)
+(128, 128, 3)
+(128, 128, 3)
+(128, 128, 3)
+(128, 128, 3)
+(128, 128, 3)
+(128, 128, 3)
+/Users/sadhana/miniconda3/lib/python3.10/site-packages/deeplake/util/check_latest_version.py:32: UserWarning: A newer version of deeplake (3.9.4) is available. It's recommended that you update to the latest version using `pip install -U deeplake`.
+  warnings.warn(
+/ - \ | / - Opening dataset in read-only mode as you don't have write permissions.
+This dataset can be visualized in Jupyter Notebook by ds.visualize() or at https://app.activeloop.ai/activeloop/wiki-art
+
+\ | / - \ | / - \ | / - \ | hub://activeloop/wiki-art loaded successfully.
+
+/Users/sadhana/miniconda3/lib/python3.10/site-packages/deeplake/integrations/pytorch/common.py:137: UserWarning: Decode method for tensors ['images'] is defaulting to numpy. Please consider specifying a decode_method in .pytorch() that maximizes the data preprocessing speed based on your transformation.
+  warnings.warn(
+Please wait, filling up the shuffle buffer with samples.:   0%|          | 0.00/2.00G [00:00<?, ?B/s]Please wait, filling up the shuffle buffer with samples.:   0%|          | 543k/2.00G [00:02<2:55:40, 204kB/s]Please wait, filling up the shuffle buffer with samples.:   1%|          | 18.8M/2.00G [00:02<03:50, 9.22MB/s]Please wait, filling up the shuffle buffer with samples.:   4%|▍         | 77.4M/2.00G [00:05<01:45, 19.5MB/s]Please wait, filling up the shuffle buffer with samples.:  10%|█         | 205M/2.00G [00:09<01:15, 25.4MB/s] Please wait, filling up the shuffle buffer with samples.:  12%|█▏        | 253M/2.00G [00:14<01:44, 18.1MB/s]Please wait, filling up the shuffle buffer with samples.:  19%|█▉        | 396M/2.00G [00:14<00:44, 39.0MB/s]Please wait, filling up the shuffle buffer with samples.:  22%|██▏       | 447M/2.00G [00:20<01:09, 24.2MB/s]Please wait, filling up the shuffle buffer with samples.:  28%|██▊       | 575M/2.00G [00:24<00:58, 26.5MB/s]Please wait, filling up the shuffle buffer with samples.:  32%|███▏      | 656M/2.00G [00:24<00:40, 36.3MB/s]Please wait, filling up the shuffle buffer with samples.:  36%|███▌      | 737M/2.00G [00:31<00:58, 23.3MB/s]Please wait, filling up the shuffle buffer with samples.:  43%|████▎     | 881M/2.00G [00:31<00:30, 40.0MB/s]Please wait, filling up the shuffle buffer with samples.:  53%|█████▎    | 1.07G/2.00G [00:34<00:19, 51.3MB/s]Please wait, filling up the shuffle buffer with samples.:  60%|█████▉    | 1.19G/2.00G [00:34<00:12, 70.7MB/s]Please wait, filling up the shuffle buffer with samples.:  63%|██████▎   | 1.26G/2.00G [00:42<00:25, 30.9MB/s]Please wait, filling up the shuffle buffer with samples.:  72%|███████▏  | 1.44G/2.00G [00:44<00:12, 47.1MB/s]Please wait, filling up the shuffle buffer with samples.:  75%|███████▍  | 1.50G/2.00G [00:44<00:09, 54.4MB/s]Please wait, filling up the shuffle buffer with samples.:  78%|███████▊  | 1.56G/2.00G [00:50<00:14, 31.4MB/s]Please wait, filling up the shuffle buffer with samples.:  89%|████████▉ | 1.78G/2.00G [00:50<00:03, 61.2MB/s]Please wait, filling up the shuffle buffer with samples.:  94%|█████████▎| 1.87G/2.00G [00:56<00:03, 37.6MB/s]Please wait, filling up the shuffle buffer with samples.:  97%|█████████▋| 1.93G/2.00G [00:58<00:02, 36.3MB/s]Please wait, filling up the shuffle buffer with samples.: 100%|█████████▉| 2.00G/2.00G [00:58<00:00, 36.8MB/s]
+/Users/sadhana/miniconda3/lib/python3.10/site-packages/torchvision/transforms/functional.py:1603: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  warnings.warn(
+/Users/sadhana/miniconda3/lib/python3.10/site-packages/torch/utils/_device.py:62: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return func(*args, **kwargs)
+/Users/sadhana/miniconda3/lib/python3.10/site-packages/torch/utils/_device.py:62: UserWarning: Using a target size (torch.Size([1, 64, 64])) that is different to the input size (torch.Size([4, 64, 64])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return func(*args, **kwargs)
+/Users/sadhana/miniconda3/lib/python3.10/site-packages/torch/utils/_device.py:62: UserWarning: Using a target size (torch.Size([1, 128, 128])) that is different to the input size (torch.Size([4, 128, 128])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return func(*args, **kwargs)
+/Users/sadhana/miniconda3/lib/python3.10/site-packages/torch/utils/_device.py:62: UserWarning: Using a target size (torch.Size([4, 128, 64, 64])) that is different to the input size (torch.Size([1, 128, 64, 64])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return func(*args, **kwargs)
+/Users/sadhana/miniconda3/lib/python3.10/site-packages/torch/utils/_device.py:62: UserWarning: Using a target size (torch.Size([1, 256, 256])) that is different to the input size (torch.Size([4, 256, 256])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return func(*args, **kwargs)
+/Users/sadhana/miniconda3/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/Users/sadhana/miniconda3/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=VGG16_Weights.IMAGENET1K_V1`. You can also use `weights=VGG16_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Shuffle buffer filling is complete.
+torch.Size([4, 3, 128, 128])
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 2.875713 Content Loss: 5.241190
+
+60
+80
+run [100]:
+Style Loss : 2.248008 Content Loss: 5.056561
+
+100
+120
+140
+run [150]:
+Style Loss : 1.866512 Content Loss: 5.261935
+
+160
+180
+run [200]:
+Style Loss : 1.667973 Content Loss: 5.589386
+
+200
+220
+240
+run [250]:
+Style Loss : 1.661651 Content Loss: 5.451502
+
+260
+280
+run [300]:
+Style Loss : 1.561906 Content Loss: 5.256812
+
+300
+Optimizing..
+run [25]:
+Loss : 0.023719, Floss: 0.023666, Mloss 0.000053
+
+run [50]:
+Loss : 0.007602, Floss: 0.007525, Mloss 0.000077
+
+run [75]:
+Loss : 0.003424, Floss: 0.003336, Mloss 0.000089
+
+run [100]:
+Loss : 0.002064, Floss: 0.001970, Mloss 0.000094
+
+run [125]:
+Loss : 0.001418, Floss: 0.001319, Mloss 0.000099
+
+run [150]:
+Loss : 0.001035, Floss: 0.000931, Mloss 0.000104
+
+run [175]:
+Loss : 0.000812, Floss: 0.000704, Mloss 0.000108
+
+run [200]:
+Loss : 0.000672, Floss: 0.000561, Mloss 0.000111
+
+run [225]:
+Loss : 0.000570, Floss: 0.000456, Mloss 0.000114
+
+run [250]:
+Loss : 0.000501, Floss: 0.000385, Mloss 0.000116
+
+run [275]:
+Loss : 0.000443, Floss: 0.000326, Mloss 0.000117
+
+run [300]:
+Loss : 0.000395, Floss: 0.000278, Mloss 0.000118
+
+run [325]:
+Loss : 0.000358, Floss: 0.000240, Mloss 0.000118
+
+run [350]:
+Loss : 0.000330, Floss: 0.000211, Mloss 0.000119
+
+run [375]:
+Loss : 0.000305, Floss: 0.000187, Mloss 0.000119
+
+run [400]:
+Loss : 0.000284, Floss: 0.000166, Mloss 0.000119
+
+(128, 128, 3)
+(128, 128, 3)
+(128, 128, 3)
+(128, 128, 3)
+(128, 128, 3)
+(128, 128, 3)
+(128, 128, 3)
+(128, 128, 3)
