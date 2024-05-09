@@ -16,6 +16,7 @@ import numpy as np
 
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print("SETTING DEVICE AS", device)
 torch.set_default_device(device)
 
 # desired size of the output image
@@ -46,7 +47,8 @@ print(images.shape)
 sample_batch = images
 
 content_img = sample_batch
-style_img = image_loader("../style_library/picasso.jpg")
+content_img = content_img.to(device)
+style_img = image_loader("style_library/picasso.jpg")
 
 assert style_img[0].size() == content_img[0].size(), \
     "we need to import style and content images of the same size"

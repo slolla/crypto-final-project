@@ -141,3 +141,102 @@ This dataset can be visualized in Jupyter Notebook by ds.visualize() or at https
   return func(*args, **kwargs)
 /Users/sadhana/miniconda3/lib/python3.10/site-packages/torch/utils/_device.py:62: UserWarning: Using a target size (torch.Size([1, 256, 256])) that is different to the input size (torch.Size([4, 256, 256])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
   return func(*args, **kwargs)
+/Users/sadhana/miniconda3/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/Users/sadhana/miniconda3/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=VGG16_Weights.IMAGENET1K_V1`. You can also use `weights=VGG16_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Shuffle buffer filling is complete.
+torch.Size([4, 3, 128, 128])
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 2.875713 Content Loss: 5.241190
+
+60
+80
+run [100]:
+Style Loss : 2.248008 Content Loss: 5.056561
+
+100
+120
+140
+run [150]:
+Style Loss : 1.866512 Content Loss: 5.261935
+
+160
+180
+run [200]:
+Style Loss : 1.667973 Content Loss: 5.589386
+
+200
+220
+240
+run [250]:
+Style Loss : 1.661651 Content Loss: 5.451502
+
+260
+280
+run [300]:
+Style Loss : 1.561906 Content Loss: 5.256812
+
+300
+Optimizing..
+run [25]:
+Loss : 0.023719, Floss: 0.023666, Mloss 0.000053
+
+run [50]:
+Loss : 0.007602, Floss: 0.007525, Mloss 0.000077
+
+run [75]:
+Loss : 0.003424, Floss: 0.003336, Mloss 0.000089
+
+run [100]:
+Loss : 0.002064, Floss: 0.001970, Mloss 0.000094
+
+run [125]:
+Loss : 0.001418, Floss: 0.001319, Mloss 0.000099
+
+run [150]:
+Loss : 0.001035, Floss: 0.000931, Mloss 0.000104
+
+run [175]:
+Loss : 0.000812, Floss: 0.000704, Mloss 0.000108
+
+run [200]:
+Loss : 0.000672, Floss: 0.000561, Mloss 0.000111
+
+run [225]:
+Loss : 0.000570, Floss: 0.000456, Mloss 0.000114
+
+run [250]:
+Loss : 0.000501, Floss: 0.000385, Mloss 0.000116
+
+run [275]:
+Loss : 0.000443, Floss: 0.000326, Mloss 0.000117
+
+run [300]:
+Loss : 0.000395, Floss: 0.000278, Mloss 0.000118
+
+run [325]:
+Loss : 0.000358, Floss: 0.000240, Mloss 0.000118
+
+run [350]:
+Loss : 0.000330, Floss: 0.000211, Mloss 0.000119
+
+run [375]:
+Loss : 0.000305, Floss: 0.000187, Mloss 0.000119
+
+run [400]:
+Loss : 0.000284, Floss: 0.000166, Mloss 0.000119
+
+(128, 128, 3)
+(128, 128, 3)
+(128, 128, 3)
+(128, 128, 3)
+(128, 128, 3)
+(128, 128, 3)
+(128, 128, 3)
+(128, 128, 3)
