@@ -36,7 +36,7 @@ def image_loader(image_name):
 
 batch_size=32
 ds = deeplake.load('hub://activeloop/wiki-art')
-ds = ds.images[0:batch_size*4].numpy()
+ds = ds.images[0:batch_size*4].numpy().aslist(True)
 train_loader = torch.utils.DataLoader(ds, batch_size=batch_size)
 
 
