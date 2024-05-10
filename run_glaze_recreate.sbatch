@@ -5,8 +5,7 @@
 #SBATCH --gpus=1
 #SBATCH --partition drl
 #SBATCH -q drl-main
-#SBATCH --mem-per-cpu=256
-#SBATCH --mem-per-cpu=5G
+#SBATCH --mem-per-cpu=256G
 date
 echo "Running my job on $HOSTNAME"
 python src/data_generation.py
