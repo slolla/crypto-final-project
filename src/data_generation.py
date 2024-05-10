@@ -39,18 +39,6 @@ ds = deeplake.load('hub://activeloop/wiki-art')
 ds = ds.images[0:batch_size*4].numpy()
 train_loader = torch.utils.DataLoader(ds, batch_size=batch_size)
 
-data = next(iter(train_loader))
-images = torch.stack([i["images"] for i in data])
-print(images.shape)
-
-sample_batch = images
-
-content_img = sample_batch
-content_img = content_img.to(device)
-style_img = image_loader("style_library/banksy_spacegirl.jpeg")
-
-assert style_img[0].size() == content_img[0].size(), \
-    "we need to import style and content images of the same size"
 
 class ContentLoss(nn.Module):
 
@@ -237,16 +225,6 @@ def run_style_transfer(cnn, normalization_mean, normalization_std,
 
     return input_img
 
-input_img = content_img.clone()
-output = run_style_transfer(cnn, cnn_normalization_mean, cnn_normalization_std,
-                            content_img, style_img, input_img)
-
-# define feature extractor
-vgg16_model = vgg16(pretrained=True)
-vgg16_model.classifier = vgg16_model.classifier[:-1]
-vgg16_model.eval()
-vgg16_model.requires_grad_(False)
-
 # define feature loss
 class FeatureLoss(nn.Module):
 
@@ -341,7 +319,27 @@ def save_im(inp_im, fname):
     im = Image.fromarray(im)
     im.save(f"{fname}.jpg")
 
-glazed_output = run_glazing(content_img, output, num_steps=400, fweight=10, mweight=0.05)
-for i in range(batch_size):
-    #save_im(content_img[i].squeeze(), f"{i}_og")
-    save_im(glazed_output[i].squeeze(), f"decrypt_data/{i}_encrypted")
+for i, batch in enumerate(train_loader):
+
+    content_img = batch
+    content_img = content_img.to(device)
+    style_img = image_loader("style_library/banksy_spacegirl.jpeg")
+
+    assert style_img[0].size() == content_img[0].size(), \
+        "we need to import style and content images of the same size"
+
+    input_img = content_img.clone()
+    output = run_style_transfer(cnn, cnn_normalization_mean, cnn_normalization_std,
+                                content_img, style_img, input_img)
+
+    # define feature extractor
+    vgg16_model = vgg16(pretrained=True)
+    vgg16_model.classifier = vgg16_model.classifier[:-1]
+    vgg16_model.eval()
+    vgg16_model.requires_grad_(False)
+
+
+    glazed_output = run_glazing(content_img, output, num_steps=400, fweight=10, mweight=0.05)
+    for i in range(batch_size):
+        #save_im(content_img[i].squeeze(), f"{i}_og")
+        save_im(glazed_output[i].squeeze(), f"decrypt_data/{i}_encrypted")
