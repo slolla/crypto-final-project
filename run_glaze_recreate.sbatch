@@ -8,6 +8,6 @@
 #SBATCH --mem-per-cpu=256G
 date
 echo "Running my job on $HOSTNAME"
-python src/data_generation.py
+python3 src/data_generation.py
 
 
