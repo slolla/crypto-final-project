@@ -37,7 +37,8 @@ def image_loader(image_name):
 batch_size=32
 ds = deeplake.load('hub://activeloop/wiki-art')
 ds = ds.images[0:batch_size*4].numpy(aslist=True)
-train_loader = torch.utils.DataLoader(ds, batch_size=batch_size)
+ds = torch.utils.data.TensorDataset(ds, transforms=loader)
+train_loader = torch.utils.data.DataLoader(ds, batch_size=batch_size)
 
 
 class ContentLoss(nn.Module):
