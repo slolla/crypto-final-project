@@ -360,8 +360,8 @@ for i, batch in enumerate(train_loader):
 
     glazed_output = run_glazing(content_img, output, num_steps=400, fweight=10, mweight=0.05)
     for j in range(batch_size):
-        #save_im(content_img[i].squeeze(), f"{i}_og")
-        save_im(glazed_output[i].squeeze(), f"decrypt_dataset/banksy_{i * batch_size + j}_encrypted")
+        #save_im(content_img[j].squeeze(), f"{i}_og")
+        save_im(glazed_output[j].squeeze(), f"decrypt_dataset/banksy_{i * batch_size + j}_encrypted")
     del glazed_output, input_img, output
     gc.collect()
     torch.cuda.empty_cache()
