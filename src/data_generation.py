@@ -53,7 +53,8 @@ def image_loader(image_name):
     return image.to(device, torch.float)
 
 batch_size=32
-ds = deeplake.load('hub://activeloop/wiki-art')
+ds = deeplake.load('hub://activeloop/wiki-art').images[0:batch_size * 4]
+print(len(ds), ds[0])
 ds = np.asarray(ds.images[0:batch_size*4].numpy(aslist=True))
 print("DATASET", ds.shape)
 ds = torch.tensor(ds)
