@@ -20,7 +20,6 @@ import argparse
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print("SETTING DEVICE AS", device)
-torch.set_default_device(device)
 
 imsize = 256
 loader = transforms.Compose([
@@ -58,9 +57,9 @@ class Model(nn.Module):
         x = self.fc3(x)
         return x
 
-net = Model()
-criterion = nn.CrossEntropyLoss()
-optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
+net = Model().to(device)
+criterion = nn.CrossEntropyLoss().to(device)
+optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9).to(device)
 
 for epoch in range(2):  # loop over the dataset multiple times
 
