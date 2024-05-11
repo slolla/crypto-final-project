@@ -32,7 +32,7 @@ trainloader = torch.utils.data.DataLoader(train_dataset, batch_size=batch_size,
                                           shuffle=True, num_workers=2)
 
 test_dataset = torchvision.datasets.ImageFolder("decrypt_dataset/val")
-trainloader = torch.utils.data.DataLoader(test_dataset, batch_size=batch_size,
+testloader = torch.utils.data.DataLoader(test_dataset, batch_size=batch_size,
                                           shuffle=True, num_workers=2)
 
 classes = ('banksy', 'cezanne', 'dali', 'haring', 'kahlo', 'miyazaki', 'monet', 'picasso', 'rembrandt', 'toriyama', 'vanagogh', 'warhol', 'wei')
@@ -94,6 +94,26 @@ for epoch in range(10):  # loop over the dataset multiple times
             print(f'[{epoch}, {i:5d}] loss: {running_loss / 50:.3f}')
             running_loss = 0.0
             print("accuracy", train_acc/(i * batch_size))
-print('Finished Training')
-with torch.no_grad():
-    
+
+    with torch.no_grad():
+        test_acc = 0.0
+        for i, data in enumerate(testloader, 0):
+            # get the inputs; data is a list of [inputs, labels]
+            inputs, labels = data[0].to(device), data[1].to(device)
+            #inputs = inputs.to(device)
+            #data = data.to(device)
+            # zero the parameter gradients
+
+            # forward + backward + optimize
+            outputs = net(inputs)
+            loss = criterion(outputs, labels)
+
+            # print statistics
+            running_loss += loss.item()
+            outputs = outputs.softmax(dim=1)
+            top1 = torch.argmax(outputs, dim=1)
+            test_acc += torch.sum(top1 == labels)
+            if i % 50 == 0 and i > 0:    # print every 2000 mini-batches
+                print(f'[{epoch}, {i:5d}] loss: {running_loss / 50:.3f}')
+                running_loss = 0.0
+                print("test accuracy", train_acc/(i * batch_size))
