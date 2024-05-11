@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 import torchvision.transforms as transforms
 from torchvision.models import vgg19, VGG19_Weights, vgg16
-
+from torch.utils.data import Dataset
 import copy
 import deeplake
 from tqdm import tqdm
@@ -28,6 +28,25 @@ loader = transforms.Compose([
     transforms.CenterCrop(imsize),
     ]) 
 
+class ImageDataset(Dataset):
+    """TensorDataset with support of transforms.
+    """
+    def __init__(self, tensors, transform=None):
+        assert all(tensors[0].size(0) == tensor.size(0) for tensor in tensors)
+        self.tensors = tensors
+        self.transform = transform
+
+    def __getitem__(self, index):
+        x = self.tensors[index]
+
+        if self.transform:
+            x = self.transform(x)
+
+        return x
+
+    def __len__(self):
+        return self.tensors[0].size(0)
+
 def image_loader(image_name):
     image = Image.open(image_name)
     # fake batch dimension required to fit network's input dimensions
@@ -36,7 +55,7 @@ def image_loader(image_name):
 
 batch_size=32
 ds = deeplake.load('hub://activeloop/wiki-art')
-ds = ds.images[0:batch_size*4].numpy(aslist=True)
+ds = ImageDataset(ds.images[0:batch_size*4].numpy(aslist=True), transforms=loader)
 ds = torch.utils.data.TensorDataset(ds, transforms=loader)
 train_loader = torch.utils.data.DataLoader(ds, batch_size=batch_size)
 
