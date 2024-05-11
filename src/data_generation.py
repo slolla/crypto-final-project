@@ -54,8 +54,10 @@ def image_loader(image_name):
 
 batch_size=32
 ds = deeplake.load('hub://activeloop/wiki-art')
-train_loader = ds.pytorch(ds, batch_size=batch_size, transforms=loader, shuffle=False)
-
+train_loader = ds.dataloader()\
+    .transform({'images': loader, 'labels': None})\
+    .batch(batch_size)\
+    .shuffle()
 
 class ContentLoss(nn.Module):
 
