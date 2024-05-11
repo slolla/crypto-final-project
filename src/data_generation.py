@@ -53,14 +53,8 @@ def image_loader(image_name):
     return image.to(device, torch.float)
 
 batch_size=32
-ds = deeplake.load('hub://activeloop/wiki-art').images[0:batch_size * 4]
-ds = [i['images'] for i in ds]
-print(len(ds), ds[0])
-ds = np.asarray(ds.images[0:batch_size*4].numpy(aslist=True))
-print("DATASET", ds.shape)
-ds = torch.tensor(ds)
-ds = ImageDataset(ds, transform=loader)
-train_loader = torch.utils.data.DataLoader(ds, batch_size=batch_size)
+ds = deeplake.load('hub://activeloop/wiki-art')
+train_loader = ds.pytorch(ds, batch_size=batch_size, transforms=loader, shuffle=False)
 
 
 class ContentLoss(nn.Module):
