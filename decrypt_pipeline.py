@@ -1,7 +1,7 @@
 # %%
 # For tips on running notebooks in Google Colab, see
 # https://pytorch.org/tutorials/beginner/colab
-%matplotlib inline
+# %matplotlib inline
 
 # %% [markdown]
 # Neural Transfer Using PyTorch
@@ -510,14 +510,14 @@ def save_im(inp_im, fname, parent_path):
 # style_img = T
 # input_img = Y'
 def decrypt_imgs(show_outputs = False):
-    path = "./images/christine_art_original/christine_art_encrypted/"
+    path = "images/512_images/"
     enc_imgs = os.listdir(path)
     for i in enc_imgs:
         if "van_gogh" in i:
             continue
         content_img = image_loader(path+i)
         input_img = content_img.cpu().clone()
-        style_img = image_loader(f"./style_library/picasso_portrait.jpg")
+        style_img = image_loader(f"style_library/picasso_portrait.jpg")
         output = run_style_transfer(cnn, cnn_normalization_mean, cnn_normalization_std,
                                 content_img, style_img, input_img)
         
@@ -526,7 +526,7 @@ def decrypt_imgs(show_outputs = False):
         if show_outputs:
             plt.figure()
             imshow(output, title=fname)
-        save_im(output, fname, "./images/dec_outputs/")
+        save_im(output, fname, "images/dec_outputs/")
 
 decrypt_imgs(False)    
 
@@ -636,7 +636,7 @@ def run_glazing(content_img, target_img, num_steps=300, fweight=1.0, mweight=1.0
 
 # %%
 def recap_decrypted(show_outputs = False):
-    path = "./images/christine_art_original/christine_art_encrypted/"
+    path = "images/512_images/"
     enc_imgs = os.listdir(path)
     for i in enc_imgs:
         if "van_gogh" in i:
@@ -644,7 +644,7 @@ def recap_decrypted(show_outputs = False):
         content_img = image_loader(path+i)
         base_name = i.replace(".jpg","")
         fname = f"{base_name}_decrypted"
-        output = image_loader(f"./images/dec_outputs/{fname}.jpg")
+        output = image_loader(f"images/dec_outputs/{fname}.jpg")
         glazed_output = run_glazing(content_img, output, 
                                     num_steps=200, fweight=0.0005, mweight=5)
 
@@ -653,7 +653,7 @@ def recap_decrypted(show_outputs = False):
         if show_outputs:
             plt.figure()
             imshow(glazed_output, title=fname)
-        save_im(glazed_output, fname, "./images/final_decryption_outputs/")
+        save_im(glazed_output, fname, "images/512_dec_outputs/")
 
 recap_decrypted(False)
 
@@ -662,26 +662,6 @@ plt.ioff()
 
 
 # %%
-import numpy as np
 
-im = glazed_output.detach().squeeze().cpu().numpy() * 255
-im = im.astype(np.uint8)
-im = np.transpose(im, (1, 2, 0))
-print(im.shape)
-im = Image.fromarray(im)
-im.save("glazed.jpg")
-
-# %%
-plt.figure()
-# imshow(content_img, title='Input Image')
-
-# sphinx_gallery_thumbnail_number = 4
-plt.ioff()
-plt.show()
-
-# %%
-# TODO: create a style "library" of artist styles (using wikitext dataset?)
-
-# given a new image, place in style embedding space and find a style far from it
 
 
