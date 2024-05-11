@@ -345,28 +345,29 @@ def save_im(inp_im, fname):
 
 def run(style_img_name, artist, round):
     for idx, batch in enumerate(train_loader):
-        content_img = torch.stack([i["images"] for i in batch])
-        content_img = content_img.to(device)
-        style_img = image_loader(f"style_library/{style_img_name}")
+        if idx > 10:
+            content_img = torch.stack([i["images"] for i in batch])
+            content_img = content_img.to(device)
+            style_img = image_loader(f"style_library/{style_img_name}")
 
-        assert style_img[0].size() == content_img[0].size(), \
-            "we need to import style and content images of the same size"
+            assert style_img[0].size() == content_img[0].size(), \
+                "we need to import style and content images of the same size"
 
-        input_img = content_img.clone()
-        output = run_style_transfer(cnn, cnn_normalization_mean, cnn_normalization_std,
+            input_img = content_img.clone()
+            output = run_style_transfer(cnn, cnn_normalization_mean, cnn_normalization_std,
                                     content_img, style_img, input_img)
 
 
-        glazed_output = run_glazing(content_img, output, num_steps=400, fweight=10, mweight=0.05)
-        for j in range(batch_size):
-            #save_im(content_img[j].squeeze(), f"{i}_og")
-            save_im(glazed_output[j].squeeze(), f"decrypt_dataset/{artist}/{artist}_{round * 175 + idx*batch_size + j}_encrypted")
-        del glazed_output, input_img, output
-        gc.collect()
-        torch.cuda.empty_cache()
+            glazed_output = run_glazing(content_img, output, num_steps=400, fweight=10, mweight=0.05)
+            for j in range(batch_size):
+                #save_im(content_img[j].squeeze(), f"{i}_og")
+                save_im(glazed_output[j].squeeze(), f"decrypt_dataset/val/{artist}/{artist}_{idx*batch_size + j}_encrypted")
+            del glazed_output, input_img, output
+            gc.collect()
+            torch.cuda.empty_cache()
 
-        if idx == 10:
-            exit()
+            if idx == 15:
+                exit()
 
 if __name__=="__main__": 
     parser = argparse.ArgumentParser(
