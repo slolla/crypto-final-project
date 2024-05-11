@@ -368,7 +368,7 @@ def run(style_img_name, artist, round):
         if idx == 10:
             exit()
 
-def __main__():
+if __name__=="__main__": 
     parser = argparse.ArgumentParser(
                     prog='ProgramName',
                     description='What the program does',
