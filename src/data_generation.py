@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
+import gc
 
 from PIL import Image
 import matplotlib.pyplot as plt
@@ -20,7 +21,7 @@ print("SETTING DEVICE AS", device)
 torch.set_default_device(device)
 
 # desired size of the output image
-imsize = 512 if torch.cuda.is_available() else 256  # use small size if no GPU
+imsize = 256 if torch.cuda.is_available() else 256  # use small size if no GPU
 
 loader = transforms.Compose([
     transforms.ToTensor(),  # transform it into a torch tensor
@@ -52,7 +53,7 @@ def image_loader(image_name):
     image = loader(image).unsqueeze(0)
     return image.to(device, torch.float)
 
-batch_size=32
+batch_size=16
 ds = deeplake.load('hub://activeloop/wiki-art')
 train_loader = ds.dataloader()\
     .transform({'images': loader, 'labels': None})\
@@ -334,9 +335,9 @@ def save_im(inp_im, fname):
     im = inp_im.detach().squeeze().cpu().numpy() * 255
     im = im.astype(np.uint8)
     im = np.transpose(im, (1, 2, 0))
-    print(im.shape)
     im = Image.fromarray(im)
     im.save(f"{fname}.jpg")
+    print("saved", fname)
 
 for i, batch in enumerate(train_loader):
     content_img = torch.stack([i["images"] for i in batch])
@@ -360,7 +361,10 @@ for i, batch in enumerate(train_loader):
     glazed_output = run_glazing(content_img, output, num_steps=400, fweight=10, mweight=0.05)
     for j in range(batch_size):
         #save_im(content_img[i].squeeze(), f"{i}_og")
-        save_im(glazed_output[i].squeeze(), f"decrypt_data/{i * batch_size + j}_encrypted")
+        save_im(glazed_output[i].squeeze(), f"decrypt_dataset/banksy_{i * batch_size + j}_encrypted")
+    del glazed_output, input_img, output
+    gc.collect()
+    torch.cuda.empty_cache()
 
     if i == 4:
         exit()

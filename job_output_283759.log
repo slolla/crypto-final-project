@@ -1,0 +1,19 @@
+cpu-bind=MASK - gpu19-1.drl, task  0  0 [2037894]: mask 0x1 set
+Fri May 10 09:57:34 PM EDT 2024
+Running my job on gpu19-1.drl
+/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/util/check_latest_version.py:32: UserWarning: A newer version of deeplake (3.9.5) is available. It's recommended that you update to the latest version using `pip install -U deeplake`.
+  warnings.warn(
+SETTING DEVICE AS cuda
+Opening dataset in read-only mode as you don't have write permissions.
+This dataset can be visualized in Jupyter Notebook by ds.visualize() or at https://app.activeloop.ai/activeloop/wiki-art
+
+/ - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ hub://activeloop/wiki-art loaded successfully.
+
+/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:274.)
+  return func(*args, **kwargs)
+Traceback (most recent call last):
+  File "/data/scratch/amini/sadhana/2024/crypto-final-project/src/data_generation.py", line 57, in <module>
+    ds = torch.tensor(ds.images[0:batch_size*4].numpy(aslist=True))
+  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py", line 78, in __torch_function__
+    return func(*args, **kwargs)
+ValueError: expected sequence of length 920 at dim 1 (got 747)

@@ -1,0 +1,21 @@
+cpu-bind=MASK - gpu19-1.drl, task  0  0 [2048553]: mask 0x1 set
+Fri May 10 10:13:54 PM EDT 2024
+Running my job on gpu19-1.drl
+/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/util/check_latest_version.py:32: UserWarning: A newer version of deeplake (3.9.5) is available. It's recommended that you update to the latest version using `pip install -U deeplake`.
+  warnings.warn(
+/ - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | SETTING DEVICE AS cuda
+Opening dataset in read-only mode as you don't have write permissions.
+This dataset can be visualized in Jupyter Notebook by ds.visualize() or at https://app.activeloop.ai/activeloop/wiki-art
+
+/ - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / hub://activeloop/wiki-art loaded successfully.
+
+/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/integrations/pytorch/common.py:137: UserWarning: Decode method for tensors ['images'] is defaulting to numpy. Please consider specifying a decode_method in .pytorch() that maximizes the data preprocessing speed based on your transformation.
+  warnings.warn(
+Please wait, filling up the shuffle buffer with samples.:   0%|          | 0.00/2.00G [00:00<?, ?B/s]Please wait, filling up the shuffle buffer with samples.:   0%|          | 3.34M/2.00G [00:03<37:18, 958kB/s]Please wait, filling up the shuffle buffer with samples.:   3%|▎         | 58.9M/2.00G [00:04<01:43, 20.1MB/s]Please wait, filling up the shuffle buffer with samples.:   6%|▌         | 126M/2.00G [00:11<02:52, 11.7MB/s] Please wait, filling up the shuffle buffer with samples.:  22%|██▏       | 441M/2.00G [00:11<00:28, 59.6MB/s]Please wait, filling up the shuffle buffer with samples.:  30%|███       | 621M/2.00G [00:11<00:15, 96.4MB/s]Please wait, filling up the shuffle buffer with samples.:  44%|████▎     | 895M/2.00G [00:12<00:07, 165MB/s] Please wait, filling up the shuffle buffer with samples.:  50%|████▉     | 0.99G/2.00G [00:12<00:06, 169MB/s]Please wait, filling up the shuffle buffer with samples.:  54%|█████▍    | 1.09G/2.00G [00:14<00:06, 143MB/s]Please wait, filling up the shuffle buffer with samples.:  69%|██████▉   | 1.38G/2.00G [00:14<00:02, 260MB/s]Please wait, filling up the shuffle buffer with samples.:  80%|████████  | 1.60G/2.00G [00:14<00:01, 373MB/s]Please wait, filling up the shuffle buffer with samples.:  88%|████████▊ | 1.75G/2.00G [00:19<00:02, 101MB/s]Please wait, filling up the shuffle buffer with samples.:  96%|█████████▌| 1.92G/2.00G [00:20<00:00, 123MB/s]Please wait, filling up the shuffle buffer with samples.: 100%|█████████▉| 2.00G/2.00G [00:20<00:00, 103MB/s]
+Shuffle buffer filling is complete.
+Traceback (most recent call last):
+  File "/data/scratch/amini/sadhana/2024/crypto-final-project/src/data_generation.py", line 343, in <module>
+    content_img = torch.tensor(batch)
+  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py", line 78, in __torch_function__
+    return func(*args, **kwargs)
+RuntimeError: Could not infer dtype of IterableOrderedDict

@@ -1,47 +1,0 @@
-cpu-bind=MASK - gpu19-1.drl, task  0  0 [1975127]: mask 0x1 set
-Fri May 10 07:18:13 PM EDT 2024
-Running my job on gpu19-1.drl
-/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/util/check_latest_version.py:32: UserWarning: A newer version of deeplake (3.9.5) is available. It's recommended that you update to the latest version using `pip install -U deeplake`.
-  warnings.warn(
-/ - \ | / - \ | / - \ | / - \ | / - \ | / SETTING DEVICE AS cuda
-Opening dataset in read-only mode as you don't have write permissions.
-This dataset can be visualized in Jupyter Notebook by ds.visualize() or at https://app.activeloop.ai/activeloop/wiki-art
-
-- \ | / - \ | / - \ hub://activeloop/wiki-art loaded successfully.
-
-/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/integrations/pytorch/common.py:137: UserWarning: Decode method for tensors ['images'] is defaulting to numpy. Please consider specifying a decode_method in .pytorch() that maximizes the data preprocessing speed based on your transformation.
-  warnings.warn(
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
-  return func(*args, **kwargs)
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([1, 64, 64])) that is different to the input size (torch.Size([100, 64, 64])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
-  return func(*args, **kwargs)
-torch.Size([100, 3, 512, 512])
-Building the style transfer model..
-Traceback (most recent call last):
-  File "/data/scratch/amini/sadhana/2024/crypto-final-project/src/data_generation.py", line 242, in <module>
-    output = run_style_transfer(cnn, cnn_normalization_mean, cnn_normalization_std,
-  File "/data/scratch/amini/sadhana/2024/crypto-final-project/src/data_generation.py", line 186, in run_style_transfer
-    model, style_losses, content_losses = get_style_model_and_losses(cnn,
-  File "/data/scratch/amini/sadhana/2024/crypto-final-project/src/data_generation.py", line 155, in get_style_model_and_losses
-    target = model(content_img).detach()
-  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
-    input = module(input)
-  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/nn/modules/activation.py", line 103, in forward
-    return F.relu(input, inplace=self.inplace)
-  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/nn/functional.py", line 1496, in relu
-    return handle_torch_function(relu, (input,), input, inplace=inplace)
-  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/overrides.py", line 1619, in handle_torch_function
-    result = mode.__torch_function__(public_api, types, args, kwargs)
-  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py", line 78, in __torch_function__
-    return func(*args, **kwargs)
-  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/nn/functional.py", line 1500, in relu
-    result = torch.relu(input)
-torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 6.25 GiB. GPU 

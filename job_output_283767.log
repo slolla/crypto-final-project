@@ -1,0 +1,45 @@
+cpu-bind=MASK - gpu19-1.drl, task  0  0 [2044158]: mask 0x1 set
+Fri May 10 10:07:34 PM EDT 2024
+Running my job on gpu19-1.drl
+/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/util/check_latest_version.py:32: UserWarning: A newer version of deeplake (3.9.5) is available. It's recommended that you update to the latest version using `pip install -U deeplake`.
+  warnings.warn(
+/ - SETTING DEVICE AS cuda
+Opening dataset in read-only mode as you don't have write permissions.
+This dataset can be visualized in Jupyter Notebook by ds.visualize() or at https://app.activeloop.ai/activeloop/wiki-art
+
+\ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ hub://activeloop/wiki-art loaded successfully.
+
+/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/integrations/pytorch/common.py:137: UserWarning: Decode method for tensors ['images'] is defaulting to numpy. Please consider specifying a decode_method in .pytorch() that maximizes the data preprocessing speed based on your transformation.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/data/scratch/amini/sadhana/2024/crypto-final-project/src/data_generation.py", line 339, in <module>
+    for i, batch in enumerate(train_loader):
+  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1346, in _next_data
+    return self._process_data(data)
+  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1372, in _process_data
+    data.reraise()
+  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/_utils.py", line 705, in reraise
+    raise exception
+deeplake.util.exceptions.TransformFailedError: Dataloader transform failed while processing sample at index Caught TransformFailedError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/integrations/pytorch/dataset.py", line 89, in _process
+    return transform(sample)
+  File "/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/integrations/pytorch/common.py", line 79, in __call__
+    return self.composite_transform(data_in)
+TypeError: 'DeepLakeCloudDataset' object is not callable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 308, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 32, in fetch
+    data.append(next(self.dataset_iter))
+  File "/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/integrations/pytorch/dataset.py", line 168, in __iter__
+    yield _process(data, self.transform, self.return_index)
+  File "/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/integrations/pytorch/dataset.py", line 91, in _process
+    raise TransformFailedError(index) from e
+deeplake.util.exceptions.TransformFailedError: Dataloader transform failed while processing sample at index 0.
+.

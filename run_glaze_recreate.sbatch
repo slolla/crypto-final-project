@@ -1,6 +1,6 @@
 #!/bin/bash -l
-#SBATCH --job-name=test
-#SBATCH --time=00:04:00              
+#SBATCH --job-name=banksy
+#SBATCH --time=04:00:00              
 #SBATCH --output=job_output_%j.log    # %j will insert the job ID
 #SBATCH --gpus=1
 #SBATCH --partition drl

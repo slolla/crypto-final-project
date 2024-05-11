@@ -1,0 +1,15 @@
+cpu-bind=MASK - gpu19-1.drl, task  0  0 [2008411]: mask 0x1 set
+Fri May 10 08:50:35 PM EDT 2024
+Running my job on gpu19-1.drl
+/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/util/check_latest_version.py:32: UserWarning: A newer version of deeplake (3.9.5) is available. It's recommended that you update to the latest version using `pip install -U deeplake`.
+  warnings.warn(
+SETTING DEVICE AS cuda
+Opening dataset in read-only mode as you don't have write permissions.
+This dataset can be visualized in Jupyter Notebook by ds.visualize() or at https://app.activeloop.ai/activeloop/wiki-art
+
+/ - \ | / - \ | / - \ | / - \ | / - \ | / - \ hub://activeloop/wiki-art loaded successfully.
+
+Traceback (most recent call last):
+  File "/data/scratch/amini/sadhana/2024/crypto-final-project/src/data_generation.py", line 58, in <module>
+    ds = ImageDataset(ds.images[0:batch_size*4].numpy(aslist=True), transforms=loader)
+TypeError: ImageDataset.__init__() got an unexpected keyword argument 'transforms'

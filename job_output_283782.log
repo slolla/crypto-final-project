@@ -1,0 +1,44 @@
+cpu-bind=MASK - gpu19-1.drl, task  0  0 [2051181]: mask 0x1 set
+Fri May 10 10:17:33 PM EDT 2024
+Running my job on gpu19-1.drl
+/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/util/check_latest_version.py:32: UserWarning: A newer version of deeplake (3.9.5) is available. It's recommended that you update to the latest version using `pip install -U deeplake`.
+  warnings.warn(
+/ - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - SETTING DEVICE AS cuda
+Opening dataset in read-only mode as you don't have write permissions.
+This dataset can be visualized in Jupyter Notebook by ds.visualize() or at https://app.activeloop.ai/activeloop/wiki-art
+
+\ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | hub://activeloop/wiki-art loaded successfully.
+
+/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/integrations/pytorch/common.py:137: UserWarning: Decode method for tensors ['images'] is defaulting to numpy. Please consider specifying a decode_method in .pytorch() that maximizes the data preprocessing speed based on your transformation.
+  warnings.warn(
+Please wait, filling up the shuffle buffer with samples.:   0%|          | 0.00/2.00G [00:00<?, ?B/s]Please wait, filling up the shuffle buffer with samples.:   0%|          | 2.06M/2.00G [00:03<1:01:14, 584kB/s]Please wait, filling up the shuffle buffer with samples.:   6%|▌         | 113M/2.00G [00:04<00:51, 39.5MB/s]  Please wait, filling up the shuffle buffer with samples.:  10%|█         | 215M/2.00G [00:07<00:52, 36.4MB/s]Please wait, filling up the shuffle buffer with samples.:  23%|██▎       | 480M/2.00G [00:07<00:15, 107MB/s] Please wait, filling up the shuffle buffer with samples.:  43%|████▎     | 874M/2.00G [00:07<00:04, 249MB/s]Please wait, filling up the shuffle buffer with samples.:  50%|█████     | 1.00G/2.00G [00:09<00:06, 176MB/s]Please wait, filling up the shuffle buffer with samples.:  55%|█████▌    | 1.10G/2.00G [00:09<00:04, 202MB/s]Please wait, filling up the shuffle buffer with samples.:  72%|███████▏  | 1.44G/2.00G [00:11<00:03, 179MB/s]Please wait, filling up the shuffle buffer with samples.:  87%|████████▋ | 1.75G/2.00G [00:11<00:00, 275MB/s]Please wait, filling up the shuffle buffer with samples.: 100%|█████████▉| 2.00G/2.00G [00:11<00:00, 179MB/s]
+/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return func(*args, **kwargs)
+/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([1, 64, 64])) that is different to the input size (torch.Size([32, 64, 64])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return func(*args, **kwargs)
+Shuffle buffer filling is complete.
+Building the style transfer model..
+Traceback (most recent call last):
+  File "/data/scratch/amini/sadhana/2024/crypto-final-project/src/data_generation.py", line 350, in <module>
+    output = run_style_transfer(cnn, cnn_normalization_mean, cnn_normalization_std,
+  File "/data/scratch/amini/sadhana/2024/crypto-final-project/src/data_generation.py", line 192, in run_style_transfer
+    model, style_losses, content_losses = get_style_model_and_losses(cnn,
+  File "/data/scratch/amini/sadhana/2024/crypto-final-project/src/data_generation.py", line 161, in get_style_model_and_losses
+    target = model(content_img).detach()
+  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 460, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 456, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py", line 78, in __torch_function__
+    return func(*args, **kwargs)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 1024.00 MiB. GPU 
