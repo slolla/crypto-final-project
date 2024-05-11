@@ -360,3 +360,6 @@ for i, batch in enumerate(train_loader):
     for j in range(batch_size):
         #save_im(content_img[i].squeeze(), f"{i}_og")
         save_im(glazed_output[i].squeeze(), f"decrypt_data/{i * batch_size + j}_encrypted")
+
+    if i == 4:
+        exit()
