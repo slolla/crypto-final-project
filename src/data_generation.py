@@ -59,7 +59,7 @@ batch_size=16
 ds = deeplake.load('hub://activeloop/wiki-art')
 train_loader = ds.dataloader()\
     .transform({'images': loader, 'labels': None})\
-    .batch(batch_size)
+    .batch(batch_size)\
 
 class ContentLoss(nn.Module):
 
