@@ -516,7 +516,7 @@ def decrypt_imgs(show_outputs = False):
         if "van_gogh" in i:
             continue
         content_img = image_loader(path+i)
-        input_img = content_img.cpu().clone()
+        input_img = content_img.cpu().clone().to(device)
         style_img = image_loader(f"style_library/picasso_portrait.jpg")
         output = run_style_transfer(cnn, cnn_normalization_mean, cnn_normalization_std,
                                 content_img, style_img, input_img)
@@ -593,7 +593,7 @@ def run_glazing(content_img, target_img, num_steps=300, fweight=1.0, mweight=1.0
     # such as dropout or batch normalization layers behave correctly. 
     #delta_x = torch.zeros(inp_img.shape)
     #delta_x.requires_grad_(True)
-    new_img = content_img.cpu().clone()
+    new_img = content_img.cpu().clone().to(device)
     new_img.requires_grad_(True)
     optimizer = get_glaze_optimizer(new_img)
 
