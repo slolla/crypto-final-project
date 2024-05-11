@@ -339,8 +339,7 @@ def save_im(inp_im, fname):
     im.save(f"{fname}.jpg")
 
 for i, batch in enumerate(train_loader):
-    print(batch)
-    content_img = torch.tensor(batch)
+    content_img = torch.stack([i["images"] for i in batch])
     content_img = content_img.to(device)
     style_img = image_loader("style_library/banksy_spacegirl.jpeg")
 
