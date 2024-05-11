@@ -15,9 +15,8 @@ import copy
 import deeplake
 from tqdm import tqdm
 import numpy as np
+import argparse 
 
-style_img_name = "warhol_ornaments.jpeg"
-artist, _ = style_img_name.split("_")
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print("SETTING DEVICE AS", device)
 torch.set_default_device(device)
@@ -30,7 +29,11 @@ loader = transforms.Compose([
     transforms.Resize(imsize),  # scale imported image
     transforms.CenterCrop(imsize),
     ]) 
-
+# define feature extractor
+vgg16_model = vgg16(pretrained=True)
+vgg16_model.classifier = vgg16_model.classifier[:-1]
+vgg16_model.eval()
+vgg16_model.requires_grad_(False)
 class ImageDataset(Dataset):
     """TensorDataset with support of transforms.
     """
@@ -340,32 +343,41 @@ def save_im(inp_im, fname):
     im.save(f"{fname}.jpg")
     print("saved", fname)
 
-for idx, batch in enumerate(train_loader):
-    content_img = torch.stack([i["images"] for i in batch])
-    content_img = content_img.to(device)
-    style_img = image_loader(f"style_library/{style_img_name}")
+def run(style_img_name, artist, round):
+    for idx, batch in enumerate(train_loader):
+        content_img = torch.stack([i["images"] for i in batch])
+        content_img = content_img.to(device)
+        style_img = image_loader(f"style_library/{style_img_name}")
 
-    assert style_img[0].size() == content_img[0].size(), \
-        "we need to import style and content images of the same size"
+        assert style_img[0].size() == content_img[0].size(), \
+            "we need to import style and content images of the same size"
 
-    input_img = content_img.clone()
-    output = run_style_transfer(cnn, cnn_normalization_mean, cnn_normalization_std,
-                                content_img, style_img, input_img)
-
-    # define feature extractor
-    vgg16_model = vgg16(pretrained=True)
-    vgg16_model.classifier = vgg16_model.classifier[:-1]
-    vgg16_model.eval()
-    vgg16_model.requires_grad_(False)
+        input_img = content_img.clone()
+        output = run_style_transfer(cnn, cnn_normalization_mean, cnn_normalization_std,
+                                    content_img, style_img, input_img)
 
 
-    glazed_output = run_glazing(content_img, output, num_steps=400, fweight=10, mweight=0.05)
-    for j in range(batch_size):
-        #save_im(content_img[j].squeeze(), f"{i}_og")
-        save_im(glazed_output[j].squeeze(), f"decrypt_dataset/{artist}/{artist}_{i*batch_size + j}_encrypted")
-    del glazed_output, input_img, output
-    gc.collect()
-    torch.cuda.empty_cache()
+        glazed_output = run_glazing(content_img, output, num_steps=400, fweight=10, mweight=0.05)
+        for j in range(batch_size):
+            #save_im(content_img[j].squeeze(), f"{i}_og")
+            save_im(glazed_output[j].squeeze(), f"decrypt_dataset/{artist}/{artist}_{round * 175 + idx*batch_size + j}_encrypted")
+        del glazed_output, input_img, output
+        gc.collect()
+        torch.cuda.empty_cache()
 
-    if idx == 10:
-        exit()
+        if idx == 10:
+            exit()
+
+def __main__():
+    parser = argparse.ArgumentParser(
+                    prog='ProgramName',
+                    description='What the program does',
+                    epilog='Text at the bottom of help')
+    parser.add_argument('-f', type=str)
+    parser.add_argument('-r', type=int, default=0)
+
+    args = parser.parse_args()
+    style_img_name = args.f
+    round = args.r
+    artist, _ = style_img_name.split("_")
+    run(style_img_name, artist, round)
