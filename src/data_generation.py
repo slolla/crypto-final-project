@@ -340,7 +340,7 @@ def save_im(inp_im, fname):
 
 for i, batch in enumerate(train_loader):
 
-    content_img = batch
+    content_img = torch.tensor(np.asarray(batch))
     content_img = content_img.to(device)
     style_img = image_loader("style_library/banksy_spacegirl.jpeg")
 
