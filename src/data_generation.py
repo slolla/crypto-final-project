@@ -58,7 +58,6 @@ ds = deeplake.load('hub://activeloop/wiki-art')
 train_loader = ds.dataloader()\
     .transform({'images': loader, 'labels': None})\
     .batch(batch_size)\
-    .shuffle()
 
 class ContentLoss(nn.Module):
 
