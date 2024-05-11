@@ -1,0 +1,1178 @@
+cpu-bind=MASK - gpu19-2.drl, task  0  0 [2216341]: mask 0x1 set
+Sat May 11 12:50:49 AM EDT 2024
+Running my job on gpu19-2.drl
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: deeplake in /tmp/home/amini/.local/lib/python3.10/site-packages (3.9.5)
+Requirement already satisfied: tqdm in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (4.66.4)
+Requirement already satisfied: aioboto3>=10.4.0 in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (12.4.0)
+Requirement already satisfied: humbug>=0.3.1 in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (0.3.2)
+Requirement already satisfied: lz4 in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (4.3.3)
+Requirement already satisfied: click in /usr/lib/python3/dist-packages (from deeplake) (8.0.3)
+Requirement already satisfied: numpy in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (1.26.4)
+Requirement already satisfied: boto3 in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (1.34.69)
+Requirement already satisfied: pillow~=10.2.0 in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (10.2.0)
+Requirement already satisfied: pathos in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (0.3.2)
+Requirement already satisfied: pyjwt in /usr/lib/python3/dist-packages (from deeplake) (2.3.0)
+Requirement already satisfied: libdeeplake==0.0.128 in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (0.0.128)
+Requirement already satisfied: nest-asyncio in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (1.6.0)
+Requirement already satisfied: pydantic in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (2.7.1)
+Requirement already satisfied: dill in /tmp/home/amini/.local/lib/python3.10/site-packages (from libdeeplake==0.0.128->deeplake) (0.3.8)
+Requirement already satisfied: aiobotocore[boto3]==2.12.3 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aioboto3>=10.4.0->deeplake) (2.12.3)
+Requirement already satisfied: aioitertools<1.0.0,>=0.5.1 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (0.11.0)
+Requirement already satisfied: botocore<1.34.70,>=1.34.41 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (1.34.69)
+Requirement already satisfied: aiohttp<4.0.0,>=3.7.4.post0 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (3.9.5)
+Requirement already satisfied: wrapt<2.0.0,>=1.10.10 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (1.16.0)
+Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in /tmp/home/amini/.local/lib/python3.10/site-packages (from boto3->deeplake) (1.0.1)
+Requirement already satisfied: s3transfer<0.11.0,>=0.10.0 in /tmp/home/amini/.local/lib/python3.10/site-packages (from boto3->deeplake) (0.10.1)
+Requirement already satisfied: requests in /tmp/home/amini/.local/lib/python3.10/site-packages (from humbug>=0.3.1->deeplake) (2.31.0)
+Requirement already satisfied: ppft>=1.7.6.8 in /tmp/home/amini/.local/lib/python3.10/site-packages (from pathos->deeplake) (1.7.6.8)
+Requirement already satisfied: pox>=0.3.4 in /tmp/home/amini/.local/lib/python3.10/site-packages (from pathos->deeplake) (0.3.4)
+Requirement already satisfied: multiprocess>=0.70.16 in /tmp/home/amini/.local/lib/python3.10/site-packages (from pathos->deeplake) (0.70.16)
+Requirement already satisfied: typing-extensions>=4.6.1 in /tmp/home/amini/.local/lib/python3.10/site-packages (from pydantic->deeplake) (4.11.0)
+Requirement already satisfied: pydantic-core==2.18.2 in /tmp/home/amini/.local/lib/python3.10/site-packages (from pydantic->deeplake) (2.18.2)
+Requirement already satisfied: annotated-types>=0.4.0 in /tmp/home/amini/.local/lib/python3.10/site-packages (from pydantic->deeplake) (0.6.0)
+Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in /tmp/home/amini/.local/lib/python3.10/site-packages (from botocore<1.34.70,>=1.34.41->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (2.9.0.post0)
+Requirement already satisfied: urllib3!=2.2.0,<3,>=1.25.4 in /tmp/home/amini/.local/lib/python3.10/site-packages (from botocore<1.34.70,>=1.34.41->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (2.2.1)
+Requirement already satisfied: certifi>=2017.4.17 in /tmp/home/amini/.local/lib/python3.10/site-packages (from requests->humbug>=0.3.1->deeplake) (2024.2.2)
+Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3/dist-packages (from requests->humbug>=0.3.1->deeplake) (3.3)
+Requirement already satisfied: charset-normalizer<4,>=2 in /tmp/home/amini/.local/lib/python3.10/site-packages (from requests->humbug>=0.3.1->deeplake) (3.3.2)
+Requirement already satisfied: aiosignal>=1.1.2 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aiohttp<4.0.0,>=3.7.4.post0->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (1.3.1)
+Requirement already satisfied: attrs>=17.3.0 in /usr/lib/python3/dist-packages (from aiohttp<4.0.0,>=3.7.4.post0->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (21.2.0)
+Requirement already satisfied: frozenlist>=1.1.1 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aiohttp<4.0.0,>=3.7.4.post0->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (1.4.1)
+Requirement already satisfied: multidict<7.0,>=4.5 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aiohttp<4.0.0,>=3.7.4.post0->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (6.0.5)
+Requirement already satisfied: async-timeout<5.0,>=4.0 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aiohttp<4.0.0,>=3.7.4.post0->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (4.0.3)
+Requirement already satisfied: yarl<2.0,>=1.0 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aiohttp<4.0.0,>=3.7.4.post0->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (1.9.4)
+Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil<3.0.0,>=2.1->botocore<1.34.70,>=1.34.41->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (1.16.0)
+/ - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ SETTING DEVICE AS cuda
+Opening dataset in read-only mode as you don't have write permissions.
+This dataset can be visualized in Jupyter Notebook by ds.visualize() or at https://app.activeloop.ai/activeloop/wiki-art
+
+| / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - hub://activeloop/wiki-art loaded successfully.
+
+/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/integrations/pytorch/common.py:137: UserWarning: Decode method for tensors ['images'] is defaulting to numpy. Please consider specifying a decode_method in .pytorch() that maximizes the data preprocessing speed based on your transformation.
+  warnings.warn(
+/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return func(*args, **kwargs)
+/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([1, 64, 64])) that is different to the input size (torch.Size([16, 64, 64])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return func(*args, **kwargs)
+/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([1, 128, 128])) that is different to the input size (torch.Size([16, 128, 128])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return func(*args, **kwargs)
+/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([16, 128, 128, 128])) that is different to the input size (torch.Size([1, 128, 128, 128])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return func(*args, **kwargs)
+/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([1, 256, 256])) that is different to the input size (torch.Size([16, 256, 256])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return func(*args, **kwargs)
+/tmp/home/amini/.local/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/tmp/home/amini/.local/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=VGG16_Weights.IMAGENET1K_V1`. You can also use `weights=VGG16_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 4.776296 Content Loss: 21.772648
+
+60
+80
+run [100]:
+Style Loss : 3.522332 Content Loss: 19.868843
+
+100
+120
+140
+run [150]:
+Style Loss : 3.435575 Content Loss: 20.121609
+
+160
+180
+run [200]:
+Style Loss : 3.954429 Content Loss: 21.220480
+
+200
+220
+240
+run [250]:
+Style Loss : 4.755462 Content Loss: 22.705090
+
+260
+280
+run [300]:
+Style Loss : 6.701483 Content Loss: 25.340927
+
+300
+Optimizing..
+run [25]:
+Loss : 0.062519, Floss: 0.062502, Mloss 0.000017
+
+run [50]:
+Loss : 0.020036, Floss: 0.020009, Mloss 0.000027
+
+run [75]:
+Loss : 0.010224, Floss: 0.010190, Mloss 0.000033
+
+run [100]:
+Loss : 0.006201, Floss: 0.006163, Mloss 0.000038
+
+run [125]:
+Loss : 0.004253, Floss: 0.004211, Mloss 0.000041
+
+run [150]:
+Loss : 0.003116, Floss: 0.003071, Mloss 0.000045
+
+run [175]:
+Loss : 0.002386, Floss: 0.002338, Mloss 0.000048
+
+run [200]:
+Loss : 0.001913, Floss: 0.001862, Mloss 0.000050
+
+run [225]:
+Loss : 0.001563, Floss: 0.001511, Mloss 0.000052
+
+run [250]:
+Loss : 0.001307, Floss: 0.001253, Mloss 0.000054
+
+run [275]:
+Loss : 0.001115, Floss: 0.001060, Mloss 0.000055
+
+run [300]:
+Loss : 0.000971, Floss: 0.000915, Mloss 0.000056
+
+run [325]:
+Loss : 0.000849, Floss: 0.000792, Mloss 0.000057
+
+run [350]:
+Loss : 0.000753, Floss: 0.000695, Mloss 0.000058
+
+run [375]:
+Loss : 0.000675, Floss: 0.000616, Mloss 0.000059
+
+run [400]:
+Loss : 0.000609, Floss: 0.000550, Mloss 0.000060
+
+saved decrypt_dataset/toriyama/toriyama_0_encrypted
+saved decrypt_dataset/toriyama/toriyama_1_encrypted
+saved decrypt_dataset/toriyama/toriyama_2_encrypted
+saved decrypt_dataset/toriyama/toriyama_3_encrypted
+saved decrypt_dataset/toriyama/toriyama_4_encrypted
+saved decrypt_dataset/toriyama/toriyama_5_encrypted
+saved decrypt_dataset/toriyama/toriyama_6_encrypted
+saved decrypt_dataset/toriyama/toriyama_7_encrypted
+saved decrypt_dataset/toriyama/toriyama_8_encrypted
+saved decrypt_dataset/toriyama/toriyama_9_encrypted
+saved decrypt_dataset/toriyama/toriyama_10_encrypted
+saved decrypt_dataset/toriyama/toriyama_11_encrypted
+saved decrypt_dataset/toriyama/toriyama_12_encrypted
+saved decrypt_dataset/toriyama/toriyama_13_encrypted
+saved decrypt_dataset/toriyama/toriyama_14_encrypted
+saved decrypt_dataset/toriyama/toriyama_15_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 4.287906 Content Loss: 19.226643
+
+60
+80
+run [100]:
+Style Loss : 3.284491 Content Loss: 18.010138
+
+100
+120
+140
+run [150]:
+Style Loss : 3.337227 Content Loss: 17.759121
+
+160
+180
+run [200]:
+Style Loss : 3.519578 Content Loss: 19.845673
+
+200
+220
+240
+run [250]:
+Style Loss : 3.735277 Content Loss: 18.972363
+
+260
+280
+run [300]:
+Style Loss : 5.016696 Content Loss: 18.947170
+
+300
+Optimizing..
+run [25]:
+Loss : 0.034110, Floss: 0.034102, Mloss 0.000008
+
+run [50]:
+Loss : 0.012739, Floss: 0.012727, Mloss 0.000012
+
+run [75]:
+Loss : 0.007011, Floss: 0.006996, Mloss 0.000015
+
+run [100]:
+Loss : 0.004499, Floss: 0.004482, Mloss 0.000017
+
+run [125]:
+Loss : 0.003119, Floss: 0.003100, Mloss 0.000019
+
+run [150]:
+Loss : 0.002289, Floss: 0.002269, Mloss 0.000021
+
+run [175]:
+Loss : 0.001775, Floss: 0.001753, Mloss 0.000022
+
+run [200]:
+Loss : 0.001414, Floss: 0.001391, Mloss 0.000023
+
+run [225]:
+Loss : 0.001158, Floss: 0.001134, Mloss 0.000024
+
+run [250]:
+Loss : 0.000975, Floss: 0.000950, Mloss 0.000025
+
+run [275]:
+Loss : 0.000836, Floss: 0.000810, Mloss 0.000026
+
+run [300]:
+Loss : 0.000725, Floss: 0.000699, Mloss 0.000026
+
+run [325]:
+Loss : 0.000638, Floss: 0.000610, Mloss 0.000027
+
+run [350]:
+Loss : 0.000566, Floss: 0.000538, Mloss 0.000028
+
+run [375]:
+Loss : 0.000508, Floss: 0.000479, Mloss 0.000028
+
+run [400]:
+Loss : 0.000459, Floss: 0.000430, Mloss 0.000029
+
+saved decrypt_dataset/toriyama/toriyama_0_encrypted
+saved decrypt_dataset/toriyama/toriyama_1_encrypted
+saved decrypt_dataset/toriyama/toriyama_2_encrypted
+saved decrypt_dataset/toriyama/toriyama_3_encrypted
+saved decrypt_dataset/toriyama/toriyama_4_encrypted
+saved decrypt_dataset/toriyama/toriyama_5_encrypted
+saved decrypt_dataset/toriyama/toriyama_6_encrypted
+saved decrypt_dataset/toriyama/toriyama_7_encrypted
+saved decrypt_dataset/toriyama/toriyama_8_encrypted
+saved decrypt_dataset/toriyama/toriyama_9_encrypted
+saved decrypt_dataset/toriyama/toriyama_10_encrypted
+saved decrypt_dataset/toriyama/toriyama_11_encrypted
+saved decrypt_dataset/toriyama/toriyama_12_encrypted
+saved decrypt_dataset/toriyama/toriyama_13_encrypted
+saved decrypt_dataset/toriyama/toriyama_14_encrypted
+saved decrypt_dataset/toriyama/toriyama_15_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 4.531207 Content Loss: 19.804405
+
+60
+80
+run [100]:
+Style Loss : 3.408298 Content Loss: 18.414021
+
+100
+120
+140
+run [150]:
+Style Loss : 3.399179 Content Loss: 18.301937
+
+160
+180
+run [200]:
+Style Loss : 5.319479 Content Loss: 21.937323
+
+200
+220
+240
+run [250]:
+Style Loss : 11.184369 Content Loss: 31.946436
+
+260
+280
+run [300]:
+Style Loss : 63596.296875 Content Loss: 342.467194
+
+300
+Optimizing..
+run [25]:
+Loss : 0.050492, Floss: 0.050465, Mloss 0.000028
+
+run [50]:
+Loss : 0.016248, Floss: 0.016202, Mloss 0.000045
+
+run [75]:
+Loss : 0.009260, Floss: 0.009204, Mloss 0.000056
+
+run [100]:
+Loss : 0.006226, Floss: 0.006161, Mloss 0.000064
+
+run [125]:
+Loss : 0.004568, Floss: 0.004495, Mloss 0.000073
+
+run [150]:
+Loss : 0.003591, Floss: 0.003512, Mloss 0.000079
+
+run [175]:
+Loss : 0.002936, Floss: 0.002852, Mloss 0.000085
+
+run [200]:
+Loss : 0.002468, Floss: 0.002379, Mloss 0.000090
+
+run [225]:
+Loss : 0.002110, Floss: 0.002016, Mloss 0.000094
+
+run [250]:
+Loss : 0.001838, Floss: 0.001739, Mloss 0.000098
+
+run [275]:
+Loss : 0.001623, Floss: 0.001521, Mloss 0.000102
+
+run [300]:
+Loss : 0.001459, Floss: 0.001354, Mloss 0.000105
+
+run [325]:
+Loss : 0.001323, Floss: 0.001216, Mloss 0.000107
+
+run [350]:
+Loss : 0.001204, Floss: 0.001095, Mloss 0.000109
+
+run [375]:
+Loss : 0.001105, Floss: 0.000994, Mloss 0.000111
+
+run [400]:
+Loss : 0.001024, Floss: 0.000911, Mloss 0.000113
+
+saved decrypt_dataset/toriyama/toriyama_0_encrypted
+saved decrypt_dataset/toriyama/toriyama_1_encrypted
+saved decrypt_dataset/toriyama/toriyama_2_encrypted
+saved decrypt_dataset/toriyama/toriyama_3_encrypted
+saved decrypt_dataset/toriyama/toriyama_4_encrypted
+saved decrypt_dataset/toriyama/toriyama_5_encrypted
+saved decrypt_dataset/toriyama/toriyama_6_encrypted
+saved decrypt_dataset/toriyama/toriyama_7_encrypted
+saved decrypt_dataset/toriyama/toriyama_8_encrypted
+saved decrypt_dataset/toriyama/toriyama_9_encrypted
+saved decrypt_dataset/toriyama/toriyama_10_encrypted
+saved decrypt_dataset/toriyama/toriyama_11_encrypted
+saved decrypt_dataset/toriyama/toriyama_12_encrypted
+saved decrypt_dataset/toriyama/toriyama_13_encrypted
+saved decrypt_dataset/toriyama/toriyama_14_encrypted
+saved decrypt_dataset/toriyama/toriyama_15_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 3.630694 Content Loss: 15.937997
+
+60
+80
+run [100]:
+Style Loss : 2.867358 Content Loss: 15.020861
+
+100
+120
+140
+run [150]:
+Style Loss : 3.072383 Content Loss: 15.636091
+
+160
+180
+run [200]:
+Style Loss : 55.028667 Content Loss: 28.239162
+
+200
+220
+240
+run [250]:
+Style Loss : 7.510761 Content Loss: 22.506908
+
+260
+280
+run [300]:
+Style Loss : 160495.937500 Content Loss: 577.366943
+
+300
+Optimizing..
+run [25]:
+Loss : 0.079831, Floss: 0.079795, Mloss 0.000035
+
+run [50]:
+Loss : 0.019698, Floss: 0.019641, Mloss 0.000057
+
+run [75]:
+Loss : 0.010196, Floss: 0.010125, Mloss 0.000071
+
+run [100]:
+Loss : 0.006860, Floss: 0.006777, Mloss 0.000083
+
+run [125]:
+Loss : 0.005089, Floss: 0.004996, Mloss 0.000092
+
+run [150]:
+Loss : 0.004048, Floss: 0.003948, Mloss 0.000100
+
+run [175]:
+Loss : 0.003329, Floss: 0.003222, Mloss 0.000106
+
+run [200]:
+Loss : 0.002790, Floss: 0.002678, Mloss 0.000112
+
+run [225]:
+Loss : 0.002396, Floss: 0.002279, Mloss 0.000117
+
+run [250]:
+Loss : 0.002085, Floss: 0.001964, Mloss 0.000121
+
+run [275]:
+Loss : 0.001855, Floss: 0.001730, Mloss 0.000124
+
+run [300]:
+Loss : 0.001677, Floss: 0.001550, Mloss 0.000128
+
+run [325]:
+Loss : 0.001534, Floss: 0.001404, Mloss 0.000131
+
+run [350]:
+Loss : 0.001409, Floss: 0.001276, Mloss 0.000133
+
+run [375]:
+Loss : 0.001304, Floss: 0.001169, Mloss 0.000135
+
+run [400]:
+Loss : 0.001214, Floss: 0.001077, Mloss 0.000137
+
+saved decrypt_dataset/toriyama/toriyama_0_encrypted
+saved decrypt_dataset/toriyama/toriyama_1_encrypted
+saved decrypt_dataset/toriyama/toriyama_2_encrypted
+saved decrypt_dataset/toriyama/toriyama_3_encrypted
+saved decrypt_dataset/toriyama/toriyama_4_encrypted
+saved decrypt_dataset/toriyama/toriyama_5_encrypted
+saved decrypt_dataset/toriyama/toriyama_6_encrypted
+saved decrypt_dataset/toriyama/toriyama_7_encrypted
+saved decrypt_dataset/toriyama/toriyama_8_encrypted
+saved decrypt_dataset/toriyama/toriyama_9_encrypted
+saved decrypt_dataset/toriyama/toriyama_10_encrypted
+saved decrypt_dataset/toriyama/toriyama_11_encrypted
+saved decrypt_dataset/toriyama/toriyama_12_encrypted
+saved decrypt_dataset/toriyama/toriyama_13_encrypted
+saved decrypt_dataset/toriyama/toriyama_14_encrypted
+saved decrypt_dataset/toriyama/toriyama_15_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 3.702740 Content Loss: 18.497395
+
+60
+80
+run [100]:
+Style Loss : 2.922776 Content Loss: 17.292217
+
+100
+120
+140
+run [150]:
+Style Loss : 3.009782 Content Loss: 16.809835
+
+160
+180
+run [200]:
+Style Loss : 3.219279 Content Loss: 17.825655
+
+200
+220
+240
+run [250]:
+Style Loss : 3.783199 Content Loss: 18.535103
+
+260
+280
+run [300]:
+Style Loss : 4.737309 Content Loss: 22.605585
+
+300
+Optimizing..
+run [25]:
+Loss : 0.027319, Floss: 0.027308, Mloss 0.000011
+
+run [50]:
+Loss : 0.009507, Floss: 0.009491, Mloss 0.000016
+
+run [75]:
+Loss : 0.005224, Floss: 0.005205, Mloss 0.000019
+
+run [100]:
+Loss : 0.003407, Floss: 0.003386, Mloss 0.000021
+
+run [125]:
+Loss : 0.002413, Floss: 0.002390, Mloss 0.000023
+
+run [150]:
+Loss : 0.001822, Floss: 0.001797, Mloss 0.000025
+
+run [175]:
+Loss : 0.001444, Floss: 0.001417, Mloss 0.000027
+
+run [200]:
+Loss : 0.001173, Floss: 0.001144, Mloss 0.000028
+
+run [225]:
+Loss : 0.000966, Floss: 0.000936, Mloss 0.000030
+
+run [250]:
+Loss : 0.000822, Floss: 0.000791, Mloss 0.000031
+
+run [275]:
+Loss : 0.000709, Floss: 0.000677, Mloss 0.000032
+
+run [300]:
+Loss : 0.000619, Floss: 0.000585, Mloss 0.000033
+
+run [325]:
+Loss : 0.000548, Floss: 0.000514, Mloss 0.000034
+
+run [350]:
+Loss : 0.000492, Floss: 0.000457, Mloss 0.000035
+
+run [375]:
+Loss : 0.000444, Floss: 0.000408, Mloss 0.000036
+
+run [400]:
+Loss : 0.000404, Floss: 0.000368, Mloss 0.000036
+
+saved decrypt_dataset/toriyama/toriyama_0_encrypted
+saved decrypt_dataset/toriyama/toriyama_1_encrypted
+saved decrypt_dataset/toriyama/toriyama_2_encrypted
+saved decrypt_dataset/toriyama/toriyama_3_encrypted
+saved decrypt_dataset/toriyama/toriyama_4_encrypted
+saved decrypt_dataset/toriyama/toriyama_5_encrypted
+saved decrypt_dataset/toriyama/toriyama_6_encrypted
+saved decrypt_dataset/toriyama/toriyama_7_encrypted
+saved decrypt_dataset/toriyama/toriyama_8_encrypted
+saved decrypt_dataset/toriyama/toriyama_9_encrypted
+saved decrypt_dataset/toriyama/toriyama_10_encrypted
+saved decrypt_dataset/toriyama/toriyama_11_encrypted
+saved decrypt_dataset/toriyama/toriyama_12_encrypted
+saved decrypt_dataset/toriyama/toriyama_13_encrypted
+saved decrypt_dataset/toriyama/toriyama_14_encrypted
+saved decrypt_dataset/toriyama/toriyama_15_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 3.715467 Content Loss: 16.489296
+
+60
+80
+run [100]:
+Style Loss : 2.803806 Content Loss: 15.229465
+
+100
+120
+140
+run [150]:
+Style Loss : 3.536077 Content Loss: 14.973612
+
+160
+180
+run [200]:
+Style Loss : 2.855292 Content Loss: 15.753831
+
+200
+220
+240
+run [250]:
+Style Loss : 18135.785156 Content Loss: 217.838287
+
+260
+280
+run [300]:
+Style Loss : 28.054644 Content Loss: 43.860771
+
+300
+Optimizing..
+run [25]:
+Loss : 0.036450, Floss: 0.036431, Mloss 0.000019
+
+run [50]:
+Loss : 0.011013, Floss: 0.010982, Mloss 0.000031
+
+run [75]:
+Loss : 0.006022, Floss: 0.005985, Mloss 0.000037
+
+run [100]:
+Loss : 0.003846, Floss: 0.003802, Mloss 0.000043
+
+run [125]:
+Loss : 0.002718, Floss: 0.002671, Mloss 0.000047
+
+run [150]:
+Loss : 0.002073, Floss: 0.002023, Mloss 0.000050
+
+run [175]:
+Loss : 0.001623, Floss: 0.001571, Mloss 0.000052
+
+run [200]:
+Loss : 0.001321, Floss: 0.001267, Mloss 0.000054
+
+run [225]:
+Loss : 0.001096, Floss: 0.001041, Mloss 0.000055
+
+run [250]:
+Loss : 0.000936, Floss: 0.000879, Mloss 0.000057
+
+run [275]:
+Loss : 0.000809, Floss: 0.000750, Mloss 0.000058
+
+run [300]:
+Loss : 0.000706, Floss: 0.000647, Mloss 0.000059
+
+run [325]:
+Loss : 0.000627, Floss: 0.000567, Mloss 0.000060
+
+run [350]:
+Loss : 0.000562, Floss: 0.000501, Mloss 0.000061
+
+run [375]:
+Loss : 0.000510, Floss: 0.000448, Mloss 0.000062
+
+run [400]:
+Loss : 0.000464, Floss: 0.000402, Mloss 0.000063
+
+saved decrypt_dataset/toriyama/toriyama_0_encrypted
+saved decrypt_dataset/toriyama/toriyama_1_encrypted
+saved decrypt_dataset/toriyama/toriyama_2_encrypted
+saved decrypt_dataset/toriyama/toriyama_3_encrypted
+saved decrypt_dataset/toriyama/toriyama_4_encrypted
+saved decrypt_dataset/toriyama/toriyama_5_encrypted
+saved decrypt_dataset/toriyama/toriyama_6_encrypted
+saved decrypt_dataset/toriyama/toriyama_7_encrypted
+saved decrypt_dataset/toriyama/toriyama_8_encrypted
+saved decrypt_dataset/toriyama/toriyama_9_encrypted
+saved decrypt_dataset/toriyama/toriyama_10_encrypted
+saved decrypt_dataset/toriyama/toriyama_11_encrypted
+saved decrypt_dataset/toriyama/toriyama_12_encrypted
+saved decrypt_dataset/toriyama/toriyama_13_encrypted
+saved decrypt_dataset/toriyama/toriyama_14_encrypted
+saved decrypt_dataset/toriyama/toriyama_15_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 3.145302 Content Loss: 10.056612
+
+60
+80
+run [100]:
+Style Loss : 2.348578 Content Loss: 9.393026
+
+100
+120
+140
+run [150]:
+Style Loss : 2.073693 Content Loss: 9.251799
+
+160
+180
+run [200]:
+Style Loss : 2.209097 Content Loss: 9.323081
+
+200
+220
+240
+run [250]:
+Style Loss : 2.530366 Content Loss: 10.722934
+
+260
+280
+run [300]:
+Style Loss : 3.557635 Content Loss: 10.860559
+
+300
+Optimizing..
+run [25]:
+Loss : 0.013957, Floss: 0.013952, Mloss 0.000005
+
+run [50]:
+Loss : 0.004949, Floss: 0.004941, Mloss 0.000008
+
+run [75]:
+Loss : 0.002687, Floss: 0.002677, Mloss 0.000010
+
+run [100]:
+Loss : 0.001786, Floss: 0.001775, Mloss 0.000011
+
+run [125]:
+Loss : 0.001291, Floss: 0.001279, Mloss 0.000012
+
+run [150]:
+Loss : 0.000988, Floss: 0.000974, Mloss 0.000014
+
+run [175]:
+Loss : 0.000788, Floss: 0.000773, Mloss 0.000015
+
+run [200]:
+Loss : 0.000642, Floss: 0.000626, Mloss 0.000015
+
+run [225]:
+Loss : 0.000536, Floss: 0.000520, Mloss 0.000016
+
+run [250]:
+Loss : 0.000454, Floss: 0.000437, Mloss 0.000017
+
+run [275]:
+Loss : 0.000391, Floss: 0.000373, Mloss 0.000017
+
+run [300]:
+Loss : 0.000341, Floss: 0.000323, Mloss 0.000018
+
+run [325]:
+Loss : 0.000302, Floss: 0.000283, Mloss 0.000019
+
+run [350]:
+Loss : 0.000270, Floss: 0.000251, Mloss 0.000019
+
+run [375]:
+Loss : 0.000242, Floss: 0.000223, Mloss 0.000020
+
+run [400]:
+Loss : 0.000219, Floss: 0.000199, Mloss 0.000020
+
+saved decrypt_dataset/toriyama/toriyama_0_encrypted
+saved decrypt_dataset/toriyama/toriyama_1_encrypted
+saved decrypt_dataset/toriyama/toriyama_2_encrypted
+saved decrypt_dataset/toriyama/toriyama_3_encrypted
+saved decrypt_dataset/toriyama/toriyama_4_encrypted
+saved decrypt_dataset/toriyama/toriyama_5_encrypted
+saved decrypt_dataset/toriyama/toriyama_6_encrypted
+saved decrypt_dataset/toriyama/toriyama_7_encrypted
+saved decrypt_dataset/toriyama/toriyama_8_encrypted
+saved decrypt_dataset/toriyama/toriyama_9_encrypted
+saved decrypt_dataset/toriyama/toriyama_10_encrypted
+saved decrypt_dataset/toriyama/toriyama_11_encrypted
+saved decrypt_dataset/toriyama/toriyama_12_encrypted
+saved decrypt_dataset/toriyama/toriyama_13_encrypted
+saved decrypt_dataset/toriyama/toriyama_14_encrypted
+saved decrypt_dataset/toriyama/toriyama_15_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 3.342836 Content Loss: 11.059344
+
+60
+80
+run [100]:
+Style Loss : 2.620476 Content Loss: 10.283689
+
+100
+120
+140
+run [150]:
+Style Loss : 2.443626 Content Loss: 10.204905
+
+160
+180
+run [200]:
+Style Loss : 2.572385 Content Loss: 10.687031
+
+200
+220
+240
+run [250]:
+Style Loss : 3.201323 Content Loss: 11.706702
+
+260
+280
+run [300]:
+Style Loss : 2.799563 Content Loss: 11.714270
+
+300
+Optimizing..
+run [25]:
+Loss : 0.018099, Floss: 0.018092, Mloss 0.000007
+
+run [50]:
+Loss : 0.006231, Floss: 0.006220, Mloss 0.000010
+
+run [75]:
+Loss : 0.003271, Floss: 0.003257, Mloss 0.000013
+
+run [100]:
+Loss : 0.002053, Floss: 0.002038, Mloss 0.000015
+
+run [125]:
+Loss : 0.001416, Floss: 0.001400, Mloss 0.000016
+
+run [150]:
+Loss : 0.001061, Floss: 0.001043, Mloss 0.000018
+
+run [175]:
+Loss : 0.000818, Floss: 0.000799, Mloss 0.000019
+
+run [200]:
+Loss : 0.000655, Floss: 0.000635, Mloss 0.000020
+
+run [225]:
+Loss : 0.000539, Floss: 0.000518, Mloss 0.000021
+
+run [250]:
+Loss : 0.000457, Floss: 0.000435, Mloss 0.000022
+
+run [275]:
+Loss : 0.000392, Floss: 0.000370, Mloss 0.000023
+
+run [300]:
+Loss : 0.000341, Floss: 0.000318, Mloss 0.000023
+
+run [325]:
+Loss : 0.000300, Floss: 0.000276, Mloss 0.000024
+
+run [350]:
+Loss : 0.000266, Floss: 0.000242, Mloss 0.000025
+
+run [375]:
+Loss : 0.000239, Floss: 0.000214, Mloss 0.000025
+
+run [400]:
+Loss : 0.000217, Floss: 0.000191, Mloss 0.000026
+
+saved decrypt_dataset/toriyama/toriyama_0_encrypted
+saved decrypt_dataset/toriyama/toriyama_1_encrypted
+saved decrypt_dataset/toriyama/toriyama_2_encrypted
+saved decrypt_dataset/toriyama/toriyama_3_encrypted
+saved decrypt_dataset/toriyama/toriyama_4_encrypted
+saved decrypt_dataset/toriyama/toriyama_5_encrypted
+saved decrypt_dataset/toriyama/toriyama_6_encrypted
+saved decrypt_dataset/toriyama/toriyama_7_encrypted
+saved decrypt_dataset/toriyama/toriyama_8_encrypted
+saved decrypt_dataset/toriyama/toriyama_9_encrypted
+saved decrypt_dataset/toriyama/toriyama_10_encrypted
+saved decrypt_dataset/toriyama/toriyama_11_encrypted
+saved decrypt_dataset/toriyama/toriyama_12_encrypted
+saved decrypt_dataset/toriyama/toriyama_13_encrypted
+saved decrypt_dataset/toriyama/toriyama_14_encrypted
+saved decrypt_dataset/toriyama/toriyama_15_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 3.608757 Content Loss: 12.801460
+
+60
+80
+run [100]:
+Style Loss : 2.628176 Content Loss: 11.841393
+
+100
+120
+140
+run [150]:
+Style Loss : 2.463706 Content Loss: 11.602647
+
+160
+180
+run [200]:
+Style Loss : 2.692855 Content Loss: 12.461323
+
+200
+220
+240
+run [250]:
+Style Loss : 2.651473 Content Loss: 12.310389
+
+260
+280
+run [300]:
+Style Loss : 64520.664062 Content Loss: 357.515289
+
+300
+Optimizing..
+run [25]:
+Loss : 0.045098, Floss: 0.045045, Mloss 0.000052
+
+run [50]:
+Loss : 0.012726, Floss: 0.012651, Mloss 0.000075
+
+run [75]:
+Loss : 0.006775, Floss: 0.006683, Mloss 0.000092
+
+run [100]:
+Loss : 0.004369, Floss: 0.004264, Mloss 0.000105
+
+run [125]:
+Loss : 0.003117, Floss: 0.003005, Mloss 0.000112
+
+run [150]:
+Loss : 0.002378, Floss: 0.002262, Mloss 0.000116
+
+run [175]:
+Loss : 0.001898, Floss: 0.001778, Mloss 0.000120
+
+run [200]:
+Loss : 0.001551, Floss: 0.001429, Mloss 0.000122
+
+run [225]:
+Loss : 0.001295, Floss: 0.001169, Mloss 0.000125
+
+run [250]:
+Loss : 0.001110, Floss: 0.000983, Mloss 0.000127
+
+run [275]:
+Loss : 0.000975, Floss: 0.000847, Mloss 0.000128
+
+run [300]:
+Loss : 0.000868, Floss: 0.000739, Mloss 0.000129
+
+run [325]:
+Loss : 0.000781, Floss: 0.000651, Mloss 0.000130
+
+run [350]:
+Loss : 0.000710, Floss: 0.000579, Mloss 0.000131
+
+run [375]:
+Loss : 0.000651, Floss: 0.000520, Mloss 0.000132
+
+run [400]:
+Loss : 0.000603, Floss: 0.000471, Mloss 0.000132
+
+saved decrypt_dataset/toriyama/toriyama_0_encrypted
+saved decrypt_dataset/toriyama/toriyama_1_encrypted
+saved decrypt_dataset/toriyama/toriyama_2_encrypted
+saved decrypt_dataset/toriyama/toriyama_3_encrypted
+saved decrypt_dataset/toriyama/toriyama_4_encrypted
+saved decrypt_dataset/toriyama/toriyama_5_encrypted
+saved decrypt_dataset/toriyama/toriyama_6_encrypted
+saved decrypt_dataset/toriyama/toriyama_7_encrypted
+saved decrypt_dataset/toriyama/toriyama_8_encrypted
+saved decrypt_dataset/toriyama/toriyama_9_encrypted
+saved decrypt_dataset/toriyama/toriyama_10_encrypted
+saved decrypt_dataset/toriyama/toriyama_11_encrypted
+saved decrypt_dataset/toriyama/toriyama_12_encrypted
+saved decrypt_dataset/toriyama/toriyama_13_encrypted
+saved decrypt_dataset/toriyama/toriyama_14_encrypted
+saved decrypt_dataset/toriyama/toriyama_15_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 4.080769 Content Loss: 18.959099
+
+60
+80
+run [100]:
+Style Loss : 3.165457 Content Loss: 17.810276
+
+100
+120
+140
+run [150]:
+Style Loss : 3.084393 Content Loss: 17.724407
+
+160
+180
+run [200]:
+Style Loss : 3.321241 Content Loss: 18.628094
+
+200
+220
+240
+run [250]:
+Style Loss : 4.084841 Content Loss: 20.738890
+
+260
+280
+run [300]:
+Style Loss : 86791.742188 Content Loss: 402.511047
+
+300
+Optimizing..
+run [25]:
+Loss : 0.055017, Floss: 0.054994, Mloss 0.000024
+
+run [50]:
+Loss : 0.017231, Floss: 0.017197, Mloss 0.000035
+
+run [75]:
+Loss : 0.009829, Floss: 0.009785, Mloss 0.000043
+
+run [100]:
+Loss : 0.006379, Floss: 0.006328, Mloss 0.000051
+
+run [125]:
+Loss : 0.004485, Floss: 0.004428, Mloss 0.000057
+
+run [150]:
+Loss : 0.003360, Floss: 0.003297, Mloss 0.000063
+
+run [175]:
+Loss : 0.002640, Floss: 0.002572, Mloss 0.000068
+
+run [200]:
+Loss : 0.002142, Floss: 0.002070, Mloss 0.000071
+
+run [225]:
+Loss : 0.001788, Floss: 0.001713, Mloss 0.000075
+
+run [250]:
+Loss : 0.001521, Floss: 0.001444, Mloss 0.000077
+
+run [275]:
+Loss : 0.001311, Floss: 0.001231, Mloss 0.000080
+
+run [300]:
+Loss : 0.001148, Floss: 0.001066, Mloss 0.000082
+
+run [325]:
+Loss : 0.001024, Floss: 0.000940, Mloss 0.000084
+
+run [350]:
+Loss : 0.000917, Floss: 0.000831, Mloss 0.000085
+
+run [375]:
+Loss : 0.000832, Floss: 0.000745, Mloss 0.000087
+
+run [400]:
+Loss : 0.000757, Floss: 0.000668, Mloss 0.000089
+
+saved decrypt_dataset/toriyama/toriyama_0_encrypted
+saved decrypt_dataset/toriyama/toriyama_1_encrypted
+saved decrypt_dataset/toriyama/toriyama_2_encrypted
+saved decrypt_dataset/toriyama/toriyama_3_encrypted
+saved decrypt_dataset/toriyama/toriyama_4_encrypted
+saved decrypt_dataset/toriyama/toriyama_5_encrypted
+saved decrypt_dataset/toriyama/toriyama_6_encrypted
+saved decrypt_dataset/toriyama/toriyama_7_encrypted
+saved decrypt_dataset/toriyama/toriyama_8_encrypted
+saved decrypt_dataset/toriyama/toriyama_9_encrypted
+saved decrypt_dataset/toriyama/toriyama_10_encrypted
+saved decrypt_dataset/toriyama/toriyama_11_encrypted
+saved decrypt_dataset/toriyama/toriyama_12_encrypted
+saved decrypt_dataset/toriyama/toriyama_13_encrypted
+saved decrypt_dataset/toriyama/toriyama_14_encrypted
+saved decrypt_dataset/toriyama/toriyama_15_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 3.837961 Content Loss: 18.384743
+
+60
+80
+run [100]:
+Style Loss : 3.091087 Content Loss: 17.056267
+
+100
+120
+140
+run [150]:
+Style Loss : 132854.937500 Content Loss: 509.586945
+
+160
+180
+run [200]:
+Style Loss : 10.467018 Content Loss: 37.560936
+
+200
+220
+240
+run [250]:
+Style Loss : 3.740520 Content Loss: 21.455860
+
+260
+280
+run [300]:
+Style Loss : 5.657813 Content Loss: 19.271824
+
+300
+Optimizing..
+run [25]:
+Loss : 0.032585, Floss: 0.032574, Mloss 0.000011
+
+run [50]:
+Loss : 0.011569, Floss: 0.011553, Mloss 0.000016
+
+run [75]:
+Loss : 0.006569, Floss: 0.006550, Mloss 0.000019
+
+run [100]:
+Loss : 0.004420, Floss: 0.004398, Mloss 0.000022
+
+run [125]:
+Loss : 0.003245, Floss: 0.003220, Mloss 0.000024
+
+run [150]:
+Loss : 0.002444, Floss: 0.002418, Mloss 0.000026
+
+run [175]:
+Loss : 0.001929, Floss: 0.001901, Mloss 0.000028
+
+run [200]:
+Loss : 0.001574, Floss: 0.001545, Mloss 0.000030
+
+run [225]:
+Loss : 0.001307, Floss: 0.001276, Mloss 0.000031
+
+run [250]:
+Loss : 0.001104, Floss: 0.001071, Mloss 0.000033
+
+run [275]:
+Loss : 0.000944, Floss: 0.000910, Mloss 0.000034
+
+run [300]:
+Loss : 0.000827, Floss: 0.000792, Mloss 0.000035
+
+run [325]:
+Loss : 0.000725, Floss: 0.000689, Mloss 0.000036
+
+run [350]:
+Loss : 0.000648, Floss: 0.000611, Mloss 0.000037
+
+run [375]:
+Loss : 0.000584, Floss: 0.000546, Mloss 0.000038
+
+run [400]:
+Loss : 0.000528, Floss: 0.000490, Mloss 0.000039
+
+saved decrypt_dataset/toriyama/toriyama_0_encrypted
+saved decrypt_dataset/toriyama/toriyama_1_encrypted
+saved decrypt_dataset/toriyama/toriyama_2_encrypted
+saved decrypt_dataset/toriyama/toriyama_3_encrypted
+saved decrypt_dataset/toriyama/toriyama_4_encrypted
+saved decrypt_dataset/toriyama/toriyama_5_encrypted
+saved decrypt_dataset/toriyama/toriyama_6_encrypted
+saved decrypt_dataset/toriyama/toriyama_7_encrypted
+saved decrypt_dataset/toriyama/toriyama_8_encrypted
+saved decrypt_dataset/toriyama/toriyama_9_encrypted
+saved decrypt_dataset/toriyama/toriyama_10_encrypted
+saved decrypt_dataset/toriyama/toriyama_11_encrypted
+saved decrypt_dataset/toriyama/toriyama_12_encrypted
+saved decrypt_dataset/toriyama/toriyama_13_encrypted
+saved decrypt_dataset/toriyama/toriyama_14_encrypted
+saved decrypt_dataset/toriyama/toriyama_15_encrypted

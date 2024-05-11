@@ -1,3 +1,4 @@
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -15,7 +16,8 @@ import deeplake
 from tqdm import tqdm
 import numpy as np
 
-
+style_img_name = "warhol_ornaments.jpeg"
+artist, _ = style_img_name.split("_")
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print("SETTING DEVICE AS", device)
 torch.set_default_device(device)
@@ -57,8 +59,7 @@ batch_size=16
 ds = deeplake.load('hub://activeloop/wiki-art')
 train_loader = ds.dataloader()\
     .transform({'images': loader, 'labels': None})\
-    .batch(batch_size)\
-    .shuffle()
+    .batch(batch_size)
 
 class ContentLoss(nn.Module):
 
@@ -339,10 +340,10 @@ def save_im(inp_im, fname):
     im.save(f"{fname}.jpg")
     print("saved", fname)
 
-for i, batch in enumerate(train_loader):
+for idx, batch in enumerate(train_loader):
     content_img = torch.stack([i["images"] for i in batch])
     content_img = content_img.to(device)
-    style_img = image_loader("style_library/banksy_spacegirl.jpeg")
+    style_img = image_loader(f"style_library/{style_img_name}")
 
     assert style_img[0].size() == content_img[0].size(), \
         "we need to import style and content images of the same size"
@@ -361,10 +362,10 @@ for i, batch in enumerate(train_loader):
     glazed_output = run_glazing(content_img, output, num_steps=400, fweight=10, mweight=0.05)
     for j in range(batch_size):
         #save_im(content_img[j].squeeze(), f"{i}_og")
-        save_im(glazed_output[j].squeeze(), f"decrypt_dataset/banksy_{i * batch_size + j}_encrypted")
+        save_im(glazed_output[j].squeeze(), f"decrypt_dataset/{artist}/{artist}_{i*batch_size + j}_encrypted")
     del glazed_output, input_img, output
     gc.collect()
     torch.cuda.empty_cache()
 
-    if i == 4:
+    if idx == 10:
         exit()

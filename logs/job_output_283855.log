@@ -1,0 +1,1258 @@
+cpu-bind=MASK - gpu20-2.drl, task  0  0 [2498431]: mask 0x8000000000 set
+Sat May 11 12:10:33 AM EDT 2024
+Running my job on gpu20-2.drl
+Defaulting to user installation because normal site-packages is not writeable
+Collecting deeplake
+  Downloading deeplake-3.9.5.tar.gz (590 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 590.4/590.4 KB 10.4 MB/s eta 0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting nest-asyncio
+  Downloading nest_asyncio-1.6.0-py3-none-any.whl (5.2 kB)
+Requirement already satisfied: tqdm in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (4.66.4)
+Requirement already satisfied: pyjwt in /usr/lib/python3/dist-packages (from deeplake) (2.3.0)
+Requirement already satisfied: click in /usr/lib/python3/dist-packages (from deeplake) (8.0.3)
+Collecting pydantic
+  Downloading pydantic-2.7.1-py3-none-any.whl (409 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 409.3/409.3 KB 15.0 MB/s eta 0:00:00
+Collecting aioboto3>=10.4.0
+  Downloading aioboto3-12.4.0-py3-none-any.whl (32 kB)
+Collecting pathos
+  Downloading pathos-0.3.2-py3-none-any.whl (82 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 82.1/82.1 KB 19.0 MB/s eta 0:00:00
+Collecting libdeeplake==0.0.128
+  Downloading libdeeplake-0.0.128-cp310-cp310-manylinux_2_28_x86_64.whl (16.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.3/16.3 MB 58.3 MB/s eta 0:00:00
+Collecting humbug>=0.3.1
+  Downloading humbug-0.3.2-py3-none-any.whl (15 kB)
+Requirement already satisfied: numpy in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (1.26.4)
+Collecting boto3
+  Downloading boto3-1.34.103-py3-none-any.whl (139 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 139.3/139.3 KB 63.2 MB/s eta 0:00:00
+Collecting lz4
+  Downloading lz4-4.3.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 107.1 MB/s eta 0:00:00
+Collecting pillow~=10.2.0
+  Downloading pillow-10.2.0-cp310-cp310-manylinux_2_28_x86_64.whl (4.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 115.2 MB/s eta 0:00:00
+Collecting dill
+  Downloading dill-0.3.8-py3-none-any.whl (116 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 116.3/116.3 KB 49.0 MB/s eta 0:00:00
+Collecting aiobotocore[boto3]==2.12.3
+  Downloading aiobotocore-2.12.3-py3-none-any.whl (76 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 76.5/76.5 KB 42.5 MB/s eta 0:00:00
+Collecting wrapt<2.0.0,>=1.10.10
+  Downloading wrapt-1.16.0-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (80 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.3/80.3 KB 48.2 MB/s eta 0:00:00
+Collecting aioitertools<1.0.0,>=0.5.1
+  Downloading aioitertools-0.11.0-py3-none-any.whl (23 kB)
+Collecting botocore<1.34.70,>=1.34.41
+  Downloading botocore-1.34.69-py3-none-any.whl (12.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 121.9 MB/s eta 0:00:00
+Collecting aiohttp<4.0.0,>=3.7.4.post0
+  Downloading aiohttp-3.9.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 164.8 MB/s eta 0:00:00
+Collecting boto3
+  Downloading boto3-1.34.69-py3-none-any.whl (139 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 139.3/139.3 KB 77.5 MB/s eta 0:00:00
+Collecting s3transfer<0.11.0,>=0.10.0
+  Downloading s3transfer-0.10.1-py3-none-any.whl (82 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 82.2/82.2 KB 42.8 MB/s eta 0:00:00
+Collecting jmespath<2.0.0,>=0.7.1
+  Downloading jmespath-1.0.1-py3-none-any.whl (20 kB)
+Collecting requests
+  Downloading requests-2.31.0-py3-none-any.whl (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.6/62.6 KB 36.5 MB/s eta 0:00:00
+Collecting multiprocess>=0.70.16
+  Downloading multiprocess-0.70.16-py310-none-any.whl (134 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.8/134.8 KB 63.0 MB/s eta 0:00:00
+Collecting ppft>=1.7.6.8
+  Downloading ppft-1.7.6.8-py3-none-any.whl (56 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.8/56.8 KB 31.8 MB/s eta 0:00:00
+Collecting pox>=0.3.4
+  Downloading pox-0.3.4-py3-none-any.whl (29 kB)
+Collecting pydantic-core==2.18.2
+  Downloading pydantic_core-2.18.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 152.1 MB/s eta 0:00:00
+Requirement already satisfied: typing-extensions>=4.6.1 in /tmp/home/amini/.local/lib/python3.10/site-packages (from pydantic->deeplake) (4.11.0)
+Collecting annotated-types>=0.4.0
+  Downloading annotated_types-0.6.0-py3-none-any.whl (12 kB)
+Collecting urllib3!=2.2.0,<3,>=1.25.4
+  Downloading urllib3-2.2.1-py3-none-any.whl (121 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.1/121.1 KB 59.9 MB/s eta 0:00:00
+Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in /tmp/home/amini/.local/lib/python3.10/site-packages (from botocore<1.34.70,>=1.34.41->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (2.9.0.post0)
+Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3/dist-packages (from requests->humbug>=0.3.1->deeplake) (3.3)
+Collecting certifi>=2017.4.17
+  Downloading certifi-2024.2.2-py3-none-any.whl (163 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.8/163.8 KB 74.1 MB/s eta 0:00:00
+Collecting charset-normalizer<4,>=2
+  Downloading charset_normalizer-3.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (142 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 142.1/142.1 KB 71.8 MB/s eta 0:00:00
+Collecting aiosignal>=1.1.2
+  Downloading aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+Collecting frozenlist>=1.1.1
+  Downloading frozenlist-1.4.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (239 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 239.5/239.5 KB 96.8 MB/s eta 0:00:00
+Collecting multidict<7.0,>=4.5
+  Downloading multidict-6.0.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (124 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 124.3/124.3 KB 69.3 MB/s eta 0:00:00
+Collecting yarl<2.0,>=1.0
+  Downloading yarl-1.9.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (301 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 301.6/301.6 KB 110.3 MB/s eta 0:00:00
+Requirement already satisfied: attrs>=17.3.0 in /usr/lib/python3/dist-packages (from aiohttp<4.0.0,>=3.7.4.post0->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (21.2.0)
+Collecting async-timeout<5.0,>=4.0
+  Downloading async_timeout-4.0.3-py3-none-any.whl (5.7 kB)
+Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil<3.0.0,>=2.1->botocore<1.34.70,>=1.34.41->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (1.16.0)
+Building wheels for collected packages: deeplake
+  Building wheel for deeplake (pyproject.toml): started
+  Building wheel for deeplake (pyproject.toml): finished with status 'done'
+  Created wheel for deeplake: filename=deeplake-3.9.5-py3-none-any.whl size=712260 sha256=cb2225bae6b87ab9a5efc0c70cfaf9c6981cdec48dbcc7f127a44aafbd1dae91
+  Stored in directory: /tmp/home/amini/.cache/pip/wheels/3f/6a/70/06791d24e5463408b297bb325e9f1dc26d4948334258dbee1d
+Successfully built deeplake
+Installing collected packages: wrapt, urllib3, pydantic-core, ppft, pox, pillow, nest-asyncio, multidict, lz4, jmespath, frozenlist, dill, charset-normalizer, certifi, async-timeout, annotated-types, aioitertools, yarl, requests, pydantic, multiprocess, libdeeplake, botocore, aiosignal, s3transfer, pathos, humbug, aiohttp, boto3, aiobotocore, aioboto3, deeplake
+  Attempting uninstall: pillow
+    Found existing installation: Pillow 9.5.0
+    Uninstalling Pillow-9.5.0:
+      Successfully uninstalled Pillow-9.5.0
+Successfully installed aioboto3-12.4.0 aiobotocore-2.12.3 aiohttp-3.9.5 aioitertools-0.11.0 aiosignal-1.3.1 annotated-types-0.6.0 async-timeout-4.0.3 boto3-1.34.69 botocore-1.34.69 certifi-2024.2.2 charset-normalizer-3.3.2 deeplake-3.9.5 dill-0.3.8 frozenlist-1.4.1 humbug-0.3.2 jmespath-1.0.1 libdeeplake-0.0.128 lz4-4.3.3 multidict-6.0.5 multiprocess-0.70.16 nest-asyncio-1.6.0 pathos-0.3.2 pillow-10.2.0 pox-0.3.4 ppft-1.7.6.8 pydantic-2.7.1 pydantic-core-2.18.2 requests-2.31.0 s3transfer-0.10.1 urllib3-2.2.1 wrapt-1.16.0 yarl-1.9.4
+/ - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / SETTING DEVICE AS cuda
+Opening dataset in read-only mode as you don't have write permissions.
+This dataset can be visualized in Jupyter Notebook by ds.visualize() or at https://app.activeloop.ai/activeloop/wiki-art
+
+- \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / hub://activeloop/wiki-art loaded successfully.
+
+/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/integrations/pytorch/common.py:137: UserWarning: Decode method for tensors ['images'] is defaulting to numpy. Please consider specifying a decode_method in .pytorch() that maximizes the data preprocessing speed based on your transformation.
+  warnings.warn(
+Please wait, filling up the shuffle buffer with samples.:   0%|          | 0.00/2.00G [00:00<?, ?B/s]Please wait, filling up the shuffle buffer with samples.:   0%|          | 717k/2.00G [00:01<1:01:29, 582kB/s]Please wait, filling up the shuffle buffer with samples.:   1%|          | 16.5M/2.00G [00:02<04:55, 7.20MB/s]Please wait, filling up the shuffle buffer with samples.:   8%|▊         | 157M/2.00G [00:02<00:22, 89.8MB/s] Please wait, filling up the shuffle buffer with samples.:  13%|█▎        | 268M/2.00G [00:02<00:11, 170MB/s] Please wait, filling up the shuffle buffer with samples.:  17%|█▋        | 346M/2.00G [00:04<00:16, 109MB/s]Please wait, filling up the shuffle buffer with samples.:  20%|█▉        | 400M/2.00G [00:04<00:15, 111MB/s]Please wait, filling up the shuffle buffer with samples.:  27%|██▋       | 555M/2.00G [00:05<00:09, 173MB/s]Please wait, filling up the shuffle buffer with samples.:  33%|███▎      | 676M/2.00G [00:05<00:08, 176MB/s]Please wait, filling up the shuffle buffer with samples.:  42%|████▏     | 868M/2.00G [00:05<00:04, 298MB/s]Please wait, filling up the shuffle buffer with samples.:  54%|█████▍    | 1.08G/2.00G [00:07<00:04, 240MB/s]Please wait, filling up the shuffle buffer with samples.:  63%|██████▎   | 1.26G/2.00G [00:07<00:02, 326MB/s]Please wait, filling up the shuffle buffer with samples.:  72%|███████▏  | 1.43G/2.00G [00:08<00:02, 242MB/s]Please wait, filling up the shuffle buffer with samples.:  88%|████████▊ | 1.76G/2.00G [00:08<00:00, 415MB/s]Please wait, filling up the shuffle buffer with samples.:  94%|█████████▍| 1.88G/2.00G [00:10<00:00, 202MB/s]Please wait, filling up the shuffle buffer with samples.:  99%|█████████▉| 1.98G/2.00G [00:11<00:00, 184MB/s]Please wait, filling up the shuffle buffer with samples.: 100%|█████████▉| 2.00G/2.00G [00:11<00:00, 185MB/s]
+/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return func(*args, **kwargs)
+/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([1, 64, 64])) that is different to the input size (torch.Size([16, 64, 64])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return func(*args, **kwargs)
+/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([1, 128, 128])) that is different to the input size (torch.Size([16, 128, 128])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return func(*args, **kwargs)
+/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([16, 128, 128, 128])) that is different to the input size (torch.Size([1, 128, 128, 128])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return func(*args, **kwargs)
+/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([1, 256, 256])) that is different to the input size (torch.Size([16, 256, 256])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return func(*args, **kwargs)
+/tmp/home/amini/.local/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/tmp/home/amini/.local/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=VGG16_Weights.IMAGENET1K_V1`. You can also use `weights=VGG16_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Downloading: "https://download.pytorch.org/models/vgg16-397923af.pth" to /tmp/home/amini/.cache/torch/hub/checkpoints/vgg16-397923af.pth
+Shuffle buffer filling is complete.
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 1.717352 Content Loss: 2.138103
+
+60
+80
+run [100]:
+Style Loss : 1.385968 Content Loss: 2.105298
+
+100
+120
+140
+run [150]:
+Style Loss : 1.302866 Content Loss: 2.078135
+
+160
+180
+run [200]:
+Style Loss : 1.236868 Content Loss: 2.075381
+
+200
+220
+240
+run [250]:
+Style Loss : 1.201775 Content Loss: 2.062923
+
+260
+280
+run [300]:
+Style Loss : 1.179173 Content Loss: 2.079063
+
+300
+  0%|          | 0.00/528M [00:00<?, ?B/s]  5%|▌         | 27.0M/528M [00:00<00:01, 282MB/s] 10%|█         | 54.5M/528M [00:00<00:01, 286MB/s] 16%|█▌        | 82.5M/528M [00:00<00:01, 289MB/s] 21%|██        | 110M/528M [00:00<00:01, 288MB/s]  26%|██▌       | 138M/528M [00:00<00:01, 277MB/s] 31%|███       | 164M/528M [00:00<00:01, 271MB/s] 36%|███▌      | 190M/528M [00:00<00:01, 267MB/s] 41%|████      | 216M/528M [00:00<00:01, 265MB/s] 46%|████▌     | 241M/528M [00:00<00:01, 263MB/s] 50%|█████     | 266M/528M [00:01<00:01, 260MB/s] 55%|█████▌    | 291M/528M [00:01<00:00, 259MB/s] 60%|█████▉    | 316M/528M [00:01<00:00, 259MB/s] 65%|██████▍   | 341M/528M [00:01<00:00, 259MB/s] 69%|██████▉   | 366M/528M [00:01<00:00, 260MB/s] 74%|███████▍  | 390M/528M [00:01<00:00, 259MB/s] 79%|███████▊  | 415M/528M [00:01<00:00, 259MB/s] 83%|████████▎ | 440M/528M [00:01<00:00, 259MB/s] 88%|████████▊ | 465M/528M [00:01<00:00, 258MB/s] 93%|█████████▎| 490M/528M [00:01<00:00, 258MB/s] 97%|█████████▋| 514M/528M [00:02<00:00, 259MB/s]100%|██████████| 528M/528M [00:02<00:00, 264MB/s]
+Optimizing..
+run [25]:
+Loss : 0.009810, Floss: 0.009809, Mloss 0.000001
+
+run [50]:
+Loss : 0.003286, Floss: 0.003285, Mloss 0.000001
+
+run [75]:
+Loss : 0.001723, Floss: 0.001722, Mloss 0.000001
+
+run [100]:
+Loss : 0.001065, Floss: 0.001064, Mloss 0.000002
+
+run [125]:
+Loss : 0.000726, Floss: 0.000724, Mloss 0.000002
+
+run [150]:
+Loss : 0.000520, Floss: 0.000518, Mloss 0.000002
+
+run [175]:
+Loss : 0.000390, Floss: 0.000387, Mloss 0.000002
+
+run [200]:
+Loss : 0.000303, Floss: 0.000301, Mloss 0.000002
+
+run [225]:
+Loss : 0.000242, Floss: 0.000240, Mloss 0.000003
+
+run [250]:
+Loss : 0.000199, Floss: 0.000196, Mloss 0.000003
+
+run [275]:
+Loss : 0.000167, Floss: 0.000165, Mloss 0.000003
+
+run [300]:
+Loss : 0.000142, Floss: 0.000139, Mloss 0.000003
+
+run [325]:
+Loss : 0.000122, Floss: 0.000119, Mloss 0.000003
+
+run [350]:
+Loss : 0.000107, Floss: 0.000104, Mloss 0.000003
+
+run [375]:
+Loss : 0.000095, Floss: 0.000092, Mloss 0.000003
+
+run [400]:
+Loss : 0.000084, Floss: 0.000081, Mloss 0.000003
+
+saved decrypt_dataset/dali_0_encrypted
+saved decrypt_dataset/dali_1_encrypted
+saved decrypt_dataset/dali_2_encrypted
+saved decrypt_dataset/dali_3_encrypted
+saved decrypt_dataset/dali_4_encrypted
+saved decrypt_dataset/dali_5_encrypted
+saved decrypt_dataset/dali_6_encrypted
+saved decrypt_dataset/dali_7_encrypted
+saved decrypt_dataset/dali_8_encrypted
+saved decrypt_dataset/dali_9_encrypted
+saved decrypt_dataset/dali_10_encrypted
+saved decrypt_dataset/dali_11_encrypted
+saved decrypt_dataset/dali_12_encrypted
+saved decrypt_dataset/dali_13_encrypted
+saved decrypt_dataset/dali_14_encrypted
+saved decrypt_dataset/dali_15_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 1.962989 Content Loss: 3.056286
+
+60
+80
+run [100]:
+Style Loss : 1.726966 Content Loss: 3.007353
+
+100
+120
+140
+run [150]:
+Style Loss : 1.634049 Content Loss: 2.981898
+
+160
+180
+run [200]:
+Style Loss : 1.579272 Content Loss: 2.966208
+
+200
+220
+240
+run [250]:
+Style Loss : 1.542179 Content Loss: 2.955843
+
+260
+280
+run [300]:
+Style Loss : 1.514401 Content Loss: 2.948254
+
+300
+Optimizing..
+run [25]:
+Loss : 0.014830, Floss: 0.014829, Mloss 0.000001
+
+run [50]:
+Loss : 0.004861, Floss: 0.004860, Mloss 0.000002
+
+run [75]:
+Loss : 0.002555, Floss: 0.002553, Mloss 0.000002
+
+run [100]:
+Loss : 0.001573, Floss: 0.001570, Mloss 0.000003
+
+run [125]:
+Loss : 0.001036, Floss: 0.001033, Mloss 0.000003
+
+run [150]:
+Loss : 0.000752, Floss: 0.000749, Mloss 0.000003
+
+run [175]:
+Loss : 0.000574, Floss: 0.000570, Mloss 0.000003
+
+run [200]:
+Loss : 0.000453, Floss: 0.000450, Mloss 0.000004
+
+run [225]:
+Loss : 0.000366, Floss: 0.000363, Mloss 0.000004
+
+run [250]:
+Loss : 0.000304, Floss: 0.000300, Mloss 0.000004
+
+run [275]:
+Loss : 0.000258, Floss: 0.000254, Mloss 0.000004
+
+run [300]:
+Loss : 0.000222, Floss: 0.000217, Mloss 0.000004
+
+run [325]:
+Loss : 0.000194, Floss: 0.000189, Mloss 0.000004
+
+run [350]:
+Loss : 0.000171, Floss: 0.000167, Mloss 0.000005
+
+run [375]:
+Loss : 0.000153, Floss: 0.000148, Mloss 0.000005
+
+run [400]:
+Loss : 0.000137, Floss: 0.000132, Mloss 0.000005
+
+saved decrypt_dataset/dali_16_encrypted
+saved decrypt_dataset/dali_17_encrypted
+saved decrypt_dataset/dali_18_encrypted
+saved decrypt_dataset/dali_19_encrypted
+saved decrypt_dataset/dali_20_encrypted
+saved decrypt_dataset/dali_21_encrypted
+saved decrypt_dataset/dali_22_encrypted
+saved decrypt_dataset/dali_23_encrypted
+saved decrypt_dataset/dali_24_encrypted
+saved decrypt_dataset/dali_25_encrypted
+saved decrypt_dataset/dali_26_encrypted
+saved decrypt_dataset/dali_27_encrypted
+saved decrypt_dataset/dali_28_encrypted
+saved decrypt_dataset/dali_29_encrypted
+saved decrypt_dataset/dali_30_encrypted
+saved decrypt_dataset/dali_31_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 1.853344 Content Loss: 2.237768
+
+60
+80
+run [100]:
+Style Loss : 1.595821 Content Loss: 2.220197
+
+100
+120
+140
+run [150]:
+Style Loss : 1.509269 Content Loss: 2.205110
+
+160
+180
+run [200]:
+Style Loss : 1.457724 Content Loss: 2.197335
+
+200
+220
+240
+run [250]:
+Style Loss : 1.416415 Content Loss: 2.194792
+
+260
+280
+run [300]:
+Style Loss : 1.382537 Content Loss: 2.192957
+
+300
+Optimizing..
+run [25]:
+Loss : 0.010193, Floss: 0.010192, Mloss 0.000001
+
+run [50]:
+Loss : 0.003158, Floss: 0.003156, Mloss 0.000001
+
+run [75]:
+Loss : 0.001646, Floss: 0.001644, Mloss 0.000002
+
+run [100]:
+Loss : 0.001003, Floss: 0.001001, Mloss 0.000002
+
+run [125]:
+Loss : 0.000669, Floss: 0.000667, Mloss 0.000002
+
+run [150]:
+Loss : 0.000488, Floss: 0.000486, Mloss 0.000002
+
+run [175]:
+Loss : 0.000369, Floss: 0.000367, Mloss 0.000002
+
+run [200]:
+Loss : 0.000296, Floss: 0.000293, Mloss 0.000002
+
+run [225]:
+Loss : 0.000240, Floss: 0.000237, Mloss 0.000003
+
+run [250]:
+Loss : 0.000198, Floss: 0.000195, Mloss 0.000003
+
+run [275]:
+Loss : 0.000168, Floss: 0.000165, Mloss 0.000003
+
+run [300]:
+Loss : 0.000145, Floss: 0.000142, Mloss 0.000003
+
+run [325]:
+Loss : 0.000127, Floss: 0.000124, Mloss 0.000003
+
+run [350]:
+Loss : 0.000112, Floss: 0.000109, Mloss 0.000003
+
+run [375]:
+Loss : 0.000100, Floss: 0.000097, Mloss 0.000003
+
+run [400]:
+Loss : 0.000089, Floss: 0.000086, Mloss 0.000003
+
+saved decrypt_dataset/dali_32_encrypted
+saved decrypt_dataset/dali_33_encrypted
+saved decrypt_dataset/dali_34_encrypted
+saved decrypt_dataset/dali_35_encrypted
+saved decrypt_dataset/dali_36_encrypted
+saved decrypt_dataset/dali_37_encrypted
+saved decrypt_dataset/dali_38_encrypted
+saved decrypt_dataset/dali_39_encrypted
+saved decrypt_dataset/dali_40_encrypted
+saved decrypt_dataset/dali_41_encrypted
+saved decrypt_dataset/dali_42_encrypted
+saved decrypt_dataset/dali_43_encrypted
+saved decrypt_dataset/dali_44_encrypted
+saved decrypt_dataset/dali_45_encrypted
+saved decrypt_dataset/dali_46_encrypted
+saved decrypt_dataset/dali_47_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 2.042938 Content Loss: 2.610822
+
+60
+80
+run [100]:
+Style Loss : 1.741709 Content Loss: 2.598219
+
+100
+120
+140
+run [150]:
+Style Loss : 1.631454 Content Loss: 2.587365
+
+160
+180
+run [200]:
+Style Loss : 1.561916 Content Loss: 2.585745
+
+200
+220
+240
+run [250]:
+Style Loss : 1.506697 Content Loss: 2.587965
+
+260
+280
+run [300]:
+Style Loss : 1.471099 Content Loss: 2.579916
+
+300
+Optimizing..
+run [25]:
+Loss : 0.012759, Floss: 0.012758, Mloss 0.000001
+
+run [50]:
+Loss : 0.004047, Floss: 0.004045, Mloss 0.000002
+
+run [75]:
+Loss : 0.001992, Floss: 0.001989, Mloss 0.000002
+
+run [100]:
+Loss : 0.001199, Floss: 0.001196, Mloss 0.000003
+
+run [125]:
+Loss : 0.000789, Floss: 0.000786, Mloss 0.000003
+
+run [150]:
+Loss : 0.000567, Floss: 0.000564, Mloss 0.000003
+
+run [175]:
+Loss : 0.000419, Floss: 0.000416, Mloss 0.000003
+
+run [200]:
+Loss : 0.000327, Floss: 0.000324, Mloss 0.000003
+
+run [225]:
+Loss : 0.000260, Floss: 0.000257, Mloss 0.000004
+
+run [250]:
+Loss : 0.000214, Floss: 0.000211, Mloss 0.000004
+
+run [275]:
+Loss : 0.000179, Floss: 0.000175, Mloss 0.000004
+
+run [300]:
+Loss : 0.000152, Floss: 0.000148, Mloss 0.000004
+
+run [325]:
+Loss : 0.000132, Floss: 0.000128, Mloss 0.000004
+
+run [350]:
+Loss : 0.000116, Floss: 0.000111, Mloss 0.000004
+
+run [375]:
+Loss : 0.000102, Floss: 0.000098, Mloss 0.000004
+
+run [400]:
+Loss : 0.000091, Floss: 0.000086, Mloss 0.000004
+
+saved decrypt_dataset/dali_48_encrypted
+saved decrypt_dataset/dali_49_encrypted
+saved decrypt_dataset/dali_50_encrypted
+saved decrypt_dataset/dali_51_encrypted
+saved decrypt_dataset/dali_52_encrypted
+saved decrypt_dataset/dali_53_encrypted
+saved decrypt_dataset/dali_54_encrypted
+saved decrypt_dataset/dali_55_encrypted
+saved decrypt_dataset/dali_56_encrypted
+saved decrypt_dataset/dali_57_encrypted
+saved decrypt_dataset/dali_58_encrypted
+saved decrypt_dataset/dali_59_encrypted
+saved decrypt_dataset/dali_60_encrypted
+saved decrypt_dataset/dali_61_encrypted
+saved decrypt_dataset/dali_62_encrypted
+saved decrypt_dataset/dali_63_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 2.030147 Content Loss: 2.545772
+
+60
+80
+run [100]:
+Style Loss : 1.697474 Content Loss: 2.514475
+
+100
+120
+140
+run [150]:
+Style Loss : 1.575573 Content Loss: 2.494841
+
+160
+180
+run [200]:
+Style Loss : 1.501584 Content Loss: 2.488896
+
+200
+220
+240
+run [250]:
+Style Loss : 1.457505 Content Loss: 2.483255
+
+260
+280
+run [300]:
+Style Loss : 1.421701 Content Loss: 2.477815
+
+300
+Optimizing..
+run [25]:
+Loss : 0.018145, Floss: 0.018142, Mloss 0.000003
+
+run [50]:
+Loss : 0.006297, Floss: 0.006294, Mloss 0.000004
+
+run [75]:
+Loss : 0.003271, Floss: 0.003267, Mloss 0.000004
+
+run [100]:
+Loss : 0.001992, Floss: 0.001988, Mloss 0.000004
+
+run [125]:
+Loss : 0.001331, Floss: 0.001327, Mloss 0.000005
+
+run [150]:
+Loss : 0.000957, Floss: 0.000952, Mloss 0.000005
+
+run [175]:
+Loss : 0.000715, Floss: 0.000710, Mloss 0.000005
+
+run [200]:
+Loss : 0.000562, Floss: 0.000556, Mloss 0.000005
+
+run [225]:
+Loss : 0.000453, Floss: 0.000448, Mloss 0.000006
+
+run [250]:
+Loss : 0.000374, Floss: 0.000368, Mloss 0.000006
+
+run [275]:
+Loss : 0.000315, Floss: 0.000309, Mloss 0.000006
+
+run [300]:
+Loss : 0.000270, Floss: 0.000264, Mloss 0.000006
+
+run [325]:
+Loss : 0.000234, Floss: 0.000228, Mloss 0.000006
+
+run [350]:
+Loss : 0.000205, Floss: 0.000199, Mloss 0.000007
+
+run [375]:
+Loss : 0.000181, Floss: 0.000175, Mloss 0.000007
+
+run [400]:
+Loss : 0.000162, Floss: 0.000155, Mloss 0.000007
+
+saved decrypt_dataset/dali_64_encrypted
+saved decrypt_dataset/dali_65_encrypted
+saved decrypt_dataset/dali_66_encrypted
+saved decrypt_dataset/dali_67_encrypted
+saved decrypt_dataset/dali_68_encrypted
+saved decrypt_dataset/dali_69_encrypted
+saved decrypt_dataset/dali_70_encrypted
+saved decrypt_dataset/dali_71_encrypted
+saved decrypt_dataset/dali_72_encrypted
+saved decrypt_dataset/dali_73_encrypted
+saved decrypt_dataset/dali_74_encrypted
+saved decrypt_dataset/dali_75_encrypted
+saved decrypt_dataset/dali_76_encrypted
+saved decrypt_dataset/dali_77_encrypted
+saved decrypt_dataset/dali_78_encrypted
+saved decrypt_dataset/dali_79_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 1.956905 Content Loss: 2.756714
+
+60
+80
+run [100]:
+Style Loss : 1.652311 Content Loss: 2.733730
+
+100
+120
+140
+run [150]:
+Style Loss : 1.532369 Content Loss: 2.720106
+
+160
+180
+run [200]:
+Style Loss : 1.468557 Content Loss: 2.709325
+
+200
+220
+240
+run [250]:
+Style Loss : 1.417498 Content Loss: 2.707097
+
+260
+280
+run [300]:
+Style Loss : 1.379269 Content Loss: 2.713620
+
+300
+Optimizing..
+run [25]:
+Loss : 0.011495, Floss: 0.011494, Mloss 0.000001
+
+run [50]:
+Loss : 0.004137, Floss: 0.004136, Mloss 0.000001
+
+run [75]:
+Loss : 0.002212, Floss: 0.002210, Mloss 0.000002
+
+run [100]:
+Loss : 0.001426, Floss: 0.001424, Mloss 0.000002
+
+run [125]:
+Loss : 0.000995, Floss: 0.000992, Mloss 0.000003
+
+run [150]:
+Loss : 0.000736, Floss: 0.000733, Mloss 0.000003
+
+run [175]:
+Loss : 0.000558, Floss: 0.000555, Mloss 0.000003
+
+run [200]:
+Loss : 0.000438, Floss: 0.000434, Mloss 0.000003
+
+run [225]:
+Loss : 0.000351, Floss: 0.000348, Mloss 0.000004
+
+run [250]:
+Loss : 0.000290, Floss: 0.000286, Mloss 0.000004
+
+run [275]:
+Loss : 0.000244, Floss: 0.000240, Mloss 0.000004
+
+run [300]:
+Loss : 0.000206, Floss: 0.000202, Mloss 0.000004
+
+run [325]:
+Loss : 0.000180, Floss: 0.000176, Mloss 0.000004
+
+run [350]:
+Loss : 0.000158, Floss: 0.000153, Mloss 0.000004
+
+run [375]:
+Loss : 0.000140, Floss: 0.000136, Mloss 0.000004
+
+run [400]:
+Loss : 0.000124, Floss: 0.000120, Mloss 0.000005
+
+saved decrypt_dataset/dali_80_encrypted
+saved decrypt_dataset/dali_81_encrypted
+saved decrypt_dataset/dali_82_encrypted
+saved decrypt_dataset/dali_83_encrypted
+saved decrypt_dataset/dali_84_encrypted
+saved decrypt_dataset/dali_85_encrypted
+saved decrypt_dataset/dali_86_encrypted
+saved decrypt_dataset/dali_87_encrypted
+saved decrypt_dataset/dali_88_encrypted
+saved decrypt_dataset/dali_89_encrypted
+saved decrypt_dataset/dali_90_encrypted
+saved decrypt_dataset/dali_91_encrypted
+saved decrypt_dataset/dali_92_encrypted
+saved decrypt_dataset/dali_93_encrypted
+saved decrypt_dataset/dali_94_encrypted
+saved decrypt_dataset/dali_95_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 1.941263 Content Loss: 2.323587
+
+60
+80
+run [100]:
+Style Loss : 1.650591 Content Loss: 2.292437
+
+100
+120
+140
+run [150]:
+Style Loss : 1.555960 Content Loss: 2.277564
+
+160
+180
+run [200]:
+Style Loss : 1.490618 Content Loss: 2.275193
+
+200
+220
+240
+run [250]:
+Style Loss : 1.444316 Content Loss: 2.273112
+
+260
+280
+run [300]:
+Style Loss : 1.407059 Content Loss: 2.274347
+
+300
+Optimizing..
+run [25]:
+Loss : 0.011283, Floss: 0.011282, Mloss 0.000001
+
+run [50]:
+Loss : 0.003540, Floss: 0.003539, Mloss 0.000001
+
+run [75]:
+Loss : 0.001777, Floss: 0.001775, Mloss 0.000001
+
+run [100]:
+Loss : 0.001083, Floss: 0.001082, Mloss 0.000002
+
+run [125]:
+Loss : 0.000709, Floss: 0.000707, Mloss 0.000002
+
+run [150]:
+Loss : 0.000501, Floss: 0.000499, Mloss 0.000002
+
+run [175]:
+Loss : 0.000375, Floss: 0.000373, Mloss 0.000002
+
+run [200]:
+Loss : 0.000293, Floss: 0.000291, Mloss 0.000002
+
+run [225]:
+Loss : 0.000236, Floss: 0.000233, Mloss 0.000002
+
+run [250]:
+Loss : 0.000195, Floss: 0.000192, Mloss 0.000002
+
+run [275]:
+Loss : 0.000162, Floss: 0.000159, Mloss 0.000003
+
+run [300]:
+Loss : 0.000138, Floss: 0.000135, Mloss 0.000003
+
+run [325]:
+Loss : 0.000119, Floss: 0.000116, Mloss 0.000003
+
+run [350]:
+Loss : 0.000104, Floss: 0.000101, Mloss 0.000003
+
+run [375]:
+Loss : 0.000092, Floss: 0.000089, Mloss 0.000003
+
+run [400]:
+Loss : 0.000083, Floss: 0.000080, Mloss 0.000003
+
+saved decrypt_dataset/dali_96_encrypted
+saved decrypt_dataset/dali_97_encrypted
+saved decrypt_dataset/dali_98_encrypted
+saved decrypt_dataset/dali_99_encrypted
+saved decrypt_dataset/dali_100_encrypted
+saved decrypt_dataset/dali_101_encrypted
+saved decrypt_dataset/dali_102_encrypted
+saved decrypt_dataset/dali_103_encrypted
+saved decrypt_dataset/dali_104_encrypted
+saved decrypt_dataset/dali_105_encrypted
+saved decrypt_dataset/dali_106_encrypted
+saved decrypt_dataset/dali_107_encrypted
+saved decrypt_dataset/dali_108_encrypted
+saved decrypt_dataset/dali_109_encrypted
+saved decrypt_dataset/dali_110_encrypted
+saved decrypt_dataset/dali_111_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 1.685323 Content Loss: 2.123573
+
+60
+80
+run [100]:
+Style Loss : 1.434428 Content Loss: 2.104468
+
+100
+120
+140
+run [150]:
+Style Loss : 1.349222 Content Loss: 2.088928
+
+160
+180
+run [200]:
+Style Loss : 1.281956 Content Loss: 2.097450
+
+200
+220
+240
+run [250]:
+Style Loss : 1.246749 Content Loss: 2.082205
+
+260
+280
+run [300]:
+Style Loss : 1.235709 Content Loss: 2.175608
+
+300
+Optimizing..
+run [25]:
+Loss : 0.010642, Floss: 0.010641, Mloss 0.000001
+
+run [50]:
+Loss : 0.003289, Floss: 0.003287, Mloss 0.000001
+
+run [75]:
+Loss : 0.001667, Floss: 0.001665, Mloss 0.000002
+
+run [100]:
+Loss : 0.001033, Floss: 0.001031, Mloss 0.000002
+
+run [125]:
+Loss : 0.000712, Floss: 0.000709, Mloss 0.000002
+
+run [150]:
+Loss : 0.000519, Floss: 0.000516, Mloss 0.000002
+
+run [175]:
+Loss : 0.000392, Floss: 0.000390, Mloss 0.000003
+
+run [200]:
+Loss : 0.000308, Floss: 0.000305, Mloss 0.000003
+
+run [225]:
+Loss : 0.000247, Floss: 0.000244, Mloss 0.000003
+
+run [250]:
+Loss : 0.000204, Floss: 0.000201, Mloss 0.000003
+
+run [275]:
+Loss : 0.000172, Floss: 0.000169, Mloss 0.000003
+
+run [300]:
+Loss : 0.000146, Floss: 0.000143, Mloss 0.000003
+
+run [325]:
+Loss : 0.000125, Floss: 0.000122, Mloss 0.000003
+
+run [350]:
+Loss : 0.000109, Floss: 0.000106, Mloss 0.000003
+
+run [375]:
+Loss : 0.000096, Floss: 0.000093, Mloss 0.000003
+
+run [400]:
+Loss : 0.000085, Floss: 0.000082, Mloss 0.000004
+
+saved decrypt_dataset/dali_112_encrypted
+saved decrypt_dataset/dali_113_encrypted
+saved decrypt_dataset/dali_114_encrypted
+saved decrypt_dataset/dali_115_encrypted
+saved decrypt_dataset/dali_116_encrypted
+saved decrypt_dataset/dali_117_encrypted
+saved decrypt_dataset/dali_118_encrypted
+saved decrypt_dataset/dali_119_encrypted
+saved decrypt_dataset/dali_120_encrypted
+saved decrypt_dataset/dali_121_encrypted
+saved decrypt_dataset/dali_122_encrypted
+saved decrypt_dataset/dali_123_encrypted
+saved decrypt_dataset/dali_124_encrypted
+saved decrypt_dataset/dali_125_encrypted
+saved decrypt_dataset/dali_126_encrypted
+saved decrypt_dataset/dali_127_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 1.867393 Content Loss: 2.411778
+
+60
+80
+run [100]:
+Style Loss : 1.572967 Content Loss: 2.376627
+
+100
+120
+140
+run [150]:
+Style Loss : 1.446924 Content Loss: 2.373420
+
+160
+180
+run [200]:
+Style Loss : 1.368598 Content Loss: 2.716346
+
+200
+220
+240
+run [250]:
+Style Loss : 2.640136 Content Loss: 5.239870
+
+260
+280
+run [300]:
+Style Loss : 1.324560 Content Loss: 2.558514
+
+300
+Optimizing..
+run [25]:
+Loss : 0.031470, Floss: 0.031466, Mloss 0.000004
+
+run [50]:
+Loss : 0.012340, Floss: 0.012333, Mloss 0.000006
+
+run [75]:
+Loss : 0.007006, Floss: 0.006998, Mloss 0.000008
+
+run [100]:
+Loss : 0.004635, Floss: 0.004626, Mloss 0.000009
+
+run [125]:
+Loss : 0.003368, Floss: 0.003358, Mloss 0.000011
+
+run [150]:
+Loss : 0.002557, Floss: 0.002545, Mloss 0.000012
+
+run [175]:
+Loss : 0.002016, Floss: 0.002003, Mloss 0.000013
+
+run [200]:
+Loss : 0.001654, Floss: 0.001640, Mloss 0.000014
+
+run [225]:
+Loss : 0.001384, Floss: 0.001370, Mloss 0.000014
+
+run [250]:
+Loss : 0.001175, Floss: 0.001159, Mloss 0.000015
+
+run [275]:
+Loss : 0.001008, Floss: 0.000992, Mloss 0.000016
+
+run [300]:
+Loss : 0.000880, Floss: 0.000863, Mloss 0.000017
+
+run [325]:
+Loss : 0.000775, Floss: 0.000758, Mloss 0.000017
+
+run [350]:
+Loss : 0.000687, Floss: 0.000669, Mloss 0.000018
+
+run [375]:
+Loss : 0.000615, Floss: 0.000597, Mloss 0.000018
+
+run [400]:
+Loss : 0.000556, Floss: 0.000538, Mloss 0.000019
+
+saved decrypt_dataset/dali_128_encrypted
+saved decrypt_dataset/dali_129_encrypted
+saved decrypt_dataset/dali_130_encrypted
+saved decrypt_dataset/dali_131_encrypted
+saved decrypt_dataset/dali_132_encrypted
+saved decrypt_dataset/dali_133_encrypted
+saved decrypt_dataset/dali_134_encrypted
+saved decrypt_dataset/dali_135_encrypted
+saved decrypt_dataset/dali_136_encrypted
+saved decrypt_dataset/dali_137_encrypted
+saved decrypt_dataset/dali_138_encrypted
+saved decrypt_dataset/dali_139_encrypted
+saved decrypt_dataset/dali_140_encrypted
+saved decrypt_dataset/dali_141_encrypted
+saved decrypt_dataset/dali_142_encrypted
+saved decrypt_dataset/dali_143_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 1.819248 Content Loss: 2.033263
+
+60
+80
+run [100]:
+Style Loss : 1.531666 Content Loss: 2.022208
+
+100
+120
+140
+run [150]:
+Style Loss : 1.434419 Content Loss: 2.012560
+
+160
+180
+run [200]:
+Style Loss : 1.366657 Content Loss: 2.014865
+
+200
+220
+240
+run [250]:
+Style Loss : 1.312800 Content Loss: 2.028506
+
+260
+280
+run [300]:
+Style Loss : 1.287441 Content Loss: 2.015136
+
+300
+Optimizing..
+run [25]:
+Loss : 0.010369, Floss: 0.010367, Mloss 0.000001
+
+run [50]:
+Loss : 0.003280, Floss: 0.003279, Mloss 0.000002
+
+run [75]:
+Loss : 0.001676, Floss: 0.001674, Mloss 0.000002
+
+run [100]:
+Loss : 0.001014, Floss: 0.001011, Mloss 0.000002
+
+run [125]:
+Loss : 0.000671, Floss: 0.000669, Mloss 0.000003
+
+run [150]:
+Loss : 0.000479, Floss: 0.000476, Mloss 0.000003
+
+run [175]:
+Loss : 0.000364, Floss: 0.000361, Mloss 0.000003
+
+run [200]:
+Loss : 0.000285, Floss: 0.000282, Mloss 0.000003
+
+run [225]:
+Loss : 0.000228, Floss: 0.000225, Mloss 0.000003
+
+run [250]:
+Loss : 0.000187, Floss: 0.000184, Mloss 0.000003
+
+run [275]:
+Loss : 0.000158, Floss: 0.000154, Mloss 0.000003
+
+run [300]:
+Loss : 0.000133, Floss: 0.000130, Mloss 0.000004
+
+run [325]:
+Loss : 0.000115, Floss: 0.000111, Mloss 0.000004
+
+run [350]:
+Loss : 0.000100, Floss: 0.000096, Mloss 0.000004
+
+run [375]:
+Loss : 0.000088, Floss: 0.000084, Mloss 0.000004
+
+run [400]:
+Loss : 0.000078, Floss: 0.000074, Mloss 0.000004
+
+saved decrypt_dataset/dali_144_encrypted
+saved decrypt_dataset/dali_145_encrypted
+saved decrypt_dataset/dali_146_encrypted
+saved decrypt_dataset/dali_147_encrypted
+saved decrypt_dataset/dali_148_encrypted
+saved decrypt_dataset/dali_149_encrypted
+saved decrypt_dataset/dali_150_encrypted
+saved decrypt_dataset/dali_151_encrypted
+saved decrypt_dataset/dali_152_encrypted
+saved decrypt_dataset/dali_153_encrypted
+saved decrypt_dataset/dali_154_encrypted
+saved decrypt_dataset/dali_155_encrypted
+saved decrypt_dataset/dali_156_encrypted
+saved decrypt_dataset/dali_157_encrypted
+saved decrypt_dataset/dali_158_encrypted
+saved decrypt_dataset/dali_159_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 1.872668 Content Loss: 2.344009
+
+60
+80
+run [100]:
+Style Loss : 1.561936 Content Loss: 2.365451
+
+100
+120
+140
+run [150]:
+Style Loss : 4.200131 Content Loss: 4.154955
+
+160
+180
+run [200]:
+Style Loss : 4.004994 Content Loss: 4.684427
+
+200
+220
+240
+run [250]:
+Style Loss : 33562.792969 Content Loss: 239.343536
+
+260
+280
+run [300]:
+Style Loss : 2.091037 Content Loss: 4.126659
+
+300
+Optimizing..
+run [25]:
+Loss : 0.024184, Floss: 0.024170, Mloss 0.000014
+
+run [50]:
+Loss : 0.008643, Floss: 0.008629, Mloss 0.000014
+
+run [75]:
+Loss : 0.004626, Floss: 0.004611, Mloss 0.000015
+
+run [100]:
+Loss : 0.002972, Floss: 0.002957, Mloss 0.000015
+
+run [125]:
+Loss : 0.002054, Floss: 0.002038, Mloss 0.000016
+
+run [150]:
+Loss : 0.001513, Floss: 0.001496, Mloss 0.000017
+
+run [175]:
+Loss : 0.001160, Floss: 0.001143, Mloss 0.000017
+
+run [200]:
+Loss : 0.000928, Floss: 0.000911, Mloss 0.000018
+
+run [225]:
+Loss : 0.000761, Floss: 0.000743, Mloss 0.000018
+
+run [250]:
+Loss : 0.000638, Floss: 0.000619, Mloss 0.000019
+
+run [275]:
+Loss : 0.000547, Floss: 0.000529, Mloss 0.000019
+
+run [300]:
+Loss : 0.000475, Floss: 0.000456, Mloss 0.000019
+
+run [325]:
+Loss : 0.000415, Floss: 0.000396, Mloss 0.000020
+
+run [350]:
+Loss : 0.000368, Floss: 0.000348, Mloss 0.000020
+
+run [375]:
+Loss : 0.000329, Floss: 0.000309, Mloss 0.000020
+
+run [400]:
+Loss : 0.000297, Floss: 0.000276, Mloss 0.000021
+
+saved decrypt_dataset/dali_160_encrypted
+saved decrypt_dataset/dali_161_encrypted
+saved decrypt_dataset/dali_162_encrypted
+saved decrypt_dataset/dali_163_encrypted
+saved decrypt_dataset/dali_164_encrypted
+saved decrypt_dataset/dali_165_encrypted
+saved decrypt_dataset/dali_166_encrypted
+saved decrypt_dataset/dali_167_encrypted
+saved decrypt_dataset/dali_168_encrypted
+saved decrypt_dataset/dali_169_encrypted
+saved decrypt_dataset/dali_170_encrypted
+saved decrypt_dataset/dali_171_encrypted
+saved decrypt_dataset/dali_172_encrypted
+saved decrypt_dataset/dali_173_encrypted
+saved decrypt_dataset/dali_174_encrypted
+saved decrypt_dataset/dali_175_encrypted

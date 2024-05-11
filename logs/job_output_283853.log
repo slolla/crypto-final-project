@@ -1,0 +1,1258 @@
+cpu-bind=MASK - gpu19-2.drl, task  0  0 [2187909]: mask 0x1 set
+Sat May 11 12:08:20 AM EDT 2024
+Running my job on gpu19-2.drl
+Defaulting to user installation because normal site-packages is not writeable
+Collecting deeplake
+  Downloading deeplake-3.9.5.tar.gz (590 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 590.4/590.4 KB 10.2 MB/s eta 0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting boto3
+  Downloading boto3-1.34.103-py3-none-any.whl (139 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 139.3/139.3 KB 15.3 MB/s eta 0:00:00
+Collecting libdeeplake==0.0.128
+  Downloading libdeeplake-0.0.128-cp310-cp310-manylinux_2_28_x86_64.whl (16.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.3/16.3 MB 46.4 MB/s eta 0:00:00
+Collecting pydantic
+  Downloading pydantic-2.7.1-py3-none-any.whl (409 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 409.3/409.3 KB 124.5 MB/s eta 0:00:00
+Requirement already satisfied: tqdm in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (4.66.4)
+Collecting aioboto3>=10.4.0
+  Downloading aioboto3-12.4.0-py3-none-any.whl (32 kB)
+Collecting pillow~=10.2.0
+  Downloading pillow-10.2.0-cp310-cp310-manylinux_2_28_x86_64.whl (4.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 107.5 MB/s eta 0:00:00
+Requirement already satisfied: pyjwt in /usr/lib/python3/dist-packages (from deeplake) (2.3.0)
+Collecting humbug>=0.3.1
+  Downloading humbug-0.3.2-py3-none-any.whl (15 kB)
+Requirement already satisfied: numpy in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (1.26.4)
+Collecting nest-asyncio
+  Downloading nest_asyncio-1.6.0-py3-none-any.whl (5.2 kB)
+Requirement already satisfied: click in /usr/lib/python3/dist-packages (from deeplake) (8.0.3)
+Collecting lz4
+  Downloading lz4-4.3.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 117.4 MB/s eta 0:00:00
+Collecting pathos
+  Downloading pathos-0.3.2-py3-none-any.whl (82 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 82.1/82.1 KB 52.9 MB/s eta 0:00:00
+Collecting dill
+  Downloading dill-0.3.8-py3-none-any.whl (116 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 116.3/116.3 KB 69.0 MB/s eta 0:00:00
+Collecting aiobotocore[boto3]==2.12.3
+  Downloading aiobotocore-2.12.3-py3-none-any.whl (76 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 76.5/76.5 KB 38.9 MB/s eta 0:00:00
+Collecting wrapt<2.0.0,>=1.10.10
+  Downloading wrapt-1.16.0-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (80 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.3/80.3 KB 47.1 MB/s eta 0:00:00
+Collecting aiohttp<4.0.0,>=3.7.4.post0
+  Downloading aiohttp-3.9.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 134.9 MB/s eta 0:00:00
+Collecting botocore<1.34.70,>=1.34.41
+  Downloading botocore-1.34.69-py3-none-any.whl (12.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 140.3 MB/s eta 0:00:00
+Collecting aioitertools<1.0.0,>=0.5.1
+  Downloading aioitertools-0.11.0-py3-none-any.whl (23 kB)
+Collecting boto3
+  Downloading boto3-1.34.69-py3-none-any.whl (139 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 139.3/139.3 KB 72.0 MB/s eta 0:00:00
+Collecting jmespath<2.0.0,>=0.7.1
+  Downloading jmespath-1.0.1-py3-none-any.whl (20 kB)
+Collecting s3transfer<0.11.0,>=0.10.0
+  Downloading s3transfer-0.10.1-py3-none-any.whl (82 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 82.2/82.2 KB 44.7 MB/s eta 0:00:00
+Collecting requests
+  Downloading requests-2.31.0-py3-none-any.whl (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.6/62.6 KB 31.7 MB/s eta 0:00:00
+Collecting pox>=0.3.4
+  Downloading pox-0.3.4-py3-none-any.whl (29 kB)
+Collecting multiprocess>=0.70.16
+  Downloading multiprocess-0.70.16-py310-none-any.whl (134 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.8/134.8 KB 65.1 MB/s eta 0:00:00
+Collecting ppft>=1.7.6.8
+  Downloading ppft-1.7.6.8-py3-none-any.whl (56 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.8/56.8 KB 31.1 MB/s eta 0:00:00
+Collecting annotated-types>=0.4.0
+  Downloading annotated_types-0.6.0-py3-none-any.whl (12 kB)
+Requirement already satisfied: typing-extensions>=4.6.1 in /tmp/home/amini/.local/lib/python3.10/site-packages (from pydantic->deeplake) (4.11.0)
+Collecting pydantic-core==2.18.2
+  Downloading pydantic_core-2.18.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 128.1 MB/s eta 0:00:00
+Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in /tmp/home/amini/.local/lib/python3.10/site-packages (from botocore<1.34.70,>=1.34.41->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (2.9.0.post0)
+Collecting urllib3!=2.2.0,<3,>=1.25.4
+  Downloading urllib3-2.2.1-py3-none-any.whl (121 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.1/121.1 KB 70.0 MB/s eta 0:00:00
+Collecting charset-normalizer<4,>=2
+  Downloading charset_normalizer-3.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (142 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 142.1/142.1 KB 57.5 MB/s eta 0:00:00
+Collecting certifi>=2017.4.17
+  Downloading certifi-2024.2.2-py3-none-any.whl (163 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.8/163.8 KB 70.8 MB/s eta 0:00:00
+Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3/dist-packages (from requests->humbug>=0.3.1->deeplake) (3.3)
+Collecting multidict<7.0,>=4.5
+  Downloading multidict-6.0.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (124 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 124.3/124.3 KB 64.4 MB/s eta 0:00:00
+Collecting aiosignal>=1.1.2
+  Downloading aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+Collecting yarl<2.0,>=1.0
+  Downloading yarl-1.9.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (301 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 301.6/301.6 KB 95.5 MB/s eta 0:00:00
+Collecting async-timeout<5.0,>=4.0
+  Downloading async_timeout-4.0.3-py3-none-any.whl (5.7 kB)
+Collecting frozenlist>=1.1.1
+  Downloading frozenlist-1.4.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (239 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 239.5/239.5 KB 92.0 MB/s eta 0:00:00
+Requirement already satisfied: attrs>=17.3.0 in /usr/lib/python3/dist-packages (from aiohttp<4.0.0,>=3.7.4.post0->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (21.2.0)
+Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil<3.0.0,>=2.1->botocore<1.34.70,>=1.34.41->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (1.16.0)
+Building wheels for collected packages: deeplake
+  Building wheel for deeplake (pyproject.toml): started
+  Building wheel for deeplake (pyproject.toml): finished with status 'done'
+  Created wheel for deeplake: filename=deeplake-3.9.5-py3-none-any.whl size=712260 sha256=2d42290346bfc12d9732c73bf30f753dd5732cf38e8ad07b6e45c254a2406909
+  Stored in directory: /tmp/home/amini/.cache/pip/wheels/3f/6a/70/06791d24e5463408b297bb325e9f1dc26d4948334258dbee1d
+Successfully built deeplake
+Installing collected packages: wrapt, urllib3, pydantic-core, ppft, pox, pillow, nest-asyncio, multidict, lz4, jmespath, frozenlist, dill, charset-normalizer, certifi, async-timeout, annotated-types, aioitertools, yarl, requests, pydantic, multiprocess, libdeeplake, botocore, aiosignal, s3transfer, pathos, humbug, aiohttp, boto3, aiobotocore, aioboto3, deeplake
+  Attempting uninstall: pillow
+    Found existing installation: Pillow 9.5.0
+    Uninstalling Pillow-9.5.0:
+      Successfully uninstalled Pillow-9.5.0
+Successfully installed aioboto3-12.4.0 aiobotocore-2.12.3 aiohttp-3.9.5 aioitertools-0.11.0 aiosignal-1.3.1 annotated-types-0.6.0 async-timeout-4.0.3 boto3-1.34.69 botocore-1.34.69 certifi-2024.2.2 charset-normalizer-3.3.2 deeplake-3.9.5 dill-0.3.8 frozenlist-1.4.1 humbug-0.3.2 jmespath-1.0.1 libdeeplake-0.0.128 lz4-4.3.3 multidict-6.0.5 multiprocess-0.70.16 nest-asyncio-1.6.0 pathos-0.3.2 pillow-10.2.0 pox-0.3.4 ppft-1.7.6.8 pydantic-2.7.1 pydantic-core-2.18.2 requests-2.31.0 s3transfer-0.10.1 urllib3-2.2.1 wrapt-1.16.0 yarl-1.9.4
+/ - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / SETTING DEVICE AS cuda
+Opening dataset in read-only mode as you don't have write permissions.
+This dataset can be visualized in Jupyter Notebook by ds.visualize() or at https://app.activeloop.ai/activeloop/wiki-art
+
+- \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - hub://activeloop/wiki-art loaded successfully.
+
+/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/integrations/pytorch/common.py:137: UserWarning: Decode method for tensors ['images'] is defaulting to numpy. Please consider specifying a decode_method in .pytorch() that maximizes the data preprocessing speed based on your transformation.
+  warnings.warn(
+Please wait, filling up the shuffle buffer with samples.:   0%|          | 0.00/2.00G [00:00<?, ?B/s]Please wait, filling up the shuffle buffer with samples.:   0%|          | 3.62M/2.00G [00:04<46:58, 761kB/s]Please wait, filling up the shuffle buffer with samples.:   1%|          | 23.9M/2.00G [00:11<15:09, 2.33MB/s]Please wait, filling up the shuffle buffer with samples.:   8%|▊         | 159M/2.00G [00:12<01:42, 19.4MB/s] Please wait, filling up the shuffle buffer with samples.:  27%|██▋       | 559M/2.00G [00:12<00:17, 90.7MB/s]Please wait, filling up the shuffle buffer with samples.:  39%|███▉      | 796M/2.00G [00:13<00:09, 145MB/s] Please wait, filling up the shuffle buffer with samples.:  60%|█████▉    | 1.19G/2.00G [00:13<00:03, 283MB/s]Please wait, filling up the shuffle buffer with samples.:  71%|███████   | 1.42G/2.00G [00:13<00:01, 318MB/s]Please wait, filling up the shuffle buffer with samples.:  80%|███████▉  | 1.60G/2.00G [00:13<00:01, 370MB/s]Please wait, filling up the shuffle buffer with samples.:  87%|████████▋ | 1.74G/2.00G [00:22<00:04, 68.6MB/s]Please wait, filling up the shuffle buffer with samples.:  99%|█████████▊| 1.97G/2.00G [00:22<00:00, 92.8MB/s]
+/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return func(*args, **kwargs)
+/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([1, 64, 64])) that is different to the input size (torch.Size([16, 64, 64])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return func(*args, **kwargs)
+/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([1, 128, 128])) that is different to the input size (torch.Size([16, 128, 128])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return func(*args, **kwargs)
+/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([16, 128, 128, 128])) that is different to the input size (torch.Size([1, 128, 128, 128])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return func(*args, **kwargs)
+/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([1, 256, 256])) that is different to the input size (torch.Size([16, 256, 256])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return func(*args, **kwargs)
+/tmp/home/amini/.local/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/tmp/home/amini/.local/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=VGG16_Weights.IMAGENET1K_V1`. You can also use `weights=VGG16_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Downloading: "https://download.pytorch.org/models/vgg16-397923af.pth" to /tmp/home/amini/.cache/torch/hub/checkpoints/vgg16-397923af.pth
+Shuffle buffer filling is complete.
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 2.457171 Content Loss: 4.448444
+
+60
+80
+run [100]:
+Style Loss : 1.681285 Content Loss: 4.151700
+
+100
+120
+140
+run [150]:
+Style Loss : 1.505861 Content Loss: 4.053000
+
+160
+180
+run [200]:
+Style Loss : 1.444149 Content Loss: 4.057498
+
+200
+220
+240
+run [250]:
+Style Loss : 1.464141 Content Loss: 4.146724
+
+260
+280
+run [300]:
+Style Loss : 118822.718750 Content Loss: 461.739685
+
+300
+  0%|          | 0.00/528M [00:00<?, ?B/s]  5%|▌         | 27.2M/528M [00:00<00:01, 285MB/s] 11%|█         | 55.8M/528M [00:00<00:01, 293MB/s] 16%|█▌        | 83.8M/528M [00:00<00:01, 288MB/s] 21%|██        | 111M/528M [00:00<00:01, 278MB/s]  26%|██▌       | 138M/528M [00:00<00:01, 275MB/s] 31%|███       | 164M/528M [00:00<00:01, 270MB/s] 36%|███▌      | 190M/528M [00:00<00:01, 268MB/s] 41%|████      | 216M/528M [00:00<00:01, 265MB/s] 46%|████▌     | 241M/528M [00:00<00:01, 265MB/s] 50%|█████     | 266M/528M [00:01<00:01, 264MB/s] 55%|█████▌    | 292M/528M [00:01<00:00, 264MB/s] 60%|██████    | 317M/528M [00:01<00:00, 264MB/s] 65%|██████▍   | 342M/528M [00:01<00:00, 264MB/s] 70%|██████▉   | 367M/528M [00:01<00:00, 264MB/s] 74%|███████▍  | 393M/528M [00:01<00:00, 264MB/s] 79%|███████▉  | 418M/528M [00:01<00:00, 262MB/s] 84%|████████▍ | 443M/528M [00:01<00:00, 261MB/s] 89%|████████▊ | 468M/528M [00:01<00:00, 261MB/s] 93%|█████████▎| 493M/528M [00:01<00:00, 261MB/s] 98%|█████████▊| 518M/528M [00:02<00:00, 261MB/s]100%|██████████| 528M/528M [00:02<00:00, 267MB/s]
+Optimizing..
+run [25]:
+Loss : 0.062732, Floss: 0.062716, Mloss 0.000015
+
+run [50]:
+Loss : 0.017479, Floss: 0.017454, Mloss 0.000026
+
+run [75]:
+Loss : 0.009594, Floss: 0.009562, Mloss 0.000032
+
+run [100]:
+Loss : 0.006354, Floss: 0.006317, Mloss 0.000037
+
+run [125]:
+Loss : 0.004607, Floss: 0.004564, Mloss 0.000042
+
+run [150]:
+Loss : 0.003629, Floss: 0.003584, Mloss 0.000046
+
+run [175]:
+Loss : 0.003001, Floss: 0.002952, Mloss 0.000049
+
+run [200]:
+Loss : 0.002540, Floss: 0.002488, Mloss 0.000052
+
+run [225]:
+Loss : 0.002193, Floss: 0.002138, Mloss 0.000055
+
+run [250]:
+Loss : 0.001923, Floss: 0.001865, Mloss 0.000058
+
+run [275]:
+Loss : 0.001687, Floss: 0.001627, Mloss 0.000060
+
+run [300]:
+Loss : 0.001512, Floss: 0.001450, Mloss 0.000062
+
+run [325]:
+Loss : 0.001366, Floss: 0.001302, Mloss 0.000064
+
+run [350]:
+Loss : 0.001249, Floss: 0.001183, Mloss 0.000065
+
+run [375]:
+Loss : 0.001149, Floss: 0.001082, Mloss 0.000067
+
+run [400]:
+Loss : 0.001066, Floss: 0.000998, Mloss 0.000068
+
+saved decrypt_dataset/kahlo_0_encrypted
+saved decrypt_dataset/kahlo_1_encrypted
+saved decrypt_dataset/kahlo_2_encrypted
+saved decrypt_dataset/kahlo_3_encrypted
+saved decrypt_dataset/kahlo_4_encrypted
+saved decrypt_dataset/kahlo_5_encrypted
+saved decrypt_dataset/kahlo_6_encrypted
+saved decrypt_dataset/kahlo_7_encrypted
+saved decrypt_dataset/kahlo_8_encrypted
+saved decrypt_dataset/kahlo_9_encrypted
+saved decrypt_dataset/kahlo_10_encrypted
+saved decrypt_dataset/kahlo_11_encrypted
+saved decrypt_dataset/kahlo_12_encrypted
+saved decrypt_dataset/kahlo_13_encrypted
+saved decrypt_dataset/kahlo_14_encrypted
+saved decrypt_dataset/kahlo_15_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 3.189373 Content Loss: 7.393192
+
+60
+80
+run [100]:
+Style Loss : 2.178664 Content Loss: 6.947068
+
+100
+120
+140
+run [150]:
+Style Loss : 1.945358 Content Loss: 6.823033
+
+160
+180
+run [200]:
+Style Loss : 1.865852 Content Loss: 6.763336
+
+200
+220
+240
+run [250]:
+Style Loss : 1.894624 Content Loss: 7.217625
+
+260
+280
+run [300]:
+Style Loss : 9668.617188 Content Loss: 140.504944
+
+300
+Optimizing..
+run [25]:
+Loss : 0.075481, Floss: 0.075453, Mloss 0.000027
+
+run [50]:
+Loss : 0.021462, Floss: 0.021412, Mloss 0.000050
+
+run [75]:
+Loss : 0.010501, Floss: 0.010434, Mloss 0.000067
+
+run [100]:
+Loss : 0.006540, Floss: 0.006464, Mloss 0.000077
+
+run [125]:
+Loss : 0.004739, Floss: 0.004653, Mloss 0.000086
+
+run [150]:
+Loss : 0.003649, Floss: 0.003554, Mloss 0.000095
+
+run [175]:
+Loss : 0.002942, Floss: 0.002839, Mloss 0.000103
+
+run [200]:
+Loss : 0.002442, Floss: 0.002333, Mloss 0.000109
+
+run [225]:
+Loss : 0.002077, Floss: 0.001963, Mloss 0.000114
+
+run [250]:
+Loss : 0.001814, Floss: 0.001696, Mloss 0.000118
+
+run [275]:
+Loss : 0.001608, Floss: 0.001486, Mloss 0.000122
+
+run [300]:
+Loss : 0.001443, Floss: 0.001318, Mloss 0.000126
+
+run [325]:
+Loss : 0.001308, Floss: 0.001180, Mloss 0.000128
+
+run [350]:
+Loss : 0.001200, Floss: 0.001070, Mloss 0.000130
+
+run [375]:
+Loss : 0.001108, Floss: 0.000976, Mloss 0.000132
+
+run [400]:
+Loss : 0.001036, Floss: 0.000902, Mloss 0.000134
+
+saved decrypt_dataset/kahlo_16_encrypted
+saved decrypt_dataset/kahlo_17_encrypted
+saved decrypt_dataset/kahlo_18_encrypted
+saved decrypt_dataset/kahlo_19_encrypted
+saved decrypt_dataset/kahlo_20_encrypted
+saved decrypt_dataset/kahlo_21_encrypted
+saved decrypt_dataset/kahlo_22_encrypted
+saved decrypt_dataset/kahlo_23_encrypted
+saved decrypt_dataset/kahlo_24_encrypted
+saved decrypt_dataset/kahlo_25_encrypted
+saved decrypt_dataset/kahlo_26_encrypted
+saved decrypt_dataset/kahlo_27_encrypted
+saved decrypt_dataset/kahlo_28_encrypted
+saved decrypt_dataset/kahlo_29_encrypted
+saved decrypt_dataset/kahlo_30_encrypted
+saved decrypt_dataset/kahlo_31_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 2.553497 Content Loss: 5.918861
+
+60
+80
+run [100]:
+Style Loss : 1.869929 Content Loss: 5.515004
+
+100
+120
+140
+run [150]:
+Style Loss : 1.682525 Content Loss: 5.409120
+
+160
+180
+run [200]:
+Style Loss : 1.609589 Content Loss: 5.358123
+
+200
+220
+240
+run [250]:
+Style Loss : 1.576198 Content Loss: 5.355739
+
+260
+280
+run [300]:
+Style Loss : 1.805364 Content Loss: 6.204021
+
+300
+Optimizing..
+run [25]:
+Loss : 0.025471, Floss: 0.025468, Mloss 0.000003
+
+run [50]:
+Loss : 0.007164, Floss: 0.007159, Mloss 0.000005
+
+run [75]:
+Loss : 0.003736, Floss: 0.003730, Mloss 0.000006
+
+run [100]:
+Loss : 0.002330, Floss: 0.002323, Mloss 0.000007
+
+run [125]:
+Loss : 0.001598, Floss: 0.001590, Mloss 0.000008
+
+run [150]:
+Loss : 0.001195, Floss: 0.001187, Mloss 0.000008
+
+run [175]:
+Loss : 0.000921, Floss: 0.000912, Mloss 0.000009
+
+run [200]:
+Loss : 0.000737, Floss: 0.000727, Mloss 0.000010
+
+run [225]:
+Loss : 0.000600, Floss: 0.000590, Mloss 0.000010
+
+run [250]:
+Loss : 0.000498, Floss: 0.000488, Mloss 0.000011
+
+run [275]:
+Loss : 0.000422, Floss: 0.000411, Mloss 0.000011
+
+run [300]:
+Loss : 0.000362, Floss: 0.000350, Mloss 0.000012
+
+run [325]:
+Loss : 0.000313, Floss: 0.000301, Mloss 0.000012
+
+run [350]:
+Loss : 0.000275, Floss: 0.000262, Mloss 0.000013
+
+run [375]:
+Loss : 0.000244, Floss: 0.000231, Mloss 0.000013
+
+run [400]:
+Loss : 0.000220, Floss: 0.000206, Mloss 0.000013
+
+saved decrypt_dataset/kahlo_32_encrypted
+saved decrypt_dataset/kahlo_33_encrypted
+saved decrypt_dataset/kahlo_34_encrypted
+saved decrypt_dataset/kahlo_35_encrypted
+saved decrypt_dataset/kahlo_36_encrypted
+saved decrypt_dataset/kahlo_37_encrypted
+saved decrypt_dataset/kahlo_38_encrypted
+saved decrypt_dataset/kahlo_39_encrypted
+saved decrypt_dataset/kahlo_40_encrypted
+saved decrypt_dataset/kahlo_41_encrypted
+saved decrypt_dataset/kahlo_42_encrypted
+saved decrypt_dataset/kahlo_43_encrypted
+saved decrypt_dataset/kahlo_44_encrypted
+saved decrypt_dataset/kahlo_45_encrypted
+saved decrypt_dataset/kahlo_46_encrypted
+saved decrypt_dataset/kahlo_47_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 2.497571 Content Loss: 4.974486
+
+60
+80
+run [100]:
+Style Loss : 1.717254 Content Loss: 4.644056
+
+100
+120
+140
+run [150]:
+Style Loss : 1.558210 Content Loss: 4.536006
+
+160
+180
+run [200]:
+Style Loss : 1.504954 Content Loss: 4.490045
+
+200
+220
+240
+run [250]:
+Style Loss : 1.483554 Content Loss: 4.474615
+
+260
+280
+run [300]:
+Style Loss : 1.491878 Content Loss: 4.508136
+
+300
+Optimizing..
+run [25]:
+Loss : 0.018635, Floss: 0.018633, Mloss 0.000002
+
+run [50]:
+Loss : 0.006196, Floss: 0.006193, Mloss 0.000003
+
+run [75]:
+Loss : 0.003345, Floss: 0.003341, Mloss 0.000003
+
+run [100]:
+Loss : 0.002091, Floss: 0.002087, Mloss 0.000004
+
+run [125]:
+Loss : 0.001442, Floss: 0.001437, Mloss 0.000005
+
+run [150]:
+Loss : 0.001056, Floss: 0.001050, Mloss 0.000005
+
+run [175]:
+Loss : 0.000827, Floss: 0.000821, Mloss 0.000006
+
+run [200]:
+Loss : 0.000652, Floss: 0.000646, Mloss 0.000006
+
+run [225]:
+Loss : 0.000531, Floss: 0.000524, Mloss 0.000007
+
+run [250]:
+Loss : 0.000440, Floss: 0.000434, Mloss 0.000007
+
+run [275]:
+Loss : 0.000374, Floss: 0.000367, Mloss 0.000007
+
+run [300]:
+Loss : 0.000320, Floss: 0.000313, Mloss 0.000007
+
+run [325]:
+Loss : 0.000277, Floss: 0.000269, Mloss 0.000008
+
+run [350]:
+Loss : 0.000242, Floss: 0.000234, Mloss 0.000008
+
+run [375]:
+Loss : 0.000215, Floss: 0.000206, Mloss 0.000008
+
+run [400]:
+Loss : 0.000191, Floss: 0.000183, Mloss 0.000009
+
+saved decrypt_dataset/kahlo_48_encrypted
+saved decrypt_dataset/kahlo_49_encrypted
+saved decrypt_dataset/kahlo_50_encrypted
+saved decrypt_dataset/kahlo_51_encrypted
+saved decrypt_dataset/kahlo_52_encrypted
+saved decrypt_dataset/kahlo_53_encrypted
+saved decrypt_dataset/kahlo_54_encrypted
+saved decrypt_dataset/kahlo_55_encrypted
+saved decrypt_dataset/kahlo_56_encrypted
+saved decrypt_dataset/kahlo_57_encrypted
+saved decrypt_dataset/kahlo_58_encrypted
+saved decrypt_dataset/kahlo_59_encrypted
+saved decrypt_dataset/kahlo_60_encrypted
+saved decrypt_dataset/kahlo_61_encrypted
+saved decrypt_dataset/kahlo_62_encrypted
+saved decrypt_dataset/kahlo_63_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 2.463796 Content Loss: 4.801399
+
+60
+80
+run [100]:
+Style Loss : 1.723067 Content Loss: 4.420790
+
+100
+120
+140
+run [150]:
+Style Loss : 1.523791 Content Loss: 4.332532
+
+160
+180
+run [200]:
+Style Loss : 1.445085 Content Loss: 4.296963
+
+200
+220
+240
+run [250]:
+Style Loss : 5.978283 Content Loss: 9.291430
+
+260
+280
+run [300]:
+Style Loss : 1.418906 Content Loss: 4.422362
+
+300
+Optimizing..
+run [25]:
+Loss : 0.018073, Floss: 0.018071, Mloss 0.000002
+
+run [50]:
+Loss : 0.006073, Floss: 0.006070, Mloss 0.000003
+
+run [75]:
+Loss : 0.003232, Floss: 0.003227, Mloss 0.000004
+
+run [100]:
+Loss : 0.001978, Floss: 0.001974, Mloss 0.000005
+
+run [125]:
+Loss : 0.001340, Floss: 0.001335, Mloss 0.000005
+
+run [150]:
+Loss : 0.000971, Floss: 0.000965, Mloss 0.000006
+
+run [175]:
+Loss : 0.000733, Floss: 0.000726, Mloss 0.000006
+
+run [200]:
+Loss : 0.000574, Floss: 0.000567, Mloss 0.000007
+
+run [225]:
+Loss : 0.000464, Floss: 0.000457, Mloss 0.000007
+
+run [250]:
+Loss : 0.000384, Floss: 0.000376, Mloss 0.000008
+
+run [275]:
+Loss : 0.000325, Floss: 0.000317, Mloss 0.000008
+
+run [300]:
+Loss : 0.000281, Floss: 0.000273, Mloss 0.000008
+
+run [325]:
+Loss : 0.000243, Floss: 0.000235, Mloss 0.000008
+
+run [350]:
+Loss : 0.000213, Floss: 0.000204, Mloss 0.000009
+
+run [375]:
+Loss : 0.000189, Floss: 0.000180, Mloss 0.000009
+
+run [400]:
+Loss : 0.000169, Floss: 0.000160, Mloss 0.000009
+
+saved decrypt_dataset/kahlo_64_encrypted
+saved decrypt_dataset/kahlo_65_encrypted
+saved decrypt_dataset/kahlo_66_encrypted
+saved decrypt_dataset/kahlo_67_encrypted
+saved decrypt_dataset/kahlo_68_encrypted
+saved decrypt_dataset/kahlo_69_encrypted
+saved decrypt_dataset/kahlo_70_encrypted
+saved decrypt_dataset/kahlo_71_encrypted
+saved decrypt_dataset/kahlo_72_encrypted
+saved decrypt_dataset/kahlo_73_encrypted
+saved decrypt_dataset/kahlo_74_encrypted
+saved decrypt_dataset/kahlo_75_encrypted
+saved decrypt_dataset/kahlo_76_encrypted
+saved decrypt_dataset/kahlo_77_encrypted
+saved decrypt_dataset/kahlo_78_encrypted
+saved decrypt_dataset/kahlo_79_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 2.215446 Content Loss: 4.310277
+
+60
+80
+run [100]:
+Style Loss : 1.598169 Content Loss: 3.989841
+
+100
+120
+140
+run [150]:
+Style Loss : 1.453353 Content Loss: 3.870749
+
+160
+180
+run [200]:
+Style Loss : 1.400930 Content Loss: 3.818487
+
+200
+220
+240
+run [250]:
+Style Loss : 1.383845 Content Loss: 3.883366
+
+260
+280
+run [300]:
+Style Loss : 1.583651 Content Loss: 4.951449
+
+300
+Optimizing..
+run [25]:
+Loss : 0.015179, Floss: 0.015176, Mloss 0.000003
+
+run [50]:
+Loss : 0.004997, Floss: 0.004993, Mloss 0.000004
+
+run [75]:
+Loss : 0.002602, Floss: 0.002597, Mloss 0.000005
+
+run [100]:
+Loss : 0.001627, Floss: 0.001621, Mloss 0.000006
+
+run [125]:
+Loss : 0.001115, Floss: 0.001109, Mloss 0.000006
+
+run [150]:
+Loss : 0.000810, Floss: 0.000803, Mloss 0.000007
+
+run [175]:
+Loss : 0.000621, Floss: 0.000614, Mloss 0.000007
+
+run [200]:
+Loss : 0.000492, Floss: 0.000484, Mloss 0.000007
+
+run [225]:
+Loss : 0.000403, Floss: 0.000395, Mloss 0.000008
+
+run [250]:
+Loss : 0.000335, Floss: 0.000327, Mloss 0.000008
+
+run [275]:
+Loss : 0.000282, Floss: 0.000274, Mloss 0.000008
+
+run [300]:
+Loss : 0.000244, Floss: 0.000235, Mloss 0.000009
+
+run [325]:
+Loss : 0.000212, Floss: 0.000203, Mloss 0.000009
+
+run [350]:
+Loss : 0.000187, Floss: 0.000178, Mloss 0.000009
+
+run [375]:
+Loss : 0.000167, Floss: 0.000158, Mloss 0.000009
+
+run [400]:
+Loss : 0.000150, Floss: 0.000141, Mloss 0.000010
+
+saved decrypt_dataset/kahlo_80_encrypted
+saved decrypt_dataset/kahlo_81_encrypted
+saved decrypt_dataset/kahlo_82_encrypted
+saved decrypt_dataset/kahlo_83_encrypted
+saved decrypt_dataset/kahlo_84_encrypted
+saved decrypt_dataset/kahlo_85_encrypted
+saved decrypt_dataset/kahlo_86_encrypted
+saved decrypt_dataset/kahlo_87_encrypted
+saved decrypt_dataset/kahlo_88_encrypted
+saved decrypt_dataset/kahlo_89_encrypted
+saved decrypt_dataset/kahlo_90_encrypted
+saved decrypt_dataset/kahlo_91_encrypted
+saved decrypt_dataset/kahlo_92_encrypted
+saved decrypt_dataset/kahlo_93_encrypted
+saved decrypt_dataset/kahlo_94_encrypted
+saved decrypt_dataset/kahlo_95_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 3.252689 Content Loss: 8.627104
+
+60
+80
+run [100]:
+Style Loss : 2.302193 Content Loss: 8.103943
+
+100
+120
+140
+run [150]:
+Style Loss : 2.072956 Content Loss: 7.948370
+
+160
+180
+run [200]:
+Style Loss : 1.984238 Content Loss: 7.879319
+
+200
+220
+240
+run [250]:
+Style Loss : 1.938253 Content Loss: 7.848917
+
+260
+280
+run [300]:
+Style Loss : 1.942284 Content Loss: 7.966698
+
+300
+Optimizing..
+run [25]:
+Loss : 0.027771, Floss: 0.027765, Mloss 0.000006
+
+run [50]:
+Loss : 0.008746, Floss: 0.008739, Mloss 0.000007
+
+run [75]:
+Loss : 0.004493, Floss: 0.004484, Mloss 0.000009
+
+run [100]:
+Loss : 0.002800, Floss: 0.002789, Mloss 0.000010
+
+run [125]:
+Loss : 0.001905, Floss: 0.001894, Mloss 0.000011
+
+run [150]:
+Loss : 0.001391, Floss: 0.001379, Mloss 0.000012
+
+run [175]:
+Loss : 0.001075, Floss: 0.001063, Mloss 0.000013
+
+run [200]:
+Loss : 0.000854, Floss: 0.000840, Mloss 0.000013
+
+run [225]:
+Loss : 0.000702, Floss: 0.000688, Mloss 0.000014
+
+run [250]:
+Loss : 0.000590, Floss: 0.000576, Mloss 0.000014
+
+run [275]:
+Loss : 0.000507, Floss: 0.000492, Mloss 0.000015
+
+run [300]:
+Loss : 0.000439, Floss: 0.000423, Mloss 0.000015
+
+run [325]:
+Loss : 0.000383, Floss: 0.000368, Mloss 0.000016
+
+run [350]:
+Loss : 0.000339, Floss: 0.000322, Mloss 0.000016
+
+run [375]:
+Loss : 0.000303, Floss: 0.000286, Mloss 0.000016
+
+run [400]:
+Loss : 0.000273, Floss: 0.000256, Mloss 0.000017
+
+saved decrypt_dataset/kahlo_96_encrypted
+saved decrypt_dataset/kahlo_97_encrypted
+saved decrypt_dataset/kahlo_98_encrypted
+saved decrypt_dataset/kahlo_99_encrypted
+saved decrypt_dataset/kahlo_100_encrypted
+saved decrypt_dataset/kahlo_101_encrypted
+saved decrypt_dataset/kahlo_102_encrypted
+saved decrypt_dataset/kahlo_103_encrypted
+saved decrypt_dataset/kahlo_104_encrypted
+saved decrypt_dataset/kahlo_105_encrypted
+saved decrypt_dataset/kahlo_106_encrypted
+saved decrypt_dataset/kahlo_107_encrypted
+saved decrypt_dataset/kahlo_108_encrypted
+saved decrypt_dataset/kahlo_109_encrypted
+saved decrypt_dataset/kahlo_110_encrypted
+saved decrypt_dataset/kahlo_111_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 2.478001 Content Loss: 6.313169
+
+60
+80
+run [100]:
+Style Loss : 1.881195 Content Loss: 5.967026
+
+100
+120
+140
+run [150]:
+Style Loss : 1.718494 Content Loss: 5.866393
+
+160
+180
+run [200]:
+Style Loss : 1.645547 Content Loss: 5.813960
+
+200
+220
+240
+run [250]:
+Style Loss : 1.623650 Content Loss: 5.876418
+
+260
+280
+run [300]:
+Style Loss : 1.606464 Content Loss: 5.853543
+
+300
+Optimizing..
+run [25]:
+Loss : 0.018925, Floss: 0.018923, Mloss 0.000002
+
+run [50]:
+Loss : 0.005872, Floss: 0.005869, Mloss 0.000004
+
+run [75]:
+Loss : 0.003053, Floss: 0.003048, Mloss 0.000005
+
+run [100]:
+Loss : 0.001943, Floss: 0.001938, Mloss 0.000005
+
+run [125]:
+Loss : 0.001337, Floss: 0.001331, Mloss 0.000006
+
+run [150]:
+Loss : 0.000989, Floss: 0.000983, Mloss 0.000006
+
+run [175]:
+Loss : 0.000766, Floss: 0.000759, Mloss 0.000007
+
+run [200]:
+Loss : 0.000615, Floss: 0.000607, Mloss 0.000007
+
+run [225]:
+Loss : 0.000509, Floss: 0.000501, Mloss 0.000008
+
+run [250]:
+Loss : 0.000427, Floss: 0.000419, Mloss 0.000008
+
+run [275]:
+Loss : 0.000366, Floss: 0.000358, Mloss 0.000009
+
+run [300]:
+Loss : 0.000316, Floss: 0.000307, Mloss 0.000009
+
+run [325]:
+Loss : 0.000278, Floss: 0.000269, Mloss 0.000009
+
+run [350]:
+Loss : 0.000247, Floss: 0.000238, Mloss 0.000010
+
+run [375]:
+Loss : 0.000223, Floss: 0.000213, Mloss 0.000010
+
+run [400]:
+Loss : 0.000202, Floss: 0.000192, Mloss 0.000010
+
+saved decrypt_dataset/kahlo_112_encrypted
+saved decrypt_dataset/kahlo_113_encrypted
+saved decrypt_dataset/kahlo_114_encrypted
+saved decrypt_dataset/kahlo_115_encrypted
+saved decrypt_dataset/kahlo_116_encrypted
+saved decrypt_dataset/kahlo_117_encrypted
+saved decrypt_dataset/kahlo_118_encrypted
+saved decrypt_dataset/kahlo_119_encrypted
+saved decrypt_dataset/kahlo_120_encrypted
+saved decrypt_dataset/kahlo_121_encrypted
+saved decrypt_dataset/kahlo_122_encrypted
+saved decrypt_dataset/kahlo_123_encrypted
+saved decrypt_dataset/kahlo_124_encrypted
+saved decrypt_dataset/kahlo_125_encrypted
+saved decrypt_dataset/kahlo_126_encrypted
+saved decrypt_dataset/kahlo_127_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 2.803125 Content Loss: 5.890046
+
+60
+80
+run [100]:
+Style Loss : 1.956310 Content Loss: 5.536773
+
+100
+120
+140
+run [150]:
+Style Loss : 1.725241 Content Loss: 5.453046
+
+160
+180
+run [200]:
+Style Loss : 1.667727 Content Loss: 5.479424
+
+200
+220
+240
+run [250]:
+Style Loss : 1.678011 Content Loss: 5.545969
+
+260
+280
+run [300]:
+Style Loss : 1.807308 Content Loss: 5.974436
+
+300
+Optimizing..
+run [25]:
+Loss : 0.065264, Floss: 0.065241, Mloss 0.000023
+
+run [50]:
+Loss : 0.017098, Floss: 0.017060, Mloss 0.000038
+
+run [75]:
+Loss : 0.009007, Floss: 0.008961, Mloss 0.000047
+
+run [100]:
+Loss : 0.006039, Floss: 0.005985, Mloss 0.000053
+
+run [125]:
+Loss : 0.004412, Floss: 0.004352, Mloss 0.000061
+
+run [150]:
+Loss : 0.003421, Floss: 0.003356, Mloss 0.000066
+
+run [175]:
+Loss : 0.002807, Floss: 0.002736, Mloss 0.000071
+
+run [200]:
+Loss : 0.002355, Floss: 0.002280, Mloss 0.000075
+
+run [225]:
+Loss : 0.002023, Floss: 0.001944, Mloss 0.000079
+
+run [250]:
+Loss : 0.001769, Floss: 0.001686, Mloss 0.000083
+
+run [275]:
+Loss : 0.001572, Floss: 0.001486, Mloss 0.000085
+
+run [300]:
+Loss : 0.001412, Floss: 0.001324, Mloss 0.000088
+
+run [325]:
+Loss : 0.001284, Floss: 0.001193, Mloss 0.000090
+
+run [350]:
+Loss : 0.001174, Floss: 0.001081, Mloss 0.000093
+
+run [375]:
+Loss : 0.001083, Floss: 0.000988, Mloss 0.000095
+
+run [400]:
+Loss : 0.001003, Floss: 0.000906, Mloss 0.000097
+
+saved decrypt_dataset/kahlo_128_encrypted
+saved decrypt_dataset/kahlo_129_encrypted
+saved decrypt_dataset/kahlo_130_encrypted
+saved decrypt_dataset/kahlo_131_encrypted
+saved decrypt_dataset/kahlo_132_encrypted
+saved decrypt_dataset/kahlo_133_encrypted
+saved decrypt_dataset/kahlo_134_encrypted
+saved decrypt_dataset/kahlo_135_encrypted
+saved decrypt_dataset/kahlo_136_encrypted
+saved decrypt_dataset/kahlo_137_encrypted
+saved decrypt_dataset/kahlo_138_encrypted
+saved decrypt_dataset/kahlo_139_encrypted
+saved decrypt_dataset/kahlo_140_encrypted
+saved decrypt_dataset/kahlo_141_encrypted
+saved decrypt_dataset/kahlo_142_encrypted
+saved decrypt_dataset/kahlo_143_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 2.655955 Content Loss: 6.102684
+
+60
+80
+run [100]:
+Style Loss : 1.935920 Content Loss: 5.704971
+
+100
+120
+140
+run [150]:
+Style Loss : 1.745310 Content Loss: 5.587817
+
+160
+180
+run [200]:
+Style Loss : 1.671755 Content Loss: 5.539836
+
+200
+220
+240
+run [250]:
+Style Loss : 1.640259 Content Loss: 5.600871
+
+260
+280
+run [300]:
+Style Loss : 1.939898 Content Loss: 7.392424
+
+300
+Optimizing..
+run [25]:
+Loss : 0.033654, Floss: 0.033649, Mloss 0.000005
+
+run [50]:
+Loss : 0.009166, Floss: 0.009158, Mloss 0.000008
+
+run [75]:
+Loss : 0.004755, Floss: 0.004746, Mloss 0.000009
+
+run [100]:
+Loss : 0.002993, Floss: 0.002984, Mloss 0.000010
+
+run [125]:
+Loss : 0.002063, Floss: 0.002052, Mloss 0.000011
+
+run [150]:
+Loss : 0.001538, Floss: 0.001526, Mloss 0.000011
+
+run [175]:
+Loss : 0.001174, Floss: 0.001162, Mloss 0.000012
+
+run [200]:
+Loss : 0.000931, Floss: 0.000919, Mloss 0.000013
+
+run [225]:
+Loss : 0.000765, Floss: 0.000752, Mloss 0.000013
+
+run [250]:
+Loss : 0.000641, Floss: 0.000627, Mloss 0.000014
+
+run [275]:
+Loss : 0.000546, Floss: 0.000532, Mloss 0.000014
+
+run [300]:
+Loss : 0.000471, Floss: 0.000456, Mloss 0.000015
+
+run [325]:
+Loss : 0.000414, Floss: 0.000399, Mloss 0.000015
+
+run [350]:
+Loss : 0.000367, Floss: 0.000352, Mloss 0.000015
+
+run [375]:
+Loss : 0.000327, Floss: 0.000312, Mloss 0.000016
+
+run [400]:
+Loss : 0.000296, Floss: 0.000279, Mloss 0.000016
+
+saved decrypt_dataset/kahlo_144_encrypted
+saved decrypt_dataset/kahlo_145_encrypted
+saved decrypt_dataset/kahlo_146_encrypted
+saved decrypt_dataset/kahlo_147_encrypted
+saved decrypt_dataset/kahlo_148_encrypted
+saved decrypt_dataset/kahlo_149_encrypted
+saved decrypt_dataset/kahlo_150_encrypted
+saved decrypt_dataset/kahlo_151_encrypted
+saved decrypt_dataset/kahlo_152_encrypted
+saved decrypt_dataset/kahlo_153_encrypted
+saved decrypt_dataset/kahlo_154_encrypted
+saved decrypt_dataset/kahlo_155_encrypted
+saved decrypt_dataset/kahlo_156_encrypted
+saved decrypt_dataset/kahlo_157_encrypted
+saved decrypt_dataset/kahlo_158_encrypted
+saved decrypt_dataset/kahlo_159_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 2.759947 Content Loss: 6.422736
+
+60
+80
+run [100]:
+Style Loss : 1.983259 Content Loss: 6.020401
+
+100
+120
+140
+run [150]:
+Style Loss : 1.779619 Content Loss: 5.914437
+
+160
+180
+run [200]:
+Style Loss : 1.698823 Content Loss: 5.893981
+
+200
+220
+240
+run [250]:
+Style Loss : 1.713185 Content Loss: 6.079045
+
+260
+280
+run [300]:
+Style Loss : 33559.605469 Content Loss: 261.596222
+
+300
+Optimizing..
+run [25]:
+Loss : 0.042950, Floss: 0.042906, Mloss 0.000044
+
+run [50]:
+Loss : 0.015175, Floss: 0.015114, Mloss 0.000062
+
+run [75]:
+Loss : 0.008875, Floss: 0.008798, Mloss 0.000077
+
+run [100]:
+Loss : 0.006037, Floss: 0.005948, Mloss 0.000090
+
+run [125]:
+Loss : 0.004488, Floss: 0.004387, Mloss 0.000101
+
+run [150]:
+Loss : 0.003513, Floss: 0.003403, Mloss 0.000110
+
+run [175]:
+Loss : 0.002853, Floss: 0.002737, Mloss 0.000117
+
+run [200]:
+Loss : 0.002404, Floss: 0.002280, Mloss 0.000124
+
+run [225]:
+Loss : 0.002072, Floss: 0.001943, Mloss 0.000129
+
+run [250]:
+Loss : 0.001817, Floss: 0.001683, Mloss 0.000134
+
+run [275]:
+Loss : 0.001612, Floss: 0.001474, Mloss 0.000138
+
+run [300]:
+Loss : 0.001463, Floss: 0.001322, Mloss 0.000141
+
+run [325]:
+Loss : 0.001334, Floss: 0.001190, Mloss 0.000144
+
+run [350]:
+Loss : 0.001232, Floss: 0.001086, Mloss 0.000146
+
+run [375]:
+Loss : 0.001144, Floss: 0.000996, Mloss 0.000149
+
+run [400]:
+Loss : 0.001072, Floss: 0.000921, Mloss 0.000151
+
+saved decrypt_dataset/kahlo_160_encrypted
+saved decrypt_dataset/kahlo_161_encrypted
+saved decrypt_dataset/kahlo_162_encrypted
+saved decrypt_dataset/kahlo_163_encrypted
+saved decrypt_dataset/kahlo_164_encrypted
+saved decrypt_dataset/kahlo_165_encrypted
+saved decrypt_dataset/kahlo_166_encrypted
+saved decrypt_dataset/kahlo_167_encrypted
+saved decrypt_dataset/kahlo_168_encrypted
+saved decrypt_dataset/kahlo_169_encrypted
+saved decrypt_dataset/kahlo_170_encrypted
+saved decrypt_dataset/kahlo_171_encrypted
+saved decrypt_dataset/kahlo_172_encrypted
+saved decrypt_dataset/kahlo_173_encrypted
+saved decrypt_dataset/kahlo_174_encrypted
+saved decrypt_dataset/kahlo_175_encrypted

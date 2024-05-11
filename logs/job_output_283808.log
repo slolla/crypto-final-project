@@ -1,0 +1,534 @@
+cpu-bind=MASK - gpu19-1.drl, task  0  0 [2081814]: mask 0x1 set
+Fri May 10 11:08:04 PM EDT 2024
+Running my job on gpu19-1.drl
+/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/util/check_latest_version.py:32: UserWarning: A newer version of deeplake (3.9.5) is available. It's recommended that you update to the latest version using `pip install -U deeplake`.
+  warnings.warn(
+/ - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ SETTING DEVICE AS cuda
+Opening dataset in read-only mode as you don't have write permissions.
+This dataset can be visualized in Jupyter Notebook by ds.visualize() or at https://app.activeloop.ai/activeloop/wiki-art
+
+| / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | hub://activeloop/wiki-art loaded successfully.
+
+/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/integrations/pytorch/common.py:137: UserWarning: Decode method for tensors ['images'] is defaulting to numpy. Please consider specifying a decode_method in .pytorch() that maximizes the data preprocessing speed based on your transformation.
+  warnings.warn(
+Please wait, filling up the shuffle buffer with samples.:   0%|          | 0.00/2.00G [00:00<?, ?B/s]Please wait, filling up the shuffle buffer with samples.:   0%|          | 8.77M/2.00G [00:01<07:38, 4.67MB/s]Please wait, filling up the shuffle buffer with samples.:   7%|▋         | 153M/2.00G [00:05<00:56, 35.4MB/s] Please wait, filling up the shuffle buffer with samples.:  14%|█▍        | 286M/2.00G [00:06<00:32, 56.2MB/s]Please wait, filling up the shuffle buffer with samples.:  28%|██▊       | 566M/2.00G [00:06<00:10, 144MB/s] Please wait, filling up the shuffle buffer with samples.:  33%|███▎      | 672M/2.00G [00:07<00:11, 124MB/s]Please wait, filling up the shuffle buffer with samples.:  40%|████      | 826M/2.00G [00:07<00:07, 180MB/s]Please wait, filling up the shuffle buffer with samples.:  50%|█████     | 1.01G/2.00G [00:08<00:03, 282MB/s]Please wait, filling up the shuffle buffer with samples.:  60%|█████▉    | 1.20G/2.00G [00:09<00:04, 180MB/s]Please wait, filling up the shuffle buffer with samples.:  65%|██████▍   | 1.30G/2.00G [00:10<00:03, 211MB/s]Please wait, filling up the shuffle buffer with samples.:  72%|███████▏  | 1.44G/2.00G [00:10<00:02, 282MB/s]Please wait, filling up the shuffle buffer with samples.:  89%|████████▉ | 1.78G/2.00G [00:10<00:00, 527MB/s]Please wait, filling up the shuffle buffer with samples.: 100%|█████████▉| 2.00G/2.00G [00:10<00:00, 207MB/s]
+/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return func(*args, **kwargs)
+/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([1, 64, 64])) that is different to the input size (torch.Size([16, 64, 64])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return func(*args, **kwargs)
+/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([1, 128, 128])) that is different to the input size (torch.Size([16, 128, 128])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return func(*args, **kwargs)
+/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([16, 128, 128, 128])) that is different to the input size (torch.Size([1, 128, 128, 128])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return func(*args, **kwargs)
+/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([1, 256, 256])) that is different to the input size (torch.Size([16, 256, 256])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return func(*args, **kwargs)
+/tmp/home/amini/.local/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/tmp/home/amini/.local/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=VGG16_Weights.IMAGENET1K_V1`. You can also use `weights=VGG16_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Shuffle buffer filling is complete.
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 2.645145 Content Loss: 5.596147
+
+60
+80
+run [100]:
+Style Loss : 2.129431 Content Loss: 5.284578
+
+100
+120
+140
+run [150]:
+Style Loss : 2.023089 Content Loss: 5.320030
+
+160
+180
+run [200]:
+Style Loss : 73444.250000 Content Loss: 366.382385
+
+200
+220
+240
+run [250]:
+Style Loss : 4.270564 Content Loss: 12.025030
+
+260
+280
+run [300]:
+Style Loss : 2.585422 Content Loss: 6.992623
+
+300
+Optimizing..
+run [25]:
+Loss : 0.031634, Floss: 0.031630, Mloss 0.000004
+
+run [50]:
+Loss : 0.009431, Floss: 0.009425, Mloss 0.000006
+
+run [75]:
+Loss : 0.005061, Floss: 0.005054, Mloss 0.000007
+
+run [100]:
+Loss : 0.003336, Floss: 0.003328, Mloss 0.000008
+
+run [125]:
+Loss : 0.002350, Floss: 0.002341, Mloss 0.000009
+
+run [150]:
+Loss : 0.001755, Floss: 0.001745, Mloss 0.000010
+
+run [175]:
+Loss : 0.001344, Floss: 0.001334, Mloss 0.000011
+
+run [200]:
+Loss : 0.001079, Floss: 0.001068, Mloss 0.000011
+
+run [225]:
+Loss : 0.000892, Floss: 0.000879, Mloss 0.000012
+
+run [250]:
+Loss : 0.000753, Floss: 0.000740, Mloss 0.000013
+
+run [275]:
+Loss : 0.000640, Floss: 0.000626, Mloss 0.000014
+
+run [300]:
+Loss : 0.000553, Floss: 0.000539, Mloss 0.000014
+
+run [325]:
+Loss : 0.000484, Floss: 0.000469, Mloss 0.000015
+
+run [350]:
+Loss : 0.000429, Floss: 0.000413, Mloss 0.000015
+
+run [375]:
+Loss : 0.000382, Floss: 0.000366, Mloss 0.000016
+
+run [400]:
+Loss : 0.000346, Floss: 0.000330, Mloss 0.000016
+
+saved decrypt_dataset/banksy_0_encrypted
+saved decrypt_dataset/banksy_1_encrypted
+saved decrypt_dataset/banksy_2_encrypted
+saved decrypt_dataset/banksy_3_encrypted
+saved decrypt_dataset/banksy_4_encrypted
+saved decrypt_dataset/banksy_5_encrypted
+saved decrypt_dataset/banksy_6_encrypted
+saved decrypt_dataset/banksy_7_encrypted
+saved decrypt_dataset/banksy_8_encrypted
+saved decrypt_dataset/banksy_9_encrypted
+saved decrypt_dataset/banksy_10_encrypted
+saved decrypt_dataset/banksy_11_encrypted
+saved decrypt_dataset/banksy_12_encrypted
+saved decrypt_dataset/banksy_13_encrypted
+saved decrypt_dataset/banksy_14_encrypted
+saved decrypt_dataset/banksy_15_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 2.830649 Content Loss: 6.002475
+
+60
+80
+run [100]:
+Style Loss : 2.307506 Content Loss: 5.744100
+
+100
+120
+140
+run [150]:
+Style Loss : 2.174168 Content Loss: 6.018692
+
+160
+180
+run [200]:
+Style Loss : 2.517303 Content Loss: 6.855117
+
+200
+220
+240
+run [250]:
+Style Loss : 2.611173 Content Loss: 7.140656
+
+260
+280
+run [300]:
+Style Loss : 12.119855 Content Loss: 9.890378
+
+300
+Optimizing..
+run [25]:
+Loss : 0.085733, Floss: 0.085725, Mloss 0.000007
+
+run [50]:
+Loss : 0.013627, Floss: 0.013613, Mloss 0.000013
+
+run [75]:
+Loss : 0.006737, Floss: 0.006720, Mloss 0.000016
+
+run [100]:
+Loss : 0.004435, Floss: 0.004416, Mloss 0.000018
+
+run [125]:
+Loss : 0.003152, Floss: 0.003132, Mloss 0.000021
+
+run [150]:
+Loss : 0.002376, Floss: 0.002354, Mloss 0.000022
+
+run [175]:
+Loss : 0.001840, Floss: 0.001816, Mloss 0.000024
+
+run [200]:
+Loss : 0.001476, Floss: 0.001451, Mloss 0.000025
+
+run [225]:
+Loss : 0.001208, Floss: 0.001181, Mloss 0.000026
+
+run [250]:
+Loss : 0.001010, Floss: 0.000982, Mloss 0.000027
+
+run [275]:
+Loss : 0.000863, Floss: 0.000834, Mloss 0.000029
+
+run [300]:
+Loss : 0.000748, Floss: 0.000719, Mloss 0.000029
+
+run [325]:
+Loss : 0.000659, Floss: 0.000629, Mloss 0.000030
+
+run [350]:
+Loss : 0.000586, Floss: 0.000555, Mloss 0.000031
+
+run [375]:
+Loss : 0.000526, Floss: 0.000495, Mloss 0.000032
+
+run [400]:
+Loss : 0.000475, Floss: 0.000442, Mloss 0.000032
+
+saved decrypt_dataset/banksy_16_encrypted
+saved decrypt_dataset/banksy_17_encrypted
+saved decrypt_dataset/banksy_18_encrypted
+saved decrypt_dataset/banksy_19_encrypted
+saved decrypt_dataset/banksy_20_encrypted
+saved decrypt_dataset/banksy_21_encrypted
+saved decrypt_dataset/banksy_22_encrypted
+saved decrypt_dataset/banksy_23_encrypted
+saved decrypt_dataset/banksy_24_encrypted
+saved decrypt_dataset/banksy_25_encrypted
+saved decrypt_dataset/banksy_26_encrypted
+saved decrypt_dataset/banksy_27_encrypted
+saved decrypt_dataset/banksy_28_encrypted
+saved decrypt_dataset/banksy_29_encrypted
+saved decrypt_dataset/banksy_30_encrypted
+saved decrypt_dataset/banksy_31_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 2.493341 Content Loss: 6.283852
+
+60
+80
+run [100]:
+Style Loss : 2.170505 Content Loss: 5.937278
+
+100
+120
+140
+run [150]:
+Style Loss : 2.062494 Content Loss: 6.021189
+
+160
+180
+run [200]:
+Style Loss : 2.240857 Content Loss: 6.819045
+
+200
+220
+240
+run [250]:
+Style Loss : 158094.765625 Content Loss: 505.230835
+
+260
+280
+run [300]:
+Style Loss : 4.549474 Content Loss: 12.817438
+
+300
+Optimizing..
+run [25]:
+Loss : 0.054532, Floss: 0.054527, Mloss 0.000005
+
+run [50]:
+Loss : 0.016064, Floss: 0.016055, Mloss 0.000009
+
+run [75]:
+Loss : 0.007076, Floss: 0.007064, Mloss 0.000012
+
+run [100]:
+Loss : 0.004267, Floss: 0.004253, Mloss 0.000014
+
+run [125]:
+Loss : 0.002904, Floss: 0.002887, Mloss 0.000017
+
+run [150]:
+Loss : 0.002138, Floss: 0.002120, Mloss 0.000018
+
+run [175]:
+Loss : 0.001627, Floss: 0.001607, Mloss 0.000020
+
+run [200]:
+Loss : 0.001302, Floss: 0.001280, Mloss 0.000021
+
+run [225]:
+Loss : 0.001076, Floss: 0.001054, Mloss 0.000022
+
+run [250]:
+Loss : 0.000898, Floss: 0.000874, Mloss 0.000023
+
+run [275]:
+Loss : 0.000766, Floss: 0.000742, Mloss 0.000024
+
+run [300]:
+Loss : 0.000660, Floss: 0.000635, Mloss 0.000025
+
+run [325]:
+Loss : 0.000579, Floss: 0.000554, Mloss 0.000026
+
+run [350]:
+Loss : 0.000515, Floss: 0.000488, Mloss 0.000026
+
+run [375]:
+Loss : 0.000461, Floss: 0.000434, Mloss 0.000027
+
+run [400]:
+Loss : 0.000416, Floss: 0.000389, Mloss 0.000027
+
+saved decrypt_dataset/banksy_32_encrypted
+saved decrypt_dataset/banksy_33_encrypted
+saved decrypt_dataset/banksy_34_encrypted
+saved decrypt_dataset/banksy_35_encrypted
+saved decrypt_dataset/banksy_36_encrypted
+saved decrypt_dataset/banksy_37_encrypted
+saved decrypt_dataset/banksy_38_encrypted
+saved decrypt_dataset/banksy_39_encrypted
+saved decrypt_dataset/banksy_40_encrypted
+saved decrypt_dataset/banksy_41_encrypted
+saved decrypt_dataset/banksy_42_encrypted
+saved decrypt_dataset/banksy_43_encrypted
+saved decrypt_dataset/banksy_44_encrypted
+saved decrypt_dataset/banksy_45_encrypted
+saved decrypt_dataset/banksy_46_encrypted
+saved decrypt_dataset/banksy_47_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 2.336861 Content Loss: 5.178823
+
+60
+80
+run [100]:
+Style Loss : 9.692548 Content Loss: 8.917764
+
+100
+120
+140
+run [150]:
+Style Loss : 2.452742 Content Loss: 6.299552
+
+160
+180
+run [200]:
+Style Loss : 84.317886 Content Loss: 24.046822
+
+200
+220
+240
+run [250]:
+Style Loss : 9.459309 Content Loss: 9.693587
+
+260
+280
+run [300]:
+Style Loss : 7.499876 Content Loss: 11.047646
+
+300
+Optimizing..
+run [25]:
+Loss : 0.029895, Floss: 0.029891, Mloss 0.000004
+
+run [50]:
+Loss : 0.009657, Floss: 0.009651, Mloss 0.000006
+
+run [75]:
+Loss : 0.005126, Floss: 0.005120, Mloss 0.000007
+
+run [100]:
+Loss : 0.003236, Floss: 0.003228, Mloss 0.000008
+
+run [125]:
+Loss : 0.002271, Floss: 0.002263, Mloss 0.000008
+
+run [150]:
+Loss : 0.001653, Floss: 0.001644, Mloss 0.000009
+
+run [175]:
+Loss : 0.001266, Floss: 0.001256, Mloss 0.000010
+
+run [200]:
+Loss : 0.001010, Floss: 0.001000, Mloss 0.000011
+
+run [225]:
+Loss : 0.000833, Floss: 0.000822, Mloss 0.000011
+
+run [250]:
+Loss : 0.000705, Floss: 0.000694, Mloss 0.000012
+
+run [275]:
+Loss : 0.000604, Floss: 0.000592, Mloss 0.000012
+
+run [300]:
+Loss : 0.000521, Floss: 0.000508, Mloss 0.000012
+
+run [325]:
+Loss : 0.000458, Floss: 0.000445, Mloss 0.000013
+
+run [350]:
+Loss : 0.000407, Floss: 0.000394, Mloss 0.000013
+
+run [375]:
+Loss : 0.000364, Floss: 0.000350, Mloss 0.000013
+
+run [400]:
+Loss : 0.000327, Floss: 0.000314, Mloss 0.000014
+
+saved decrypt_dataset/banksy_48_encrypted
+saved decrypt_dataset/banksy_49_encrypted
+saved decrypt_dataset/banksy_50_encrypted
+saved decrypt_dataset/banksy_51_encrypted
+saved decrypt_dataset/banksy_52_encrypted
+saved decrypt_dataset/banksy_53_encrypted
+saved decrypt_dataset/banksy_54_encrypted
+saved decrypt_dataset/banksy_55_encrypted
+saved decrypt_dataset/banksy_56_encrypted
+saved decrypt_dataset/banksy_57_encrypted
+saved decrypt_dataset/banksy_58_encrypted
+saved decrypt_dataset/banksy_59_encrypted
+saved decrypt_dataset/banksy_60_encrypted
+saved decrypt_dataset/banksy_61_encrypted
+saved decrypt_dataset/banksy_62_encrypted
+saved decrypt_dataset/banksy_63_encrypted
+Building the style transfer model..
+Optimizing..
+0
+20
+40
+run [50]:
+Style Loss : 2.301431 Content Loss: 5.397307
+
+60
+80
+run [100]:
+Style Loss : 1.862851 Content Loss: 5.269825
+
+100
+120
+140
+run [150]:
+Style Loss : 2.990357 Content Loss: 5.312471
+
+160
+180
+run [200]:
+Style Loss : 6.691595 Content Loss: 7.175202
+
+200
+220
+240
+run [250]:
+Style Loss : 3.563799 Content Loss: 8.239080
+
+260
+280
+run [300]:
+Style Loss : 3.371291 Content Loss: 7.589476
+
+300
+Optimizing..
+run [25]:
+Loss : 0.032804, Floss: 0.032800, Mloss 0.000004
+
+run [50]:
+Loss : 0.009261, Floss: 0.009255, Mloss 0.000006
+
+run [75]:
+Loss : 0.004791, Floss: 0.004783, Mloss 0.000008
+
+run [100]:
+Loss : 0.003030, Floss: 0.003021, Mloss 0.000009
+
+run [125]:
+Loss : 0.002140, Floss: 0.002130, Mloss 0.000010
+
+run [150]:
+Loss : 0.001583, Floss: 0.001572, Mloss 0.000011
+
+run [175]:
+Loss : 0.001225, Floss: 0.001214, Mloss 0.000011
+
+run [200]:
+Loss : 0.000985, Floss: 0.000973, Mloss 0.000012
+
+run [225]:
+Loss : 0.000804, Floss: 0.000791, Mloss 0.000013
+
+run [250]:
+Loss : 0.000682, Floss: 0.000668, Mloss 0.000014
+
+run [275]:
+Loss : 0.000583, Floss: 0.000569, Mloss 0.000014
+
+run [300]:
+Loss : 0.000511, Floss: 0.000496, Mloss 0.000015
+
+run [325]:
+Loss : 0.000453, Floss: 0.000437, Mloss 0.000015
+
+run [350]:
+Loss : 0.000404, Floss: 0.000388, Mloss 0.000016
+
+run [375]:
+Loss : 0.000365, Floss: 0.000349, Mloss 0.000016
+
+run [400]:
+Loss : 0.000329, Floss: 0.000312, Mloss 0.000016
+
+saved decrypt_dataset/banksy_64_encrypted
+saved decrypt_dataset/banksy_65_encrypted
+saved decrypt_dataset/banksy_66_encrypted
+saved decrypt_dataset/banksy_67_encrypted
+saved decrypt_dataset/banksy_68_encrypted
+saved decrypt_dataset/banksy_69_encrypted
+saved decrypt_dataset/banksy_70_encrypted
+saved decrypt_dataset/banksy_71_encrypted
+saved decrypt_dataset/banksy_72_encrypted
+saved decrypt_dataset/banksy_73_encrypted
+saved decrypt_dataset/banksy_74_encrypted
+saved decrypt_dataset/banksy_75_encrypted
+saved decrypt_dataset/banksy_76_encrypted
+saved decrypt_dataset/banksy_77_encrypted
+saved decrypt_dataset/banksy_78_encrypted
+saved decrypt_dataset/banksy_79_encrypted

@@ -1,0 +1,7 @@
+cpu-bind=MASK - gpu19-2.drl, task  0  0 [2185530]: mask 0x1 set
+Sat May 11 12:04:43 AM EDT 2024
+Running my job on gpu19-2.drl
+Traceback (most recent call last):
+  File "/data/scratch/amini/sadhana/2024/crypto-final-project/src/data_generation.py", line 15, in <module>
+    import deeplake
+ModuleNotFoundError: No module named 'deeplake'
