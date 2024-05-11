@@ -45,7 +45,7 @@ class ImageDataset(Dataset):
         return x
 
     def __len__(self):
-        return self.tensors[0].size(0)
+        return self.tensors.size(0)
 
 def image_loader(image_name):
     image = Image.open(image_name)
