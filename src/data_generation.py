@@ -54,6 +54,7 @@ def image_loader(image_name):
 
 batch_size=32
 ds = deeplake.load('hub://activeloop/wiki-art').images[0:batch_size * 4]
+ds = [i['images'] for i in ds]
 print(len(ds), ds[0])
 ds = np.asarray(ds.images[0:batch_size*4].numpy(aslist=True))
 print("DATASET", ds.shape)
