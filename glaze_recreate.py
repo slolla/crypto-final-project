@@ -320,7 +320,7 @@ save_dir = "images/final_encrypted"
 imgs = os.listdir(content_dir)
 for content_filename in imgs:
     style_img = image_loader(f"style_library/{style_filename}.jpg")
-    content_img = image_loader(f"{content_dir}/{content_filename}.jpg")
+    content_img = image_loader(f"{content_dir}/{content_filename}")
     input_img = content_img.clone()
 
 
