@@ -1,12 +1,10 @@
 # For tips on running notebooks in Google Colab, see
 # https://pytorch.org/tutorials/beginner/colab
-%matplotlib inline
-
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
-
+import os
 from PIL import Image
 import matplotlib.pyplot as plt
 
@@ -33,14 +31,6 @@ def image_loader(image_name):
     image = loader(image).unsqueeze(0)
     return image.to(device, torch.float)
 
-style_filename = "picasso"
-content_filename = "christine_01"
-style_img = image_loader(f"./style_library/{style_filename}.jpg")
-content_img = image_loader(f"./images/{content_filename}.jpg")
-
-
-assert style_img.size() == content_img.size(), \
-    "we need to import style and content images of the same size"
 
 class ContentLoss(nn.Module):
 
@@ -163,7 +153,6 @@ def get_style_model_and_losses(cnn, normalization_mean, normalization_std,
 
     return model, style_losses, content_losses
 
-input_img = content_img.clone()
 def get_input_optimizer(input_img):
     # this line to show that input is a parameter that requires a gradient
     optimizer = optim.LBFGS([input_img])
@@ -229,11 +218,6 @@ def run_style_transfer(cnn, normalization_mean, normalization_std,
 
     return input_img
 
-output = run_style_transfer(cnn, cnn_normalization_mean, cnn_normalization_std,
-                            content_img, style_img, input_img)
-
-
-
 ### OUR CODE ###
 import numpy as np
 
@@ -288,7 +272,7 @@ def run_glazing(content_img, target_img, num_steps=300, fweight=1.0, mweight=1.0
     # such as dropout or batch normalization layers behave correctly. 
     #delta_x = torch.zeros(inp_img.shape)
     #delta_x.requires_grad_(True)
-    new_img = content_img.cpu().clone()
+    new_img = content_img.cpu().clone().to(device)
     new_img.requires_grad_(True)
     optimizer = get_glaze_optimizer(new_img)
 
@@ -329,11 +313,29 @@ def run_glazing(content_img, target_img, num_steps=300, fweight=1.0, mweight=1.0
 
     return new_img
 
-glazed_output = run_glazing(content_img, output, num_steps=400, fweight=5, mweight=0.5)
-import numpy as np
+style_filename = "picasso_portrait"
+content_dir = "images/final_images"
+save_dir = "images/final_encrypted"
+imgs = os.listdir(content_dir)
+for content_filename in imgs:
+    style_img = image_loader(f"style_library/{style_filename}.jpg")
+    content_img = image_loader(f"images/{content_filename}.jpg")
+    input_img = content_img.clone()
 
-im = glazed_output.detach().squeeze().cpu().numpy() * 255
-im = im.astype(np.uint8)
-im = np.transpose(im, (1, 2, 0))
-im = Image.fromarray(im)
-im.save(f"images/{style_filename}_{content_filename}.jpg")
+
+    assert style_img.size() == content_img.size(), \
+        "we need to import style and content images of the same size"
+
+
+    output = run_style_transfer(cnn, cnn_normalization_mean, cnn_normalization_std,
+                                content_img, style_img, input_img)
+
+
+    glazed_output = run_glazing(content_img, output, num_steps=400, fweight=5, mweight=0.5)
+    import numpy as np
+
+    im = glazed_output.detach().squeeze().cpu().numpy() * 255
+    im = im.astype(np.uint8)
+    im = np.transpose(im, (1, 2, 0))
+    im = Image.fromarray(im)
+    im.save(f"images/{style_filename}_{content_filename}.jpg")
