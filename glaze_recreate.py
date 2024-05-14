@@ -27,6 +27,7 @@ loader = transforms.Compose([
 
 def image_loader(image_name):
     image = Image.open(image_name)
+    image = image.convert('RGB')
     # fake batch dimension required to fit network's input dimensions
     image = loader(image).unsqueeze(0)
     return image.to(device, torch.float)
@@ -319,7 +320,7 @@ save_dir = "images/final_encrypted"
 imgs = os.listdir(content_dir)
 for content_filename in imgs:
     style_img = image_loader(f"style_library/{style_filename}.jpg")
-    content_img = image_loader(f"images/{content_filename}.jpg")
+    content_img = image_loader(f"{content_dir}/{content_filename}.jpg")
     input_img = content_img.clone()
 
 
@@ -338,4 +339,4 @@ for content_filename in imgs:
     im = im.astype(np.uint8)
     im = np.transpose(im, (1, 2, 0))
     im = Image.fromarray(im)
-    im.save(f"images/{style_filename}_{content_filename}.jpg")
+    im.save(f"{save_dir}/{style_filename}_{content_filename}.jpg")
