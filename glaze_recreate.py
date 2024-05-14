@@ -317,12 +317,18 @@ def run_glazing(content_img, target_img, num_steps=300, fweight=1.0, mweight=1.0
 style_filename = "picasso_portrait"
 content_dir = "images/final_images"
 save_dir = "images/final_encrypted"
+transform_dir = "images/transformed_images"
 imgs = os.listdir(content_dir)
 for content_filename in imgs:
     style_img = image_loader(f"style_library/{style_filename}.jpg")
     content_img = image_loader(f"{content_dir}/{content_filename}")
     input_img = content_img.clone()
 
+    im = content_img.detach().squeeze().cpu().numpy() * 255
+    im = im.astype(np.uint8)
+    im = np.transpose(im, (1, 2, 0))
+    im = Image.fromarray(im)
+    im.save(f"{transform_dir}/{content_filename}_transformed.jpg")
 
     assert style_img.size() == content_img.size(), \
         "we need to import style and content images of the same size"
