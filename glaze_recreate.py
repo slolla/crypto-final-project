@@ -328,7 +328,7 @@ for content_filename in imgs:
     im = im.astype(np.uint8)
     im = np.transpose(im, (1, 2, 0))
     im = Image.fromarray(im)
-    im.save(f"{transform_dir}/{content_filename}_transformed.jpg")
+    im.save(f"{transform_dir}/{content_filename}")
 
     assert style_img.size() == content_img.size(), \
         "we need to import style and content images of the same size"
