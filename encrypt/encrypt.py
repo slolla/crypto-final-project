@@ -339,7 +339,6 @@ for content_filename in imgs:
 
 
     glazed_output = run_glazing(content_img, output, num_steps=400, fweight=5, mweight=0.5)
-    import numpy as np
 
     im = glazed_output.detach().squeeze().cpu().numpy() * 255
     im = im.astype(np.uint8)
