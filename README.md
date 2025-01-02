@@ -24,4 +24,4 @@ The rise of style mimicry models has posed significant challenges for artists, l
 ├── style_library/       # Sample datasets and style libraries
 ├── encrypted_data/      # Sample encrypted data to run decryption algorithm
 ├── images/              # Data used for generating paper figures
-└── README.md            # Project overview and instructions```
+└── README.md            # Project overview and instructions
