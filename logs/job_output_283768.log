@@ -1,19 +1,0 @@
-cpu-bind=MASK - gpu19-1.drl, task  0  0 [2046010]: mask 0x1 set
-Fri May 10 10:10:19 PM EDT 2024
-Running my job on gpu19-1.drl
-/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/util/check_latest_version.py:32: UserWarning: A newer version of deeplake (3.9.5) is available. It's recommended that you update to the latest version using `pip install -U deeplake`.
-  warnings.warn(
-/ - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | SETTING DEVICE AS cuda
-Opening dataset in read-only mode as you don't have write permissions.
-This dataset can be visualized in Jupyter Notebook by ds.visualize() or at https://app.activeloop.ai/activeloop/wiki-art
-
-/ - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ hub://activeloop/wiki-art loaded successfully.
-
-/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/integrations/pytorch/common.py:137: UserWarning: Decode method for tensors ['images'] is defaulting to numpy. Please consider specifying a decode_method in .pytorch() that maximizes the data preprocessing speed based on your transformation.
-  warnings.warn(
-Please wait, filling up the shuffle buffer with samples.:   0%|          | 0.00/2.00G [00:00<?, ?B/s]Please wait, filling up the shuffle buffer with samples.:   0%|          | 5.46M/2.00G [00:02<14:06, 2.53MB/s]Please wait, filling up the shuffle buffer with samples.:   6%|▌         | 118M/2.00G [00:05<01:20, 25.2MB/s] Please wait, filling up the shuffle buffer with samples.:   9%|▉         | 187M/2.00G [00:06<00:56, 34.6MB/s]Please wait, filling up the shuffle buffer with samples.:  19%|█▉        | 394M/2.00G [00:06<00:17, 98.8MB/s]Please wait, filling up the shuffle buffer with samples.:  27%|██▋       | 553M/2.00G [00:07<00:12, 124MB/s] Please wait, filling up the shuffle buffer with samples.:  45%|████▍     | 914M/2.00G [00:09<00:06, 181MB/s]Please wait, filling up the shuffle buffer with samples.:  68%|██████▊   | 1.36G/2.00G [00:09<00:02, 329MB/s]Please wait, filling up the shuffle buffer with samples.:  73%|███████▎  | 1.47G/2.00G [00:10<00:02, 226MB/s]Please wait, filling up the shuffle buffer with samples.:  91%|█████████ | 1.81G/2.00G [00:11<00:00, 356MB/s]Please wait, filling up the shuffle buffer with samples.: 100%|█████████▉| 2.00G/2.00G [00:11<00:00, 193MB/s]
-Shuffle buffer filling is complete.
-Traceback (most recent call last):
-  File "/data/scratch/amini/sadhana/2024/crypto-final-project/src/data_generation.py", line 344, in <module>
-    content_img = content_img.to(device)
-AttributeError: 'list' object has no attribute 'to'

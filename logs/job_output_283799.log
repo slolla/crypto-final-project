@@ -1,29 +1,0 @@
-cpu-bind=MASK - gpu19-1.drl, task  0  0 [2072547]: mask 0x1 set
-Fri May 10 10:50:43 PM EDT 2024
-Running my job on gpu19-1.drl
-/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/util/check_latest_version.py:32: UserWarning: A newer version of deeplake (3.9.5) is available. It's recommended that you update to the latest version using `pip install -U deeplake`.
-  warnings.warn(
-/ - \ | / - \ | / - \ | / - \ | / - \ | / - \ | SETTING DEVICE AS cuda
-Opening dataset in read-only mode as you don't have write permissions.
-This dataset can be visualized in Jupyter Notebook by ds.visualize() or at https://app.activeloop.ai/activeloop/wiki-art
-
-/ - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ hub://activeloop/wiki-art loaded successfully.
-
-/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/integrations/pytorch/common.py:137: UserWarning: Decode method for tensors ['images'] is defaulting to numpy. Please consider specifying a decode_method in .pytorch() that maximizes the data preprocessing speed based on your transformation.
-  warnings.warn(
-Please wait, filling up the shuffle buffer with samples.:   0%|          | 0.00/2.00G [00:00<?, ?B/s]Please wait, filling up the shuffle buffer with samples.:   0%|          | 8.40M/2.00G [00:03<16:01, 2.22MB/s]Please wait, filling up the shuffle buffer with samples.:   4%|▍         | 86.6M/2.00G [00:08<02:58, 11.5MB/s]Please wait, filling up the shuffle buffer with samples.:  14%|█▍        | 289M/2.00G [00:09<00:40, 45.8MB/s] Please wait, filling up the shuffle buffer with samples.:  19%|█▉        | 395M/2.00G [00:10<00:28, 61.9MB/s]Please wait, filling up the shuffle buffer with samples.:  31%|███       | 638M/2.00G [00:10<00:11, 132MB/s] Please wait, filling up the shuffle buffer with samples.:  36%|███▌      | 733M/2.00G [00:12<00:14, 97.3MB/s]Please wait, filling up the shuffle buffer with samples.:  48%|████▊     | 987M/2.00G [00:12<00:06, 172MB/s] Please wait, filling up the shuffle buffer with samples.:  66%|██████▌   | 1.31G/2.00G [00:12<00:02, 285MB/s]Please wait, filling up the shuffle buffer with samples.:  72%|███████▏  | 1.44G/2.00G [00:13<00:02, 287MB/s]Please wait, filling up the shuffle buffer with samples.:  78%|███████▊  | 1.55G/2.00G [00:13<00:01, 336MB/s]Please wait, filling up the shuffle buffer with samples.:  85%|████████▌ | 1.70G/2.00G [00:13<00:00, 328MB/s]Please wait, filling up the shuffle buffer with samples.:  92%|█████████▏| 1.85G/2.00G [00:14<00:00, 264MB/s]Please wait, filling up the shuffle buffer with samples.:  95%|█████████▌| 1.90G/2.00G [00:14<00:00, 278MB/s]Please wait, filling up the shuffle buffer with samples.:  99%|█████████▉| 1.99G/2.00G [00:14<00:00, 142MB/s]
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
-  return func(*args, **kwargs)
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([1, 64, 64])) that is different to the input size (torch.Size([16, 64, 64])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
-  return func(*args, **kwargs)
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([1, 128, 128])) that is different to the input size (torch.Size([16, 128, 128])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
-  return func(*args, **kwargs)
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([16, 128, 128, 128])) that is different to the input size (torch.Size([1, 128, 128, 128])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
-  return func(*args, **kwargs)
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([1, 256, 256])) that is different to the input size (torch.Size([16, 256, 256])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
-  return func(*args, **kwargs)
-/tmp/home/amini/.local/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
-  warnings.warn(
-/tmp/home/amini/.local/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=VGG16_Weights.IMAGENET1K_V1`. You can also use `weights=VGG16_Weights.DEFAULT` to get the most up-to-date weights.
-  warnings.warn(msg)
-slurmstepd: error: *** JOB 283799 ON gpu19-1.drl CANCELLED AT 2024-05-10T22:54:48 DUE TO TIME LIMIT ***

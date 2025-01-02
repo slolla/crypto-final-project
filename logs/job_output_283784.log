@@ -1,66 +1,0 @@
-cpu-bind=MASK - gpu19-1.drl, task  0  0 [2053019]: mask 0x1 set
-Fri May 10 10:19:11 PM EDT 2024
-Running my job on gpu19-1.drl
-/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/util/check_latest_version.py:32: UserWarning: A newer version of deeplake (3.9.5) is available. It's recommended that you update to the latest version using `pip install -U deeplake`.
-  warnings.warn(
-/ - \ | / - \ | / - \ | / - \ | / - SETTING DEVICE AS cuda
-Opening dataset in read-only mode as you don't have write permissions.
-This dataset can be visualized in Jupyter Notebook by ds.visualize() or at https://app.activeloop.ai/activeloop/wiki-art
-
-\ | / - \ | / - \ | / - \ | hub://activeloop/wiki-art loaded successfully.
-
-/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/integrations/pytorch/common.py:137: UserWarning: Decode method for tensors ['images'] is defaulting to numpy. Please consider specifying a decode_method in .pytorch() that maximizes the data preprocessing speed based on your transformation.
-  warnings.warn(
-Please wait, filling up the shuffle buffer with samples.:   0%|          | 0.00/2.00G [00:00<?, ?B/s]Please wait, filling up the shuffle buffer with samples.:   0%|          | 729k/2.00G [00:02<1:41:28, 353kB/s]Please wait, filling up the shuffle buffer with samples.:   1%|          | 24.3M/2.00G [00:02<03:06, 11.4MB/s]Please wait, filling up the shuffle buffer with samples.:   5%|▍         | 100M/2.00G [00:06<01:52, 18.1MB/s] Please wait, filling up the shuffle buffer with samples.:   9%|▉         | 183M/2.00G [00:06<00:49, 39.5MB/s]Please wait, filling up the shuffle buffer with samples.:  22%|██▏       | 443M/2.00G [00:07<00:12, 131MB/s] Please wait, filling up the shuffle buffer with samples.:  32%|███▏      | 658M/2.00G [00:07<00:06, 228MB/s]Please wait, filling up the shuffle buffer with samples.:  39%|███▉      | 801M/2.00G [00:08<00:07, 169MB/s]Please wait, filling up the shuffle buffer with samples.:  53%|█████▎    | 1.06G/2.00G [00:08<00:03, 288MB/s]Please wait, filling up the shuffle buffer with samples.:  73%|███████▎  | 1.45G/2.00G [00:09<00:01, 404MB/s]Please wait, filling up the shuffle buffer with samples.:  79%|███████▉  | 1.58G/2.00G [00:10<00:01, 249MB/s]Please wait, filling up the shuffle buffer with samples.:  86%|████████▋ | 1.73G/2.00G [00:10<00:00, 305MB/s]Please wait, filling up the shuffle buffer with samples.:  97%|█████████▋| 1.94G/2.00G [00:11<00:00, 420MB/s]Please wait, filling up the shuffle buffer with samples.: 100%|█████████▉| 2.00G/2.00G [00:11<00:00, 194MB/s]
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
-  return func(*args, **kwargs)
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([1, 64, 64])) that is different to the input size (torch.Size([16, 64, 64])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
-  return func(*args, **kwargs)
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([1, 128, 128])) that is different to the input size (torch.Size([16, 128, 128])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
-  return func(*args, **kwargs)
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([16, 128, 256, 256])) that is different to the input size (torch.Size([1, 128, 256, 256])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
-  return func(*args, **kwargs)
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Plan failed with an OutOfMemoryError: CUDA out of memory. Tried to allocate 2.25 GiB. GPU  (Triggered internally at ../aten/src/ATen/native/cudnn/Conv_v8.cpp:924.)
-  return func(*args, **kwargs)
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Plan failed with an OutOfMemoryError: CUDA out of memory. Tried to allocate 870.00 MiB. GPU  (Triggered internally at ../aten/src/ATen/native/cudnn/Conv_v8.cpp:924.)
-  return func(*args, **kwargs)
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([1, 256, 256])) that is different to the input size (torch.Size([16, 256, 256])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
-  return func(*args, **kwargs)
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/autograd/graph.py:744: UserWarning: Plan failed with an OutOfMemoryError: CUDA out of memory. Tried to allocate 870.00 MiB. GPU  (Triggered internally at ../aten/src/ATen/native/cudnn/Conv_v8.cpp:924.)
-  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/autograd/graph.py:744: UserWarning: Plan failed with an OutOfMemoryError: CUDA out of memory. Tried to allocate 2.25 GiB. GPU  (Triggered internally at ../aten/src/ATen/native/cudnn/Conv_v8.cpp:924.)
-  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/autograd/graph.py:744: UserWarning: Plan failed with an OutOfMemoryError: CUDA out of memory. Tried to allocate 1.69 GiB. GPU  (Triggered internally at ../aten/src/ATen/native/cudnn/Conv_v8.cpp:924.)
-  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
-Shuffle buffer filling is complete.
-Building the style transfer model..
-Optimizing..
-0
-Traceback (most recent call last):
-  File "/data/scratch/amini/sadhana/2024/crypto-final-project/src/data_generation.py", line 350, in <module>
-    output = run_style_transfer(cnn, cnn_normalization_mean, cnn_normalization_std,
-  File "/data/scratch/amini/sadhana/2024/crypto-final-project/src/data_generation.py", line 239, in run_style_transfer
-    optimizer.step(closure)
-  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/optim/optimizer.py", line 391, in wrapper
-    out = func(*args, **kwargs)
-  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
-    return func(*args, **kwargs)
-  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/optim/lbfgs.py", line 445, in step
-    loss = float(closure())
-  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
-    return func(*args, **kwargs)
-  File "/data/scratch/amini/sadhana/2024/crypto-final-project/src/data_generation.py", line 228, in closure
-    loss.backward()
-  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/_tensor.py", line 516, in backward
-    return handle_torch_function(
-  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/overrides.py", line 1619, in handle_torch_function
-    result = mode.__torch_function__(public_api, types, args, kwargs)
-  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py", line 78, in __torch_function__
-    return func(*args, **kwargs)
-  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/_tensor.py", line 525, in backward
-    torch.autograd.backward(
-  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/autograd/__init__.py", line 267, in backward
-    _engine_run_backward(
-  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/autograd/graph.py", line 744, in _engine_run_backward
-    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
-torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 512.00 MiB. GPU 

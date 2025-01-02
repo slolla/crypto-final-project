@@ -1,1180 +1,0 @@
-cpu-bind=MASK - gpu20-3.drl, task  0  0 [4104105]: mask 0x1 set
-Sat May 11 12:18:54 AM EDT 2024
-Running my job on gpu20-3.drl
-Defaulting to user installation because normal site-packages is not writeable
-Requirement already satisfied: deeplake in /tmp/home/amini/.local/lib/python3.10/site-packages (3.9.5)
-Requirement already satisfied: aioboto3>=10.4.0 in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (12.4.0)
-Requirement already satisfied: pillow~=10.2.0 in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (10.2.0)
-Requirement already satisfied: numpy in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (1.26.4)
-Requirement already satisfied: pyjwt in /usr/lib/python3/dist-packages (from deeplake) (2.3.0)
-Requirement already satisfied: boto3 in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (1.34.69)
-Requirement already satisfied: humbug>=0.3.1 in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (0.3.2)
-Requirement already satisfied: click in /usr/lib/python3/dist-packages (from deeplake) (8.0.3)
-Requirement already satisfied: libdeeplake==0.0.128 in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (0.0.128)
-Requirement already satisfied: pydantic in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (2.7.1)
-Requirement already satisfied: nest-asyncio in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (1.6.0)
-Requirement already satisfied: tqdm in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (4.66.4)
-Requirement already satisfied: lz4 in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (4.3.3)
-Requirement already satisfied: pathos in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (0.3.2)
-Requirement already satisfied: dill in /tmp/home/amini/.local/lib/python3.10/site-packages (from libdeeplake==0.0.128->deeplake) (0.3.8)
-Requirement already satisfied: aiobotocore[boto3]==2.12.3 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aioboto3>=10.4.0->deeplake) (2.12.3)
-Requirement already satisfied: aiohttp<4.0.0,>=3.7.4.post0 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (3.9.5)
-Requirement already satisfied: aioitertools<1.0.0,>=0.5.1 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (0.11.0)
-Requirement already satisfied: wrapt<2.0.0,>=1.10.10 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (1.16.0)
-Requirement already satisfied: botocore<1.34.70,>=1.34.41 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (1.34.69)
-Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in /tmp/home/amini/.local/lib/python3.10/site-packages (from boto3->deeplake) (1.0.1)
-Requirement already satisfied: s3transfer<0.11.0,>=0.10.0 in /tmp/home/amini/.local/lib/python3.10/site-packages (from boto3->deeplake) (0.10.1)
-Requirement already satisfied: requests in /tmp/home/amini/.local/lib/python3.10/site-packages (from humbug>=0.3.1->deeplake) (2.31.0)
-Requirement already satisfied: multiprocess>=0.70.16 in /tmp/home/amini/.local/lib/python3.10/site-packages (from pathos->deeplake) (0.70.16)
-Requirement already satisfied: pox>=0.3.4 in /tmp/home/amini/.local/lib/python3.10/site-packages (from pathos->deeplake) (0.3.4)
-Requirement already satisfied: ppft>=1.7.6.8 in /tmp/home/amini/.local/lib/python3.10/site-packages (from pathos->deeplake) (1.7.6.8)
-Requirement already satisfied: annotated-types>=0.4.0 in /tmp/home/amini/.local/lib/python3.10/site-packages (from pydantic->deeplake) (0.6.0)
-Requirement already satisfied: typing-extensions>=4.6.1 in /tmp/home/amini/.local/lib/python3.10/site-packages (from pydantic->deeplake) (4.11.0)
-Requirement already satisfied: pydantic-core==2.18.2 in /tmp/home/amini/.local/lib/python3.10/site-packages (from pydantic->deeplake) (2.18.2)
-Requirement already satisfied: urllib3!=2.2.0,<3,>=1.25.4 in /tmp/home/amini/.local/lib/python3.10/site-packages (from botocore<1.34.70,>=1.34.41->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (2.2.1)
-Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in /tmp/home/amini/.local/lib/python3.10/site-packages (from botocore<1.34.70,>=1.34.41->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (2.9.0.post0)
-Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3/dist-packages (from requests->humbug>=0.3.1->deeplake) (3.3)
-Requirement already satisfied: charset-normalizer<4,>=2 in /tmp/home/amini/.local/lib/python3.10/site-packages (from requests->humbug>=0.3.1->deeplake) (3.3.2)
-Requirement already satisfied: certifi>=2017.4.17 in /tmp/home/amini/.local/lib/python3.10/site-packages (from requests->humbug>=0.3.1->deeplake) (2024.2.2)
-Requirement already satisfied: async-timeout<5.0,>=4.0 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aiohttp<4.0.0,>=3.7.4.post0->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (4.0.3)
-Requirement already satisfied: aiosignal>=1.1.2 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aiohttp<4.0.0,>=3.7.4.post0->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (1.3.1)
-Requirement already satisfied: frozenlist>=1.1.1 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aiohttp<4.0.0,>=3.7.4.post0->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (1.4.1)
-Requirement already satisfied: attrs>=17.3.0 in /usr/lib/python3/dist-packages (from aiohttp<4.0.0,>=3.7.4.post0->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (21.2.0)
-Requirement already satisfied: multidict<7.0,>=4.5 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aiohttp<4.0.0,>=3.7.4.post0->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (6.0.5)
-Requirement already satisfied: yarl<2.0,>=1.0 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aiohttp<4.0.0,>=3.7.4.post0->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (1.9.4)
-Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil<3.0.0,>=2.1->botocore<1.34.70,>=1.34.41->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (1.16.0)
-/ - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / SETTING DEVICE AS cuda
-Opening dataset in read-only mode as you don't have write permissions.
-This dataset can be visualized in Jupyter Notebook by ds.visualize() or at https://app.activeloop.ai/activeloop/wiki-art
-
-- \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ hub://activeloop/wiki-art loaded successfully.
-
-/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/integrations/pytorch/common.py:137: UserWarning: Decode method for tensors ['images'] is defaulting to numpy. Please consider specifying a decode_method in .pytorch() that maximizes the data preprocessing speed based on your transformation.
-  warnings.warn(
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
-  return func(*args, **kwargs)
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([1, 64, 64])) that is different to the input size (torch.Size([16, 64, 64])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
-  return func(*args, **kwargs)
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([1, 128, 128])) that is different to the input size (torch.Size([16, 128, 128])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
-  return func(*args, **kwargs)
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([16, 128, 128, 128])) that is different to the input size (torch.Size([1, 128, 128, 128])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
-  return func(*args, **kwargs)
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([1, 256, 256])) that is different to the input size (torch.Size([16, 256, 256])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
-  return func(*args, **kwargs)
-/tmp/home/amini/.local/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
-  warnings.warn(
-/tmp/home/amini/.local/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=VGG16_Weights.IMAGENET1K_V1`. You can also use `weights=VGG16_Weights.DEFAULT` to get the most up-to-date weights.
-  warnings.warn(msg)
-Downloading: "https://download.pytorch.org/models/vgg16-397923af.pth" to /tmp/home/amini/.cache/torch/hub/checkpoints/vgg16-397923af.pth
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 2.415559 Content Loss: 6.817739
-
-60
-80
-run [100]:
-Style Loss : 1.979004 Content Loss: 6.547831
-
-100
-120
-140
-run [150]:
-Style Loss : 1.833952 Content Loss: 6.555187
-
-160
-180
-run [200]:
-Style Loss : 2.227325 Content Loss: 6.713857
-
-200
-220
-240
-run [250]:
-Style Loss : 1.781755 Content Loss: 6.822335
-
-260
-280
-run [300]:
-Style Loss : 1.792973 Content Loss: 6.733997
-
-300
-  0%|          | 0.00/528M [00:00<?, ?B/s]  2%|▏         | 10.5M/528M [00:00<00:04, 109MB/s]  4%|▍         | 21.1M/528M [00:00<00:04, 110MB/s]  6%|▌         | 31.8M/528M [00:00<00:04, 110MB/s]  8%|▊         | 42.2M/528M [00:00<00:04, 110MB/s] 10%|█         | 52.9M/528M [00:00<00:04, 110MB/s] 12%|█▏        | 63.5M/528M [00:00<00:04, 110MB/s] 14%|█▍        | 74.1M/528M [00:00<00:04, 110MB/s] 16%|█▌        | 84.8M/528M [00:00<00:04, 110MB/s] 18%|█▊        | 95.4M/528M [00:00<00:04, 110MB/s] 20%|██        | 106M/528M [00:01<00:04, 109MB/s]  22%|██▏       | 116M/528M [00:01<00:03, 110MB/s] 24%|██▍       | 127M/528M [00:01<00:03, 110MB/s] 26%|██▌       | 138M/528M [00:01<00:03, 110MB/s] 28%|██▊       | 148M/528M [00:01<00:03, 110MB/s] 30%|███       | 159M/528M [00:01<00:03, 110MB/s] 32%|███▏      | 170M/528M [00:01<00:03, 110MB/s] 34%|███▍      | 180M/528M [00:01<00:03, 110MB/s] 36%|███▌      | 191M/528M [00:01<00:03, 110MB/s] 38%|███▊      | 201M/528M [00:01<00:03, 110MB/s] 40%|████      | 212M/528M [00:02<00:03, 110MB/s] 42%|████▏     | 223M/528M [00:02<00:02, 110MB/s] 44%|████▍     | 233M/528M [00:02<00:02, 110MB/s] 46%|████▌     | 244M/528M [00:02<00:02, 110MB/s] 48%|████▊     | 254M/528M [00:02<00:02, 110MB/s] 50%|█████     | 265M/528M [00:02<00:02, 110MB/s] 52%|█████▏    | 276M/528M [00:02<00:02, 110MB/s] 54%|█████▍    | 286M/528M [00:02<00:02, 110MB/s] 56%|█████▋    | 297M/528M [00:02<00:02, 110MB/s] 58%|█████▊    | 308M/528M [00:02<00:02, 110MB/s] 60%|██████    | 318M/528M [00:03<00:01, 110MB/s] 62%|██████▏   | 329M/528M [00:03<00:01, 110MB/s] 64%|██████▍   | 340M/528M [00:03<00:01, 110MB/s] 66%|██████▋   | 350M/528M [00:03<00:01, 110MB/s] 68%|██████▊   | 361M/528M [00:03<00:01, 110MB/s] 70%|███████   | 371M/528M [00:03<00:01, 110MB/s] 72%|███████▏  | 382M/528M [00:03<00:01, 110MB/s] 74%|███████▍  | 393M/528M [00:03<00:01, 110MB/s] 76%|███████▋  | 403M/528M [00:03<00:01, 110MB/s] 78%|███████▊  | 414M/528M [00:03<00:01, 110MB/s] 80%|████████  | 424M/528M [00:04<00:00, 110MB/s] 82%|████████▏ | 435M/528M [00:04<00:00, 110MB/s] 84%|████████▍ | 446M/528M [00:04<00:00, 110MB/s] 86%|████████▋ | 456M/528M [00:04<00:00, 110MB/s] 88%|████████▊ | 467M/528M [00:04<00:00, 110MB/s] 90%|█████████ | 478M/528M [00:04<00:00, 110MB/s] 93%|█████████▎| 488M/528M [00:04<00:00, 110MB/s] 95%|█████████▍| 499M/528M [00:04<00:00, 110MB/s] 97%|█████████▋| 510M/528M [00:04<00:00, 110MB/s] 99%|█████████▊| 520M/528M [00:04<00:00, 110MB/s]100%|██████████| 528M/528M [00:05<00:00, 110MB/s]
-Optimizing..
-run [25]:
-Loss : 0.020680, Floss: 0.020675, Mloss 0.000004
-
-run [50]:
-Loss : 0.006011, Floss: 0.006005, Mloss 0.000006
-
-run [75]:
-Loss : 0.003156, Floss: 0.003149, Mloss 0.000007
-
-run [100]:
-Loss : 0.001990, Floss: 0.001983, Mloss 0.000007
-
-run [125]:
-Loss : 0.001386, Floss: 0.001378, Mloss 0.000008
-
-run [150]:
-Loss : 0.001029, Floss: 0.001020, Mloss 0.000009
-
-run [175]:
-Loss : 0.000803, Floss: 0.000793, Mloss 0.000009
-
-run [200]:
-Loss : 0.000643, Floss: 0.000633, Mloss 0.000010
-
-run [225]:
-Loss : 0.000528, Floss: 0.000517, Mloss 0.000010
-
-run [250]:
-Loss : 0.000441, Floss: 0.000430, Mloss 0.000011
-
-run [275]:
-Loss : 0.000373, Floss: 0.000362, Mloss 0.000011
-
-run [300]:
-Loss : 0.000322, Floss: 0.000311, Mloss 0.000012
-
-run [325]:
-Loss : 0.000281, Floss: 0.000269, Mloss 0.000012
-
-run [350]:
-Loss : 0.000250, Floss: 0.000238, Mloss 0.000012
-
-run [375]:
-Loss : 0.000224, Floss: 0.000212, Mloss 0.000012
-
-run [400]:
-Loss : 0.000201, Floss: 0.000189, Mloss 0.000013
-
-saved decrypt_dataset/monet_0_encrypted
-saved decrypt_dataset/monet_1_encrypted
-saved decrypt_dataset/monet_2_encrypted
-saved decrypt_dataset/monet_3_encrypted
-saved decrypt_dataset/monet_4_encrypted
-saved decrypt_dataset/monet_5_encrypted
-saved decrypt_dataset/monet_6_encrypted
-saved decrypt_dataset/monet_7_encrypted
-saved decrypt_dataset/monet_8_encrypted
-saved decrypt_dataset/monet_9_encrypted
-saved decrypt_dataset/monet_10_encrypted
-saved decrypt_dataset/monet_11_encrypted
-saved decrypt_dataset/monet_12_encrypted
-saved decrypt_dataset/monet_13_encrypted
-saved decrypt_dataset/monet_14_encrypted
-saved decrypt_dataset/monet_15_encrypted
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 2.136675 Content Loss: 6.974746
-
-60
-80
-run [100]:
-Style Loss : 1.791908 Content Loss: 6.613305
-
-100
-120
-140
-run [150]:
-Style Loss : 1.673503 Content Loss: 6.498019
-
-160
-180
-run [200]:
-Style Loss : 1.609664 Content Loss: 6.442784
-
-200
-220
-240
-run [250]:
-Style Loss : 1.578036 Content Loss: 6.407413
-
-260
-280
-run [300]:
-Style Loss : 1.562747 Content Loss: 6.382604
-
-300
-Optimizing..
-run [25]:
-Loss : 0.013957, Floss: 0.013956, Mloss 0.000002
-
-run [50]:
-Loss : 0.004521, Floss: 0.004518, Mloss 0.000003
-
-run [75]:
-Loss : 0.002409, Floss: 0.002406, Mloss 0.000003
-
-run [100]:
-Loss : 0.001511, Floss: 0.001507, Mloss 0.000004
-
-run [125]:
-Loss : 0.001065, Floss: 0.001061, Mloss 0.000004
-
-run [150]:
-Loss : 0.000791, Floss: 0.000787, Mloss 0.000004
-
-run [175]:
-Loss : 0.000615, Floss: 0.000610, Mloss 0.000005
-
-run [200]:
-Loss : 0.000494, Floss: 0.000489, Mloss 0.000005
-
-run [225]:
-Loss : 0.000408, Floss: 0.000403, Mloss 0.000005
-
-run [250]:
-Loss : 0.000344, Floss: 0.000339, Mloss 0.000006
-
-run [275]:
-Loss : 0.000294, Floss: 0.000288, Mloss 0.000006
-
-run [300]:
-Loss : 0.000255, Floss: 0.000249, Mloss 0.000006
-
-run [325]:
-Loss : 0.000224, Floss: 0.000218, Mloss 0.000006
-
-run [350]:
-Loss : 0.000198, Floss: 0.000192, Mloss 0.000007
-
-run [375]:
-Loss : 0.000176, Floss: 0.000170, Mloss 0.000007
-
-run [400]:
-Loss : 0.000158, Floss: 0.000151, Mloss 0.000007
-
-saved decrypt_dataset/monet_16_encrypted
-saved decrypt_dataset/monet_17_encrypted
-saved decrypt_dataset/monet_18_encrypted
-saved decrypt_dataset/monet_19_encrypted
-saved decrypt_dataset/monet_20_encrypted
-saved decrypt_dataset/monet_21_encrypted
-saved decrypt_dataset/monet_22_encrypted
-saved decrypt_dataset/monet_23_encrypted
-saved decrypt_dataset/monet_24_encrypted
-saved decrypt_dataset/monet_25_encrypted
-saved decrypt_dataset/monet_26_encrypted
-saved decrypt_dataset/monet_27_encrypted
-saved decrypt_dataset/monet_28_encrypted
-saved decrypt_dataset/monet_29_encrypted
-saved decrypt_dataset/monet_30_encrypted
-saved decrypt_dataset/monet_31_encrypted
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 2.895647 Content Loss: 10.229454
-
-60
-80
-run [100]:
-Style Loss : 2.394397 Content Loss: 9.672929
-
-100
-120
-140
-run [150]:
-Style Loss : 2.235485 Content Loss: 9.502664
-
-160
-180
-run [200]:
-Style Loss : 2.147551 Content Loss: 9.425669
-
-200
-220
-240
-run [250]:
-Style Loss : 2.099380 Content Loss: 9.414977
-
-260
-280
-run [300]:
-Style Loss : 2.095735 Content Loss: 9.384771
-
-300
-Optimizing..
-run [25]:
-Loss : 0.023355, Floss: 0.023349, Mloss 0.000006
-
-run [50]:
-Loss : 0.008465, Floss: 0.008456, Mloss 0.000009
-
-run [75]:
-Loss : 0.004554, Floss: 0.004542, Mloss 0.000012
-
-run [100]:
-Loss : 0.002890, Floss: 0.002877, Mloss 0.000013
-
-run [125]:
-Loss : 0.002024, Floss: 0.002009, Mloss 0.000015
-
-run [150]:
-Loss : 0.001499, Floss: 0.001482, Mloss 0.000016
-
-run [175]:
-Loss : 0.001170, Floss: 0.001152, Mloss 0.000018
-
-run [200]:
-Loss : 0.000938, Floss: 0.000919, Mloss 0.000019
-
-run [225]:
-Loss : 0.000770, Floss: 0.000750, Mloss 0.000020
-
-run [250]:
-Loss : 0.000649, Floss: 0.000628, Mloss 0.000021
-
-run [275]:
-Loss : 0.000559, Floss: 0.000537, Mloss 0.000021
-
-run [300]:
-Loss : 0.000486, Floss: 0.000463, Mloss 0.000022
-
-run [325]:
-Loss : 0.000427, Floss: 0.000404, Mloss 0.000023
-
-run [350]:
-Loss : 0.000380, Floss: 0.000357, Mloss 0.000023
-
-run [375]:
-Loss : 0.000340, Floss: 0.000316, Mloss 0.000024
-
-run [400]:
-Loss : 0.000307, Floss: 0.000283, Mloss 0.000024
-
-saved decrypt_dataset/monet_32_encrypted
-saved decrypt_dataset/monet_33_encrypted
-saved decrypt_dataset/monet_34_encrypted
-saved decrypt_dataset/monet_35_encrypted
-saved decrypt_dataset/monet_36_encrypted
-saved decrypt_dataset/monet_37_encrypted
-saved decrypt_dataset/monet_38_encrypted
-saved decrypt_dataset/monet_39_encrypted
-saved decrypt_dataset/monet_40_encrypted
-saved decrypt_dataset/monet_41_encrypted
-saved decrypt_dataset/monet_42_encrypted
-saved decrypt_dataset/monet_43_encrypted
-saved decrypt_dataset/monet_44_encrypted
-saved decrypt_dataset/monet_45_encrypted
-saved decrypt_dataset/monet_46_encrypted
-saved decrypt_dataset/monet_47_encrypted
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 2.354390 Content Loss: 7.247390
-
-60
-80
-run [100]:
-Style Loss : 1.999336 Content Loss: 6.835054
-
-100
-120
-140
-run [150]:
-Style Loss : 1.868551 Content Loss: 6.708688
-
-160
-180
-run [200]:
-Style Loss : 1.790068 Content Loss: 6.652685
-
-200
-220
-240
-run [250]:
-Style Loss : 1.741153 Content Loss: 6.655660
-
-260
-280
-run [300]:
-Style Loss : 1.729530 Content Loss: 6.678976
-
-300
-Optimizing..
-run [25]:
-Loss : 0.017477, Floss: 0.017472, Mloss 0.000005
-
-run [50]:
-Loss : 0.005545, Floss: 0.005538, Mloss 0.000007
-
-run [75]:
-Loss : 0.002878, Floss: 0.002870, Mloss 0.000008
-
-run [100]:
-Loss : 0.001720, Floss: 0.001711, Mloss 0.000009
-
-run [125]:
-Loss : 0.001162, Floss: 0.001152, Mloss 0.000010
-
-run [150]:
-Loss : 0.000845, Floss: 0.000835, Mloss 0.000010
-
-run [175]:
-Loss : 0.000650, Floss: 0.000639, Mloss 0.000011
-
-run [200]:
-Loss : 0.000510, Floss: 0.000498, Mloss 0.000012
-
-run [225]:
-Loss : 0.000415, Floss: 0.000403, Mloss 0.000012
-
-run [250]:
-Loss : 0.000345, Floss: 0.000333, Mloss 0.000012
-
-run [275]:
-Loss : 0.000292, Floss: 0.000279, Mloss 0.000013
-
-run [300]:
-Loss : 0.000252, Floss: 0.000239, Mloss 0.000013
-
-run [325]:
-Loss : 0.000220, Floss: 0.000207, Mloss 0.000013
-
-run [350]:
-Loss : 0.000195, Floss: 0.000182, Mloss 0.000014
-
-run [375]:
-Loss : 0.000174, Floss: 0.000160, Mloss 0.000014
-
-run [400]:
-Loss : 0.000157, Floss: 0.000143, Mloss 0.000014
-
-saved decrypt_dataset/monet_48_encrypted
-saved decrypt_dataset/monet_49_encrypted
-saved decrypt_dataset/monet_50_encrypted
-saved decrypt_dataset/monet_51_encrypted
-saved decrypt_dataset/monet_52_encrypted
-saved decrypt_dataset/monet_53_encrypted
-saved decrypt_dataset/monet_54_encrypted
-saved decrypt_dataset/monet_55_encrypted
-saved decrypt_dataset/monet_56_encrypted
-saved decrypt_dataset/monet_57_encrypted
-saved decrypt_dataset/monet_58_encrypted
-saved decrypt_dataset/monet_59_encrypted
-saved decrypt_dataset/monet_60_encrypted
-saved decrypt_dataset/monet_61_encrypted
-saved decrypt_dataset/monet_62_encrypted
-saved decrypt_dataset/monet_63_encrypted
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 2.483021 Content Loss: 7.122126
-
-60
-80
-run [100]:
-Style Loss : 1.990220 Content Loss: 6.736852
-
-100
-120
-140
-run [150]:
-Style Loss : 1.727798 Content Loss: 6.623439
-
-160
-180
-run [200]:
-Style Loss : 1.615347 Content Loss: 6.658280
-
-200
-220
-240
-run [250]:
-Style Loss : 1.646761 Content Loss: 6.849059
-
-260
-280
-run [300]:
-Style Loss : 1.581040 Content Loss: 6.570710
-
-300
-Optimizing..
-run [25]:
-Loss : 0.017622, Floss: 0.017618, Mloss 0.000004
-
-run [50]:
-Loss : 0.006325, Floss: 0.006319, Mloss 0.000006
-
-run [75]:
-Loss : 0.003343, Floss: 0.003336, Mloss 0.000008
-
-run [100]:
-Loss : 0.002136, Floss: 0.002127, Mloss 0.000009
-
-run [125]:
-Loss : 0.001467, Floss: 0.001457, Mloss 0.000010
-
-run [150]:
-Loss : 0.001081, Floss: 0.001071, Mloss 0.000011
-
-run [175]:
-Loss : 0.000836, Floss: 0.000824, Mloss 0.000011
-
-run [200]:
-Loss : 0.000673, Floss: 0.000661, Mloss 0.000012
-
-run [225]:
-Loss : 0.000550, Floss: 0.000537, Mloss 0.000013
-
-run [250]:
-Loss : 0.000463, Floss: 0.000450, Mloss 0.000013
-
-run [275]:
-Loss : 0.000397, Floss: 0.000383, Mloss 0.000014
-
-run [300]:
-Loss : 0.000344, Floss: 0.000330, Mloss 0.000014
-
-run [325]:
-Loss : 0.000300, Floss: 0.000286, Mloss 0.000014
-
-run [350]:
-Loss : 0.000265, Floss: 0.000250, Mloss 0.000015
-
-run [375]:
-Loss : 0.000237, Floss: 0.000222, Mloss 0.000015
-
-run [400]:
-Loss : 0.000213, Floss: 0.000197, Mloss 0.000015
-
-saved decrypt_dataset/monet_64_encrypted
-saved decrypt_dataset/monet_65_encrypted
-saved decrypt_dataset/monet_66_encrypted
-saved decrypt_dataset/monet_67_encrypted
-saved decrypt_dataset/monet_68_encrypted
-saved decrypt_dataset/monet_69_encrypted
-saved decrypt_dataset/monet_70_encrypted
-saved decrypt_dataset/monet_71_encrypted
-saved decrypt_dataset/monet_72_encrypted
-saved decrypt_dataset/monet_73_encrypted
-saved decrypt_dataset/monet_74_encrypted
-saved decrypt_dataset/monet_75_encrypted
-saved decrypt_dataset/monet_76_encrypted
-saved decrypt_dataset/monet_77_encrypted
-saved decrypt_dataset/monet_78_encrypted
-saved decrypt_dataset/monet_79_encrypted
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 1.904917 Content Loss: 5.918475
-
-60
-80
-run [100]:
-Style Loss : 1.573083 Content Loss: 5.553916
-
-100
-120
-140
-run [150]:
-Style Loss : 1.455554 Content Loss: 5.427803
-
-160
-180
-run [200]:
-Style Loss : 1.381935 Content Loss: 5.367855
-
-200
-220
-240
-run [250]:
-Style Loss : 1.353913 Content Loss: 5.370681
-
-260
-280
-run [300]:
-Style Loss : 1.332407 Content Loss: 5.302864
-
-300
-Optimizing..
-run [25]:
-Loss : 0.013089, Floss: 0.013087, Mloss 0.000002
-
-run [50]:
-Loss : 0.004414, Floss: 0.004411, Mloss 0.000003
-
-run [75]:
-Loss : 0.002313, Floss: 0.002309, Mloss 0.000003
-
-run [100]:
-Loss : 0.001437, Floss: 0.001433, Mloss 0.000004
-
-run [125]:
-Loss : 0.001002, Floss: 0.000997, Mloss 0.000004
-
-run [150]:
-Loss : 0.000743, Floss: 0.000738, Mloss 0.000005
-
-run [175]:
-Loss : 0.000580, Floss: 0.000575, Mloss 0.000005
-
-run [200]:
-Loss : 0.000467, Floss: 0.000462, Mloss 0.000006
-
-run [225]:
-Loss : 0.000385, Floss: 0.000379, Mloss 0.000006
-
-run [250]:
-Loss : 0.000326, Floss: 0.000320, Mloss 0.000006
-
-run [275]:
-Loss : 0.000279, Floss: 0.000272, Mloss 0.000006
-
-run [300]:
-Loss : 0.000242, Floss: 0.000235, Mloss 0.000007
-
-run [325]:
-Loss : 0.000213, Floss: 0.000206, Mloss 0.000007
-
-run [350]:
-Loss : 0.000190, Floss: 0.000183, Mloss 0.000007
-
-run [375]:
-Loss : 0.000171, Floss: 0.000163, Mloss 0.000007
-
-run [400]:
-Loss : 0.000154, Floss: 0.000146, Mloss 0.000007
-
-saved decrypt_dataset/monet_80_encrypted
-saved decrypt_dataset/monet_81_encrypted
-saved decrypt_dataset/monet_82_encrypted
-saved decrypt_dataset/monet_83_encrypted
-saved decrypt_dataset/monet_84_encrypted
-saved decrypt_dataset/monet_85_encrypted
-saved decrypt_dataset/monet_86_encrypted
-saved decrypt_dataset/monet_87_encrypted
-saved decrypt_dataset/monet_88_encrypted
-saved decrypt_dataset/monet_89_encrypted
-saved decrypt_dataset/monet_90_encrypted
-saved decrypt_dataset/monet_91_encrypted
-saved decrypt_dataset/monet_92_encrypted
-saved decrypt_dataset/monet_93_encrypted
-saved decrypt_dataset/monet_94_encrypted
-saved decrypt_dataset/monet_95_encrypted
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 2.057991 Content Loss: 4.688984
-
-60
-80
-run [100]:
-Style Loss : 1.563944 Content Loss: 4.392822
-
-100
-120
-140
-run [150]:
-Style Loss : 1.306754 Content Loss: 4.284941
-
-160
-180
-run [200]:
-Style Loss : 1.160396 Content Loss: 4.244198
-
-200
-220
-240
-run [250]:
-Style Loss : 1.110010 Content Loss: 4.220503
-
-260
-280
-run [300]:
-Style Loss : 1.100355 Content Loss: 4.178378
-
-300
-Optimizing..
-run [25]:
-Loss : 0.008782, Floss: 0.008779, Mloss 0.000002
-
-run [50]:
-Loss : 0.003112, Floss: 0.003108, Mloss 0.000004
-
-run [75]:
-Loss : 0.001693, Floss: 0.001688, Mloss 0.000004
-
-run [100]:
-Loss : 0.001077, Floss: 0.001072, Mloss 0.000005
-
-run [125]:
-Loss : 0.000744, Floss: 0.000739, Mloss 0.000005
-
-run [150]:
-Loss : 0.000550, Floss: 0.000544, Mloss 0.000006
-
-run [175]:
-Loss : 0.000426, Floss: 0.000420, Mloss 0.000006
-
-run [200]:
-Loss : 0.000343, Floss: 0.000336, Mloss 0.000007
-
-run [225]:
-Loss : 0.000280, Floss: 0.000273, Mloss 0.000007
-
-run [250]:
-Loss : 0.000234, Floss: 0.000226, Mloss 0.000007
-
-run [275]:
-Loss : 0.000200, Floss: 0.000192, Mloss 0.000008
-
-run [300]:
-Loss : 0.000174, Floss: 0.000166, Mloss 0.000008
-
-run [325]:
-Loss : 0.000152, Floss: 0.000144, Mloss 0.000008
-
-run [350]:
-Loss : 0.000134, Floss: 0.000126, Mloss 0.000008
-
-run [375]:
-Loss : 0.000120, Floss: 0.000112, Mloss 0.000008
-
-run [400]:
-Loss : 0.000108, Floss: 0.000099, Mloss 0.000009
-
-saved decrypt_dataset/monet_96_encrypted
-saved decrypt_dataset/monet_97_encrypted
-saved decrypt_dataset/monet_98_encrypted
-saved decrypt_dataset/monet_99_encrypted
-saved decrypt_dataset/monet_100_encrypted
-saved decrypt_dataset/monet_101_encrypted
-saved decrypt_dataset/monet_102_encrypted
-saved decrypt_dataset/monet_103_encrypted
-saved decrypt_dataset/monet_104_encrypted
-saved decrypt_dataset/monet_105_encrypted
-saved decrypt_dataset/monet_106_encrypted
-saved decrypt_dataset/monet_107_encrypted
-saved decrypt_dataset/monet_108_encrypted
-saved decrypt_dataset/monet_109_encrypted
-saved decrypt_dataset/monet_110_encrypted
-saved decrypt_dataset/monet_111_encrypted
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 3.201253 Content Loss: 13.525064
-
-60
-80
-run [100]:
-Style Loss : 2.857256 Content Loss: 13.050299
-
-100
-120
-140
-run [150]:
-Style Loss : 2.756198 Content Loss: 12.900661
-
-160
-180
-run [200]:
-Style Loss : 2.691920 Content Loss: 12.817858
-
-200
-220
-240
-run [250]:
-Style Loss : 2.646490 Content Loss: 12.763323
-
-260
-280
-run [300]:
-Style Loss : 2.612079 Content Loss: 12.725302
-
-300
-Optimizing..
-run [25]:
-Loss : 0.013548, Floss: 0.013543, Mloss 0.000005
-
-run [50]:
-Loss : 0.004600, Floss: 0.004593, Mloss 0.000008
-
-run [75]:
-Loss : 0.002397, Floss: 0.002388, Mloss 0.000009
-
-run [100]:
-Loss : 0.001502, Floss: 0.001492, Mloss 0.000011
-
-run [125]:
-Loss : 0.001038, Floss: 0.001026, Mloss 0.000012
-
-run [150]:
-Loss : 0.000760, Floss: 0.000748, Mloss 0.000013
-
-run [175]:
-Loss : 0.000595, Floss: 0.000581, Mloss 0.000014
-
-run [200]:
-Loss : 0.000474, Floss: 0.000460, Mloss 0.000015
-
-run [225]:
-Loss : 0.000391, Floss: 0.000376, Mloss 0.000015
-
-run [250]:
-Loss : 0.000327, Floss: 0.000311, Mloss 0.000016
-
-run [275]:
-Loss : 0.000279, Floss: 0.000263, Mloss 0.000017
-
-run [300]:
-Loss : 0.000242, Floss: 0.000225, Mloss 0.000017
-
-run [325]:
-Loss : 0.000213, Floss: 0.000195, Mloss 0.000018
-
-run [350]:
-Loss : 0.000190, Floss: 0.000172, Mloss 0.000018
-
-run [375]:
-Loss : 0.000171, Floss: 0.000153, Mloss 0.000018
-
-run [400]:
-Loss : 0.000155, Floss: 0.000137, Mloss 0.000019
-
-saved decrypt_dataset/monet_112_encrypted
-saved decrypt_dataset/monet_113_encrypted
-saved decrypt_dataset/monet_114_encrypted
-saved decrypt_dataset/monet_115_encrypted
-saved decrypt_dataset/monet_116_encrypted
-saved decrypt_dataset/monet_117_encrypted
-saved decrypt_dataset/monet_118_encrypted
-saved decrypt_dataset/monet_119_encrypted
-saved decrypt_dataset/monet_120_encrypted
-saved decrypt_dataset/monet_121_encrypted
-saved decrypt_dataset/monet_122_encrypted
-saved decrypt_dataset/monet_123_encrypted
-saved decrypt_dataset/monet_124_encrypted
-saved decrypt_dataset/monet_125_encrypted
-saved decrypt_dataset/monet_126_encrypted
-saved decrypt_dataset/monet_127_encrypted
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 2.441099 Content Loss: 8.074524
-
-60
-80
-run [100]:
-Style Loss : 2.018287 Content Loss: 7.693880
-
-100
-120
-140
-run [150]:
-Style Loss : 1.882929 Content Loss: 7.570127
-
-160
-180
-run [200]:
-Style Loss : 1.787133 Content Loss: 7.509025
-
-200
-220
-240
-run [250]:
-Style Loss : 1.723626 Content Loss: 7.473022
-
-260
-280
-run [300]:
-Style Loss : 1.684630 Content Loss: 7.449977
-
-300
-Optimizing..
-run [25]:
-Loss : 0.014629, Floss: 0.014626, Mloss 0.000003
-
-run [50]:
-Loss : 0.004549, Floss: 0.004544, Mloss 0.000005
-
-run [75]:
-Loss : 0.002427, Floss: 0.002422, Mloss 0.000006
-
-run [100]:
-Loss : 0.001544, Floss: 0.001537, Mloss 0.000007
-
-run [125]:
-Loss : 0.001085, Floss: 0.001078, Mloss 0.000007
-
-run [150]:
-Loss : 0.000793, Floss: 0.000786, Mloss 0.000008
-
-run [175]:
-Loss : 0.000620, Floss: 0.000611, Mloss 0.000008
-
-run [200]:
-Loss : 0.000494, Floss: 0.000486, Mloss 0.000009
-
-run [225]:
-Loss : 0.000405, Floss: 0.000396, Mloss 0.000009
-
-run [250]:
-Loss : 0.000340, Floss: 0.000330, Mloss 0.000010
-
-run [275]:
-Loss : 0.000291, Floss: 0.000281, Mloss 0.000010
-
-run [300]:
-Loss : 0.000251, Floss: 0.000241, Mloss 0.000010
-
-run [325]:
-Loss : 0.000220, Floss: 0.000209, Mloss 0.000011
-
-run [350]:
-Loss : 0.000194, Floss: 0.000183, Mloss 0.000011
-
-run [375]:
-Loss : 0.000173, Floss: 0.000162, Mloss 0.000011
-
-run [400]:
-Loss : 0.000156, Floss: 0.000145, Mloss 0.000012
-
-saved decrypt_dataset/monet_128_encrypted
-saved decrypt_dataset/monet_129_encrypted
-saved decrypt_dataset/monet_130_encrypted
-saved decrypt_dataset/monet_131_encrypted
-saved decrypt_dataset/monet_132_encrypted
-saved decrypt_dataset/monet_133_encrypted
-saved decrypt_dataset/monet_134_encrypted
-saved decrypt_dataset/monet_135_encrypted
-saved decrypt_dataset/monet_136_encrypted
-saved decrypt_dataset/monet_137_encrypted
-saved decrypt_dataset/monet_138_encrypted
-saved decrypt_dataset/monet_139_encrypted
-saved decrypt_dataset/monet_140_encrypted
-saved decrypt_dataset/monet_141_encrypted
-saved decrypt_dataset/monet_142_encrypted
-saved decrypt_dataset/monet_143_encrypted
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 2.530661 Content Loss: 6.964068
-
-60
-80
-run [100]:
-Style Loss : 1.992196 Content Loss: 6.531531
-
-100
-120
-140
-run [150]:
-Style Loss : 1.798702 Content Loss: 6.408291
-
-160
-180
-run [200]:
-Style Loss : 1.671671 Content Loss: 6.374980
-
-200
-220
-240
-run [250]:
-Style Loss : 1.605122 Content Loss: 6.353006
-
-260
-280
-run [300]:
-Style Loss : 1.585623 Content Loss: 6.329835
-
-300
-Optimizing..
-run [25]:
-Loss : 0.016240, Floss: 0.016237, Mloss 0.000003
-
-run [50]:
-Loss : 0.005306, Floss: 0.005302, Mloss 0.000004
-
-run [75]:
-Loss : 0.002827, Floss: 0.002823, Mloss 0.000004
-
-run [100]:
-Loss : 0.001819, Floss: 0.001814, Mloss 0.000005
-
-run [125]:
-Loss : 0.001261, Floss: 0.001255, Mloss 0.000006
-
-run [150]:
-Loss : 0.000928, Floss: 0.000922, Mloss 0.000006
-
-run [175]:
-Loss : 0.000721, Floss: 0.000715, Mloss 0.000006
-
-run [200]:
-Loss : 0.000580, Floss: 0.000573, Mloss 0.000007
-
-run [225]:
-Loss : 0.000475, Floss: 0.000468, Mloss 0.000007
-
-run [250]:
-Loss : 0.000395, Floss: 0.000388, Mloss 0.000007
-
-run [275]:
-Loss : 0.000336, Floss: 0.000328, Mloss 0.000008
-
-run [300]:
-Loss : 0.000288, Floss: 0.000280, Mloss 0.000008
-
-run [325]:
-Loss : 0.000251, Floss: 0.000243, Mloss 0.000008
-
-run [350]:
-Loss : 0.000221, Floss: 0.000212, Mloss 0.000008
-
-run [375]:
-Loss : 0.000196, Floss: 0.000188, Mloss 0.000009
-
-run [400]:
-Loss : 0.000176, Floss: 0.000167, Mloss 0.000009
-
-saved decrypt_dataset/monet_144_encrypted
-saved decrypt_dataset/monet_145_encrypted
-saved decrypt_dataset/monet_146_encrypted
-saved decrypt_dataset/monet_147_encrypted
-saved decrypt_dataset/monet_148_encrypted
-saved decrypt_dataset/monet_149_encrypted
-saved decrypt_dataset/monet_150_encrypted
-saved decrypt_dataset/monet_151_encrypted
-saved decrypt_dataset/monet_152_encrypted
-saved decrypt_dataset/monet_153_encrypted
-saved decrypt_dataset/monet_154_encrypted
-saved decrypt_dataset/monet_155_encrypted
-saved decrypt_dataset/monet_156_encrypted
-saved decrypt_dataset/monet_157_encrypted
-saved decrypt_dataset/monet_158_encrypted
-saved decrypt_dataset/monet_159_encrypted
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 2.190362 Content Loss: 6.281360
-
-60
-80
-run [100]:
-Style Loss : 1.837119 Content Loss: 5.959881
-
-100
-120
-140
-run [150]:
-Style Loss : 1.687117 Content Loss: 5.867255
-
-160
-180
-run [200]:
-Style Loss : 1.639845 Content Loss: 6.030553
-
-200
-220
-240
-run [250]:
-Style Loss : 1.675755 Content Loss: 6.565500
-
-260
-280
-run [300]:
-Style Loss : 2.274396 Content Loss: 7.337891
-
-300
-Optimizing..
-run [25]:
-Loss : 0.018816, Floss: 0.018812, Mloss 0.000004
-
-run [50]:
-Loss : 0.006608, Floss: 0.006602, Mloss 0.000006
-
-run [75]:
-Loss : 0.003491, Floss: 0.003484, Mloss 0.000007
-
-run [100]:
-Loss : 0.002218, Floss: 0.002210, Mloss 0.000008
-
-run [125]:
-Loss : 0.001533, Floss: 0.001524, Mloss 0.000009
-
-run [150]:
-Loss : 0.001134, Floss: 0.001124, Mloss 0.000010
-
-run [175]:
-Loss : 0.000875, Floss: 0.000864, Mloss 0.000010
-
-run [200]:
-Loss : 0.000699, Floss: 0.000688, Mloss 0.000011
-
-run [225]:
-Loss : 0.000571, Floss: 0.000559, Mloss 0.000011
-
-run [250]:
-Loss : 0.000476, Floss: 0.000464, Mloss 0.000012
-
-run [275]:
-Loss : 0.000402, Floss: 0.000390, Mloss 0.000012
-
-run [300]:
-Loss : 0.000344, Floss: 0.000331, Mloss 0.000013
-
-run [325]:
-Loss : 0.000298, Floss: 0.000285, Mloss 0.000013
-
-run [350]:
-Loss : 0.000262, Floss: 0.000248, Mloss 0.000014
-
-run [375]:
-Loss : 0.000232, Floss: 0.000218, Mloss 0.000014
-
-run [400]:
-Loss : 0.000209, Floss: 0.000194, Mloss 0.000014
-
-saved decrypt_dataset/monet_160_encrypted
-saved decrypt_dataset/monet_161_encrypted
-saved decrypt_dataset/monet_162_encrypted
-saved decrypt_dataset/monet_163_encrypted
-saved decrypt_dataset/monet_164_encrypted
-saved decrypt_dataset/monet_165_encrypted
-saved decrypt_dataset/monet_166_encrypted
-saved decrypt_dataset/monet_167_encrypted
-saved decrypt_dataset/monet_168_encrypted
-saved decrypt_dataset/monet_169_encrypted
-saved decrypt_dataset/monet_170_encrypted
-saved decrypt_dataset/monet_171_encrypted
-saved decrypt_dataset/monet_172_encrypted
-saved decrypt_dataset/monet_173_encrypted
-saved decrypt_dataset/monet_174_encrypted
-saved decrypt_dataset/monet_175_encrypted

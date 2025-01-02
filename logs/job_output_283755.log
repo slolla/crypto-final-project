@@ -1,27 +1,0 @@
-cpu-bind=MASK - gpu19-1.drl, task  0  0 [2034937]: mask 0x1 set
-Fri May 10 09:52:39 PM EDT 2024
-Running my job on gpu19-1.drl
-/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/util/check_latest_version.py:32: UserWarning: A newer version of deeplake (3.9.5) is available. It's recommended that you update to the latest version using `pip install -U deeplake`.
-  warnings.warn(
-/ - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ SETTING DEVICE AS cuda
-Opening dataset in read-only mode as you don't have write permissions.
-This dataset can be visualized in Jupyter Notebook by ds.visualize() or at https://app.activeloop.ai/activeloop/wiki-art
-
-| / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | hub://activeloop/wiki-art loaded successfully.
-
-Traceback (most recent call last):
-  File "/data/scratch/amini/sadhana/2024/crypto-final-project/src/data_generation.py", line 340, in <module>
-    for i, batch in enumerate(train_loader):
-  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
-    data = self._next_data()
-  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 674, in _next_data
-    index = self._next_index()  # may raise StopIteration
-  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 621, in _next_index
-    return next(self._sampler_iter)  # may raise StopIteration
-  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/data/sampler.py", line 287, in __iter__
-    for idx in self.sampler:
-  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/data/sampler.py", line 111, in __iter__
-    return iter(range(len(self.data_source)))
-  File "/data/scratch/amini/sadhana/2024/crypto-final-project/src/data_generation.py", line 47, in __len__
-    return self.tensors.size(0)
-AttributeError: 'list' object has no attribute 'size'

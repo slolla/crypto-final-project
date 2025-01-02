@@ -1,1140 +1,0 @@
-cpu-bind=MASK - gpu19-1.drl, task  0  0 [2114094]: mask 0x1 set
-Sat May 11 12:03:48 AM EDT 2024
-Running my job on gpu19-1.drl
-/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/util/check_latest_version.py:32: UserWarning: A newer version of deeplake (3.9.5) is available. It's recommended that you update to the latest version using `pip install -U deeplake`.
-  warnings.warn(
-/ - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | SETTING DEVICE AS cuda
-Opening dataset in read-only mode as you don't have write permissions.
-This dataset can be visualized in Jupyter Notebook by ds.visualize() or at https://app.activeloop.ai/activeloop/wiki-art
-
-/ - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / hub://activeloop/wiki-art loaded successfully.
-
-/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/integrations/pytorch/common.py:137: UserWarning: Decode method for tensors ['images'] is defaulting to numpy. Please consider specifying a decode_method in .pytorch() that maximizes the data preprocessing speed based on your transformation.
-  warnings.warn(
-Please wait, filling up the shuffle buffer with samples.:   0%|          | 0.00/2.00G [00:00<?, ?B/s]Please wait, filling up the shuffle buffer with samples.:   1%|          | 13.7M/2.00G [00:04<11:41, 3.04MB/s]Please wait, filling up the shuffle buffer with samples.:   5%|▌         | 105M/2.00G [00:12<03:35, 9.44MB/s] Please wait, filling up the shuffle buffer with samples.:  20%|█▉        | 409M/2.00G [00:12<00:34, 49.4MB/s]Please wait, filling up the shuffle buffer with samples.:  28%|██▊       | 573M/2.00G [00:12<00:19, 78.1MB/s]Please wait, filling up the shuffle buffer with samples.:  42%|████▏     | 856M/2.00G [00:12<00:08, 148MB/s] Please wait, filling up the shuffle buffer with samples.:  56%|█████▌    | 1.11G/2.00G [00:13<00:03, 243MB/s]Please wait, filling up the shuffle buffer with samples.:  67%|██████▋   | 1.35G/2.00G [00:13<00:02, 344MB/s]Please wait, filling up the shuffle buffer with samples.:  79%|███████▉  | 1.58G/2.00G [00:13<00:00, 472MB/s]Please wait, filling up the shuffle buffer with samples.:  89%|████████▉ | 1.78G/2.00G [00:14<00:00, 415MB/s]Please wait, filling up the shuffle buffer with samples.:  97%|█████████▋| 1.93G/2.00G [00:17<00:00, 149MB/s]Please wait, filling up the shuffle buffer with samples.: 100%|█████████▉| 2.00G/2.00G [00:17<00:00, 123MB/s]
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
-  return func(*args, **kwargs)
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([1, 64, 64])) that is different to the input size (torch.Size([16, 64, 64])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
-  return func(*args, **kwargs)
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([1, 128, 128])) that is different to the input size (torch.Size([16, 128, 128])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
-  return func(*args, **kwargs)
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([16, 128, 128, 128])) that is different to the input size (torch.Size([1, 128, 128, 128])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
-  return func(*args, **kwargs)
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([1, 256, 256])) that is different to the input size (torch.Size([16, 256, 256])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
-  return func(*args, **kwargs)
-/tmp/home/amini/.local/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
-  warnings.warn(
-/tmp/home/amini/.local/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=VGG16_Weights.IMAGENET1K_V1`. You can also use `weights=VGG16_Weights.DEFAULT` to get the most up-to-date weights.
-  warnings.warn(msg)
-Shuffle buffer filling is complete.
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 1.091268 Content Loss: 2.435080
-
-60
-80
-run [100]:
-Style Loss : 0.949692 Content Loss: 2.364800
-
-100
-120
-140
-run [150]:
-Style Loss : 0.906152 Content Loss: 2.338764
-
-160
-180
-run [200]:
-Style Loss : 0.881769 Content Loss: 2.325307
-
-200
-220
-240
-run [250]:
-Style Loss : 0.867102 Content Loss: 2.316492
-
-260
-280
-run [300]:
-Style Loss : 0.857084 Content Loss: 2.310307
-
-300
-Optimizing..
-run [25]:
-Loss : 0.007492, Floss: 0.007492, Mloss 0.000001
-
-run [50]:
-Loss : 0.002290, Floss: 0.002289, Mloss 0.000001
-
-run [75]:
-Loss : 0.001150, Floss: 0.001149, Mloss 0.000001
-
-run [100]:
-Loss : 0.000696, Floss: 0.000695, Mloss 0.000001
-
-run [125]:
-Loss : 0.000477, Floss: 0.000476, Mloss 0.000002
-
-run [150]:
-Loss : 0.000344, Floss: 0.000342, Mloss 0.000002
-
-run [175]:
-Loss : 0.000263, Floss: 0.000261, Mloss 0.000002
-
-run [200]:
-Loss : 0.000207, Floss: 0.000205, Mloss 0.000002
-
-run [225]:
-Loss : 0.000170, Floss: 0.000168, Mloss 0.000002
-
-run [250]:
-Loss : 0.000142, Floss: 0.000140, Mloss 0.000002
-
-run [275]:
-Loss : 0.000120, Floss: 0.000118, Mloss 0.000002
-
-run [300]:
-Loss : 0.000103, Floss: 0.000101, Mloss 0.000002
-
-run [325]:
-Loss : 0.000089, Floss: 0.000087, Mloss 0.000002
-
-run [350]:
-Loss : 0.000078, Floss: 0.000075, Mloss 0.000002
-
-run [375]:
-Loss : 0.000069, Floss: 0.000067, Mloss 0.000002
-
-run [400]:
-Loss : 0.000062, Floss: 0.000059, Mloss 0.000002
-
-saved decrypt_dataset/cezanne_0_encrypted
-saved decrypt_dataset/cezanne_1_encrypted
-saved decrypt_dataset/cezanne_2_encrypted
-saved decrypt_dataset/cezanne_3_encrypted
-saved decrypt_dataset/cezanne_4_encrypted
-saved decrypt_dataset/cezanne_5_encrypted
-saved decrypt_dataset/cezanne_6_encrypted
-saved decrypt_dataset/cezanne_7_encrypted
-saved decrypt_dataset/cezanne_8_encrypted
-saved decrypt_dataset/cezanne_9_encrypted
-saved decrypt_dataset/cezanne_10_encrypted
-saved decrypt_dataset/cezanne_11_encrypted
-saved decrypt_dataset/cezanne_12_encrypted
-saved decrypt_dataset/cezanne_13_encrypted
-saved decrypt_dataset/cezanne_14_encrypted
-saved decrypt_dataset/cezanne_15_encrypted
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 1.303639 Content Loss: 2.629122
-
-60
-80
-run [100]:
-Style Loss : 1.097641 Content Loss: 2.540522
-
-100
-120
-140
-run [150]:
-Style Loss : 1.023519 Content Loss: 2.511108
-
-160
-180
-run [200]:
-Style Loss : 0.984070 Content Loss: 2.492467
-
-200
-220
-240
-run [250]:
-Style Loss : 0.959822 Content Loss: 2.480377
-
-260
-280
-run [300]:
-Style Loss : 0.943389 Content Loss: 2.472247
-
-300
-Optimizing..
-run [25]:
-Loss : 0.006318, Floss: 0.006317, Mloss 0.000001
-
-run [50]:
-Loss : 0.002008, Floss: 0.002007, Mloss 0.000001
-
-run [75]:
-Loss : 0.001025, Floss: 0.001024, Mloss 0.000001
-
-run [100]:
-Loss : 0.000616, Floss: 0.000615, Mloss 0.000001
-
-run [125]:
-Loss : 0.000406, Floss: 0.000405, Mloss 0.000001
-
-run [150]:
-Loss : 0.000291, Floss: 0.000290, Mloss 0.000002
-
-run [175]:
-Loss : 0.000223, Floss: 0.000221, Mloss 0.000002
-
-run [200]:
-Loss : 0.000175, Floss: 0.000173, Mloss 0.000002
-
-run [225]:
-Loss : 0.000141, Floss: 0.000139, Mloss 0.000002
-
-run [250]:
-Loss : 0.000117, Floss: 0.000115, Mloss 0.000002
-
-run [275]:
-Loss : 0.000099, Floss: 0.000097, Mloss 0.000002
-
-run [300]:
-Loss : 0.000084, Floss: 0.000082, Mloss 0.000002
-
-run [325]:
-Loss : 0.000073, Floss: 0.000071, Mloss 0.000002
-
-run [350]:
-Loss : 0.000064, Floss: 0.000061, Mloss 0.000002
-
-run [375]:
-Loss : 0.000056, Floss: 0.000054, Mloss 0.000002
-
-run [400]:
-Loss : 0.000050, Floss: 0.000048, Mloss 0.000002
-
-saved decrypt_dataset/cezanne_16_encrypted
-saved decrypt_dataset/cezanne_17_encrypted
-saved decrypt_dataset/cezanne_18_encrypted
-saved decrypt_dataset/cezanne_19_encrypted
-saved decrypt_dataset/cezanne_20_encrypted
-saved decrypt_dataset/cezanne_21_encrypted
-saved decrypt_dataset/cezanne_22_encrypted
-saved decrypt_dataset/cezanne_23_encrypted
-saved decrypt_dataset/cezanne_24_encrypted
-saved decrypt_dataset/cezanne_25_encrypted
-saved decrypt_dataset/cezanne_26_encrypted
-saved decrypt_dataset/cezanne_27_encrypted
-saved decrypt_dataset/cezanne_28_encrypted
-saved decrypt_dataset/cezanne_29_encrypted
-saved decrypt_dataset/cezanne_30_encrypted
-saved decrypt_dataset/cezanne_31_encrypted
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 1.035160 Content Loss: 2.106485
-
-60
-80
-run [100]:
-Style Loss : 0.901803 Content Loss: 2.054889
-
-100
-120
-140
-run [150]:
-Style Loss : 0.852037 Content Loss: 2.031976
-
-160
-180
-run [200]:
-Style Loss : 0.824132 Content Loss: 2.017329
-
-200
-220
-240
-run [250]:
-Style Loss : 0.805101 Content Loss: 2.007942
-
-260
-280
-run [300]:
-Style Loss : 0.791559 Content Loss: 2.000597
-
-300
-Optimizing..
-run [25]:
-Loss : 0.006997, Floss: 0.006996, Mloss 0.000001
-
-run [50]:
-Loss : 0.002490, Floss: 0.002489, Mloss 0.000001
-
-run [75]:
-Loss : 0.001275, Floss: 0.001274, Mloss 0.000001
-
-run [100]:
-Loss : 0.000776, Floss: 0.000775, Mloss 0.000002
-
-run [125]:
-Loss : 0.000521, Floss: 0.000520, Mloss 0.000002
-
-run [150]:
-Loss : 0.000384, Floss: 0.000382, Mloss 0.000002
-
-run [175]:
-Loss : 0.000286, Floss: 0.000284, Mloss 0.000002
-
-run [200]:
-Loss : 0.000225, Floss: 0.000222, Mloss 0.000002
-
-run [225]:
-Loss : 0.000182, Floss: 0.000180, Mloss 0.000002
-
-run [250]:
-Loss : 0.000151, Floss: 0.000149, Mloss 0.000002
-
-run [275]:
-Loss : 0.000128, Floss: 0.000126, Mloss 0.000002
-
-run [300]:
-Loss : 0.000109, Floss: 0.000107, Mloss 0.000002
-
-run [325]:
-Loss : 0.000094, Floss: 0.000091, Mloss 0.000002
-
-run [350]:
-Loss : 0.000082, Floss: 0.000080, Mloss 0.000002
-
-run [375]:
-Loss : 0.000073, Floss: 0.000070, Mloss 0.000003
-
-run [400]:
-Loss : 0.000065, Floss: 0.000062, Mloss 0.000003
-
-saved decrypt_dataset/cezanne_32_encrypted
-saved decrypt_dataset/cezanne_33_encrypted
-saved decrypt_dataset/cezanne_34_encrypted
-saved decrypt_dataset/cezanne_35_encrypted
-saved decrypt_dataset/cezanne_36_encrypted
-saved decrypt_dataset/cezanne_37_encrypted
-saved decrypt_dataset/cezanne_38_encrypted
-saved decrypt_dataset/cezanne_39_encrypted
-saved decrypt_dataset/cezanne_40_encrypted
-saved decrypt_dataset/cezanne_41_encrypted
-saved decrypt_dataset/cezanne_42_encrypted
-saved decrypt_dataset/cezanne_43_encrypted
-saved decrypt_dataset/cezanne_44_encrypted
-saved decrypt_dataset/cezanne_45_encrypted
-saved decrypt_dataset/cezanne_46_encrypted
-saved decrypt_dataset/cezanne_47_encrypted
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 1.108753 Content Loss: 2.397886
-
-60
-80
-run [100]:
-Style Loss : 0.952032 Content Loss: 2.340848
-
-100
-120
-140
-run [150]:
-Style Loss : 0.900829 Content Loss: 2.318024
-
-160
-180
-run [200]:
-Style Loss : 0.872214 Content Loss: 2.304802
-
-200
-220
-240
-run [250]:
-Style Loss : 0.853547 Content Loss: 2.296128
-
-260
-280
-run [300]:
-Style Loss : 0.841342 Content Loss: 2.289318
-
-300
-Optimizing..
-run [25]:
-Loss : 0.005443, Floss: 0.005443, Mloss 0.000000
-
-run [50]:
-Loss : 0.001711, Floss: 0.001711, Mloss 0.000001
-
-run [75]:
-Loss : 0.000850, Floss: 0.000849, Mloss 0.000001
-
-run [100]:
-Loss : 0.000500, Floss: 0.000499, Mloss 0.000001
-
-run [125]:
-Loss : 0.000340, Floss: 0.000339, Mloss 0.000001
-
-run [150]:
-Loss : 0.000246, Floss: 0.000245, Mloss 0.000001
-
-run [175]:
-Loss : 0.000188, Floss: 0.000187, Mloss 0.000001
-
-run [200]:
-Loss : 0.000147, Floss: 0.000146, Mloss 0.000001
-
-run [225]:
-Loss : 0.000119, Floss: 0.000118, Mloss 0.000001
-
-run [250]:
-Loss : 0.000099, Floss: 0.000097, Mloss 0.000001
-
-run [275]:
-Loss : 0.000083, Floss: 0.000082, Mloss 0.000001
-
-run [300]:
-Loss : 0.000071, Floss: 0.000070, Mloss 0.000002
-
-run [325]:
-Loss : 0.000062, Floss: 0.000060, Mloss 0.000002
-
-run [350]:
-Loss : 0.000054, Floss: 0.000052, Mloss 0.000002
-
-run [375]:
-Loss : 0.000048, Floss: 0.000046, Mloss 0.000002
-
-run [400]:
-Loss : 0.000043, Floss: 0.000041, Mloss 0.000002
-
-saved decrypt_dataset/cezanne_48_encrypted
-saved decrypt_dataset/cezanne_49_encrypted
-saved decrypt_dataset/cezanne_50_encrypted
-saved decrypt_dataset/cezanne_51_encrypted
-saved decrypt_dataset/cezanne_52_encrypted
-saved decrypt_dataset/cezanne_53_encrypted
-saved decrypt_dataset/cezanne_54_encrypted
-saved decrypt_dataset/cezanne_55_encrypted
-saved decrypt_dataset/cezanne_56_encrypted
-saved decrypt_dataset/cezanne_57_encrypted
-saved decrypt_dataset/cezanne_58_encrypted
-saved decrypt_dataset/cezanne_59_encrypted
-saved decrypt_dataset/cezanne_60_encrypted
-saved decrypt_dataset/cezanne_61_encrypted
-saved decrypt_dataset/cezanne_62_encrypted
-saved decrypt_dataset/cezanne_63_encrypted
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 1.191617 Content Loss: 2.091868
-
-60
-80
-run [100]:
-Style Loss : 0.964452 Content Loss: 2.044221
-
-100
-120
-140
-run [150]:
-Style Loss : 0.874530 Content Loss: 2.027843
-
-160
-180
-run [200]:
-Style Loss : 0.829683 Content Loss: 2.019518
-
-200
-220
-240
-run [250]:
-Style Loss : 0.807578 Content Loss: 2.011639
-
-260
-280
-run [300]:
-Style Loss : 0.795598 Content Loss: 2.005342
-
-300
-Optimizing..
-run [25]:
-Loss : 0.007620, Floss: 0.007619, Mloss 0.000000
-
-run [50]:
-Loss : 0.002404, Floss: 0.002403, Mloss 0.000001
-
-run [75]:
-Loss : 0.001167, Floss: 0.001166, Mloss 0.000001
-
-run [100]:
-Loss : 0.000700, Floss: 0.000699, Mloss 0.000001
-
-run [125]:
-Loss : 0.000461, Floss: 0.000459, Mloss 0.000001
-
-run [150]:
-Loss : 0.000331, Floss: 0.000330, Mloss 0.000001
-
-run [175]:
-Loss : 0.000247, Floss: 0.000246, Mloss 0.000001
-
-run [200]:
-Loss : 0.000194, Floss: 0.000193, Mloss 0.000001
-
-run [225]:
-Loss : 0.000157, Floss: 0.000155, Mloss 0.000002
-
-run [250]:
-Loss : 0.000130, Floss: 0.000129, Mloss 0.000002
-
-run [275]:
-Loss : 0.000110, Floss: 0.000108, Mloss 0.000002
-
-run [300]:
-Loss : 0.000094, Floss: 0.000092, Mloss 0.000002
-
-run [325]:
-Loss : 0.000081, Floss: 0.000079, Mloss 0.000002
-
-run [350]:
-Loss : 0.000071, Floss: 0.000069, Mloss 0.000002
-
-run [375]:
-Loss : 0.000063, Floss: 0.000061, Mloss 0.000002
-
-run [400]:
-Loss : 0.000056, Floss: 0.000054, Mloss 0.000002
-
-saved decrypt_dataset/cezanne_64_encrypted
-saved decrypt_dataset/cezanne_65_encrypted
-saved decrypt_dataset/cezanne_66_encrypted
-saved decrypt_dataset/cezanne_67_encrypted
-saved decrypt_dataset/cezanne_68_encrypted
-saved decrypt_dataset/cezanne_69_encrypted
-saved decrypt_dataset/cezanne_70_encrypted
-saved decrypt_dataset/cezanne_71_encrypted
-saved decrypt_dataset/cezanne_72_encrypted
-saved decrypt_dataset/cezanne_73_encrypted
-saved decrypt_dataset/cezanne_74_encrypted
-saved decrypt_dataset/cezanne_75_encrypted
-saved decrypt_dataset/cezanne_76_encrypted
-saved decrypt_dataset/cezanne_77_encrypted
-saved decrypt_dataset/cezanne_78_encrypted
-saved decrypt_dataset/cezanne_79_encrypted
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 1.138090 Content Loss: 2.012779
-
-60
-80
-run [100]:
-Style Loss : 0.945563 Content Loss: 1.946859
-
-100
-120
-140
-run [150]:
-Style Loss : 0.883118 Content Loss: 1.922687
-
-160
-180
-run [200]:
-Style Loss : 0.848265 Content Loss: 1.909909
-
-200
-220
-240
-run [250]:
-Style Loss : 0.828230 Content Loss: 1.901999
-
-260
-280
-run [300]:
-Style Loss : 0.815373 Content Loss: 1.896533
-
-300
-Optimizing..
-run [25]:
-Loss : 0.007175, Floss: 0.007174, Mloss 0.000001
-
-run [50]:
-Loss : 0.002265, Floss: 0.002264, Mloss 0.000001
-
-run [75]:
-Loss : 0.001129, Floss: 0.001128, Mloss 0.000001
-
-run [100]:
-Loss : 0.000681, Floss: 0.000680, Mloss 0.000001
-
-run [125]:
-Loss : 0.000450, Floss: 0.000448, Mloss 0.000001
-
-run [150]:
-Loss : 0.000319, Floss: 0.000317, Mloss 0.000002
-
-run [175]:
-Loss : 0.000243, Floss: 0.000242, Mloss 0.000002
-
-run [200]:
-Loss : 0.000190, Floss: 0.000188, Mloss 0.000002
-
-run [225]:
-Loss : 0.000151, Floss: 0.000149, Mloss 0.000002
-
-run [250]:
-Loss : 0.000124, Floss: 0.000122, Mloss 0.000002
-
-run [275]:
-Loss : 0.000103, Floss: 0.000101, Mloss 0.000002
-
-run [300]:
-Loss : 0.000087, Floss: 0.000084, Mloss 0.000002
-
-run [325]:
-Loss : 0.000074, Floss: 0.000072, Mloss 0.000002
-
-run [350]:
-Loss : 0.000065, Floss: 0.000063, Mloss 0.000002
-
-run [375]:
-Loss : 0.000057, Floss: 0.000055, Mloss 0.000002
-
-run [400]:
-Loss : 0.000050, Floss: 0.000048, Mloss 0.000002
-
-saved decrypt_dataset/cezanne_80_encrypted
-saved decrypt_dataset/cezanne_81_encrypted
-saved decrypt_dataset/cezanne_82_encrypted
-saved decrypt_dataset/cezanne_83_encrypted
-saved decrypt_dataset/cezanne_84_encrypted
-saved decrypt_dataset/cezanne_85_encrypted
-saved decrypt_dataset/cezanne_86_encrypted
-saved decrypt_dataset/cezanne_87_encrypted
-saved decrypt_dataset/cezanne_88_encrypted
-saved decrypt_dataset/cezanne_89_encrypted
-saved decrypt_dataset/cezanne_90_encrypted
-saved decrypt_dataset/cezanne_91_encrypted
-saved decrypt_dataset/cezanne_92_encrypted
-saved decrypt_dataset/cezanne_93_encrypted
-saved decrypt_dataset/cezanne_94_encrypted
-saved decrypt_dataset/cezanne_95_encrypted
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 1.707947 Content Loss: 2.672183
-
-60
-80
-run [100]:
-Style Loss : 1.307253 Content Loss: 2.580613
-
-100
-120
-140
-run [150]:
-Style Loss : 1.191139 Content Loss: 2.542156
-
-160
-180
-run [200]:
-Style Loss : 1.139659 Content Loss: 2.522812
-
-200
-220
-240
-run [250]:
-Style Loss : 1.114847 Content Loss: 2.511881
-
-260
-280
-run [300]:
-Style Loss : 1.101099 Content Loss: 2.503478
-
-300
-Optimizing..
-run [25]:
-Loss : 0.012713, Floss: 0.012711, Mloss 0.000001
-
-run [50]:
-Loss : 0.003883, Floss: 0.003881, Mloss 0.000002
-
-run [75]:
-Loss : 0.001974, Floss: 0.001971, Mloss 0.000003
-
-run [100]:
-Loss : 0.001260, Floss: 0.001257, Mloss 0.000003
-
-run [125]:
-Loss : 0.000890, Floss: 0.000886, Mloss 0.000003
-
-run [150]:
-Loss : 0.000669, Floss: 0.000665, Mloss 0.000003
-
-run [175]:
-Loss : 0.000529, Floss: 0.000526, Mloss 0.000004
-
-run [200]:
-Loss : 0.000429, Floss: 0.000425, Mloss 0.000004
-
-run [225]:
-Loss : 0.000352, Floss: 0.000348, Mloss 0.000004
-
-run [250]:
-Loss : 0.000296, Floss: 0.000291, Mloss 0.000004
-
-run [275]:
-Loss : 0.000254, Floss: 0.000249, Mloss 0.000004
-
-run [300]:
-Loss : 0.000220, Floss: 0.000216, Mloss 0.000005
-
-run [325]:
-Loss : 0.000192, Floss: 0.000188, Mloss 0.000005
-
-run [350]:
-Loss : 0.000170, Floss: 0.000165, Mloss 0.000005
-
-run [375]:
-Loss : 0.000150, Floss: 0.000145, Mloss 0.000005
-
-run [400]:
-Loss : 0.000133, Floss: 0.000128, Mloss 0.000005
-
-saved decrypt_dataset/cezanne_96_encrypted
-saved decrypt_dataset/cezanne_97_encrypted
-saved decrypt_dataset/cezanne_98_encrypted
-saved decrypt_dataset/cezanne_99_encrypted
-saved decrypt_dataset/cezanne_100_encrypted
-saved decrypt_dataset/cezanne_101_encrypted
-saved decrypt_dataset/cezanne_102_encrypted
-saved decrypt_dataset/cezanne_103_encrypted
-saved decrypt_dataset/cezanne_104_encrypted
-saved decrypt_dataset/cezanne_105_encrypted
-saved decrypt_dataset/cezanne_106_encrypted
-saved decrypt_dataset/cezanne_107_encrypted
-saved decrypt_dataset/cezanne_108_encrypted
-saved decrypt_dataset/cezanne_109_encrypted
-saved decrypt_dataset/cezanne_110_encrypted
-saved decrypt_dataset/cezanne_111_encrypted
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 1.573480 Content Loss: 3.012244
-
-60
-80
-run [100]:
-Style Loss : 1.249928 Content Loss: 2.855858
-
-100
-120
-140
-run [150]:
-Style Loss : 1.159211 Content Loss: 2.812599
-
-160
-180
-run [200]:
-Style Loss : 1.096485 Content Loss: 2.794982
-
-200
-220
-240
-run [250]:
-Style Loss : 1.060640 Content Loss: 2.784950
-
-260
-280
-run [300]:
-Style Loss : 1.039922 Content Loss: 2.779940
-
-300
-Optimizing..
-run [25]:
-Loss : 0.010206, Floss: 0.010205, Mloss 0.000001
-
-run [50]:
-Loss : 0.003381, Floss: 0.003379, Mloss 0.000002
-
-run [75]:
-Loss : 0.001709, Floss: 0.001707, Mloss 0.000002
-
-run [100]:
-Loss : 0.001042, Floss: 0.001039, Mloss 0.000002
-
-run [125]:
-Loss : 0.000706, Floss: 0.000704, Mloss 0.000003
-
-run [150]:
-Loss : 0.000513, Floss: 0.000510, Mloss 0.000003
-
-run [175]:
-Loss : 0.000392, Floss: 0.000389, Mloss 0.000003
-
-run [200]:
-Loss : 0.000309, Floss: 0.000306, Mloss 0.000003
-
-run [225]:
-Loss : 0.000250, Floss: 0.000246, Mloss 0.000003
-
-run [250]:
-Loss : 0.000207, Floss: 0.000204, Mloss 0.000004
-
-run [275]:
-Loss : 0.000174, Floss: 0.000171, Mloss 0.000004
-
-run [300]:
-Loss : 0.000149, Floss: 0.000145, Mloss 0.000004
-
-run [325]:
-Loss : 0.000129, Floss: 0.000125, Mloss 0.000004
-
-run [350]:
-Loss : 0.000113, Floss: 0.000109, Mloss 0.000004
-
-run [375]:
-Loss : 0.000101, Floss: 0.000096, Mloss 0.000004
-
-run [400]:
-Loss : 0.000090, Floss: 0.000086, Mloss 0.000004
-
-saved decrypt_dataset/cezanne_112_encrypted
-saved decrypt_dataset/cezanne_113_encrypted
-saved decrypt_dataset/cezanne_114_encrypted
-saved decrypt_dataset/cezanne_115_encrypted
-saved decrypt_dataset/cezanne_116_encrypted
-saved decrypt_dataset/cezanne_117_encrypted
-saved decrypt_dataset/cezanne_118_encrypted
-saved decrypt_dataset/cezanne_119_encrypted
-saved decrypt_dataset/cezanne_120_encrypted
-saved decrypt_dataset/cezanne_121_encrypted
-saved decrypt_dataset/cezanne_122_encrypted
-saved decrypt_dataset/cezanne_123_encrypted
-saved decrypt_dataset/cezanne_124_encrypted
-saved decrypt_dataset/cezanne_125_encrypted
-saved decrypt_dataset/cezanne_126_encrypted
-saved decrypt_dataset/cezanne_127_encrypted
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 1.621979 Content Loss: 3.080856
-
-60
-80
-run [100]:
-Style Loss : 1.363459 Content Loss: 2.971519
-
-100
-120
-140
-run [150]:
-Style Loss : 1.259049 Content Loss: 2.936977
-
-160
-180
-run [200]:
-Style Loss : 1.201099 Content Loss: 2.921805
-
-200
-220
-240
-run [250]:
-Style Loss : 1.173210 Content Loss: 2.912111
-
-260
-280
-run [300]:
-Style Loss : 1.158601 Content Loss: 2.904642
-
-300
-Optimizing..
-run [25]:
-Loss : 0.033106, Floss: 0.033105, Mloss 0.000001
-
-run [50]:
-Loss : 0.005955, Floss: 0.005953, Mloss 0.000002
-
-run [75]:
-Loss : 0.002753, Floss: 0.002750, Mloss 0.000003
-
-run [100]:
-Loss : 0.001674, Floss: 0.001670, Mloss 0.000003
-
-run [125]:
-Loss : 0.001111, Floss: 0.001107, Mloss 0.000004
-
-run [150]:
-Loss : 0.000787, Floss: 0.000783, Mloss 0.000004
-
-run [175]:
-Loss : 0.000589, Floss: 0.000585, Mloss 0.000004
-
-run [200]:
-Loss : 0.000459, Floss: 0.000454, Mloss 0.000005
-
-run [225]:
-Loss : 0.000370, Floss: 0.000365, Mloss 0.000005
-
-run [250]:
-Loss : 0.000305, Floss: 0.000300, Mloss 0.000005
-
-run [275]:
-Loss : 0.000255, Floss: 0.000250, Mloss 0.000005
-
-run [300]:
-Loss : 0.000217, Floss: 0.000211, Mloss 0.000005
-
-run [325]:
-Loss : 0.000187, Floss: 0.000181, Mloss 0.000006
-
-run [350]:
-Loss : 0.000163, Floss: 0.000157, Mloss 0.000006
-
-run [375]:
-Loss : 0.000144, Floss: 0.000138, Mloss 0.000006
-
-run [400]:
-Loss : 0.000127, Floss: 0.000121, Mloss 0.000006
-
-saved decrypt_dataset/cezanne_128_encrypted
-saved decrypt_dataset/cezanne_129_encrypted
-saved decrypt_dataset/cezanne_130_encrypted
-saved decrypt_dataset/cezanne_131_encrypted
-saved decrypt_dataset/cezanne_132_encrypted
-saved decrypt_dataset/cezanne_133_encrypted
-saved decrypt_dataset/cezanne_134_encrypted
-saved decrypt_dataset/cezanne_135_encrypted
-saved decrypt_dataset/cezanne_136_encrypted
-saved decrypt_dataset/cezanne_137_encrypted
-saved decrypt_dataset/cezanne_138_encrypted
-saved decrypt_dataset/cezanne_139_encrypted
-saved decrypt_dataset/cezanne_140_encrypted
-saved decrypt_dataset/cezanne_141_encrypted
-saved decrypt_dataset/cezanne_142_encrypted
-saved decrypt_dataset/cezanne_143_encrypted
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 1.094057 Content Loss: 2.458362
-
-60
-80
-run [100]:
-Style Loss : 0.978597 Content Loss: 2.373272
-
-100
-120
-140
-run [150]:
-Style Loss : 0.918217 Content Loss: 2.346517
-
-160
-180
-run [200]:
-Style Loss : 0.880327 Content Loss: 2.332293
-
-200
-220
-240
-run [250]:
-Style Loss : 0.855787 Content Loss: 2.325322
-
-260
-280
-run [300]:
-Style Loss : 0.840488 Content Loss: 2.322762
-
-300
-Optimizing..
-run [25]:
-Loss : 0.021313, Floss: 0.021312, Mloss 0.000001
-
-run [50]:
-Loss : 0.004931, Floss: 0.004930, Mloss 0.000001
-
-run [75]:
-Loss : 0.002361, Floss: 0.002359, Mloss 0.000001
-
-run [100]:
-Loss : 0.001365, Floss: 0.001363, Mloss 0.000002
-
-run [125]:
-Loss : 0.000845, Floss: 0.000843, Mloss 0.000002
-
-run [150]:
-Loss : 0.000588, Floss: 0.000586, Mloss 0.000002
-
-run [175]:
-Loss : 0.000437, Floss: 0.000435, Mloss 0.000002
-
-run [200]:
-Loss : 0.000331, Floss: 0.000329, Mloss 0.000002
-
-run [225]:
-Loss : 0.000265, Floss: 0.000262, Mloss 0.000003
-
-run [250]:
-Loss : 0.000218, Floss: 0.000215, Mloss 0.000003
-
-run [275]:
-Loss : 0.000185, Floss: 0.000182, Mloss 0.000003
-
-run [300]:
-Loss : 0.000157, Floss: 0.000154, Mloss 0.000003
-
-run [325]:
-Loss : 0.000136, Floss: 0.000133, Mloss 0.000003
-
-run [350]:
-Loss : 0.000118, Floss: 0.000114, Mloss 0.000003
-
-run [375]:
-Loss : 0.000104, Floss: 0.000101, Mloss 0.000003
-
-run [400]:
-Loss : 0.000093, Floss: 0.000090, Mloss 0.000003
-
-saved decrypt_dataset/cezanne_144_encrypted
-saved decrypt_dataset/cezanne_145_encrypted
-saved decrypt_dataset/cezanne_146_encrypted
-saved decrypt_dataset/cezanne_147_encrypted
-saved decrypt_dataset/cezanne_148_encrypted
-saved decrypt_dataset/cezanne_149_encrypted
-saved decrypt_dataset/cezanne_150_encrypted
-saved decrypt_dataset/cezanne_151_encrypted
-saved decrypt_dataset/cezanne_152_encrypted
-saved decrypt_dataset/cezanne_153_encrypted
-saved decrypt_dataset/cezanne_154_encrypted
-saved decrypt_dataset/cezanne_155_encrypted
-saved decrypt_dataset/cezanne_156_encrypted
-saved decrypt_dataset/cezanne_157_encrypted
-saved decrypt_dataset/cezanne_158_encrypted
-saved decrypt_dataset/cezanne_159_encrypted
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 1.634200 Content Loss: 3.434507
-
-60
-80
-run [100]:
-Style Loss : 1.362613 Content Loss: 3.351873
-
-100
-120
-140
-run [150]:
-Style Loss : 1.275481 Content Loss: 3.320163
-
-160
-180
-run [200]:
-Style Loss : 1.217347 Content Loss: 3.303126
-
-200
-220
-240
-run [250]:
-Style Loss : 1.178992 Content Loss: 3.290544
-
-260
-280
-run [300]:
-Style Loss : 1.155711 Content Loss: 3.280000
-
-300
-Optimizing..
-run [25]:
-Loss : 0.012889, Floss: 0.012888, Mloss 0.000001
-
-run [50]:
-Loss : 0.003946, Floss: 0.003945, Mloss 0.000002
-
-run [75]:
-Loss : 0.001941, Floss: 0.001939, Mloss 0.000002
-
-run [100]:
-Loss : 0.001204, Floss: 0.001201, Mloss 0.000003
-
-run [125]:
-Loss : 0.000816, Floss: 0.000813, Mloss 0.000003
-
-run [150]:
-Loss : 0.000593, Floss: 0.000590, Mloss 0.000003
-
-run [175]:
-Loss : 0.000453, Floss: 0.000450, Mloss 0.000003
-
-run [200]:
-Loss : 0.000357, Floss: 0.000353, Mloss 0.000004
-
-run [225]:
-Loss : 0.000292, Floss: 0.000288, Mloss 0.000004
-
-run [250]:
-Loss : 0.000239, Floss: 0.000235, Mloss 0.000004
-
-run [275]:
-Loss : 0.000202, Floss: 0.000198, Mloss 0.000004
-
-run [300]:
-Loss : 0.000174, Floss: 0.000170, Mloss 0.000004
-
-run [325]:
-Loss : 0.000152, Floss: 0.000147, Mloss 0.000004
-
-run [350]:
-Loss : 0.000133, Floss: 0.000128, Mloss 0.000005
-
-run [375]:
-Loss : 0.000117, Floss: 0.000113, Mloss 0.000005
-
-run [400]:
-Loss : 0.000105, Floss: 0.000100, Mloss 0.000005
-
-saved decrypt_dataset/cezanne_160_encrypted
-saved decrypt_dataset/cezanne_161_encrypted
-saved decrypt_dataset/cezanne_162_encrypted
-saved decrypt_dataset/cezanne_163_encrypted
-saved decrypt_dataset/cezanne_164_encrypted
-saved decrypt_dataset/cezanne_165_encrypted
-saved decrypt_dataset/cezanne_166_encrypted
-saved decrypt_dataset/cezanne_167_encrypted
-saved decrypt_dataset/cezanne_168_encrypted
-saved decrypt_dataset/cezanne_169_encrypted
-saved decrypt_dataset/cezanne_170_encrypted
-saved decrypt_dataset/cezanne_171_encrypted
-saved decrypt_dataset/cezanne_172_encrypted
-saved decrypt_dataset/cezanne_173_encrypted
-saved decrypt_dataset/cezanne_174_encrypted
-saved decrypt_dataset/cezanne_175_encrypted

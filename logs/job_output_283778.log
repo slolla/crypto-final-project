@@ -1,21 +1,0 @@
-cpu-bind=MASK - gpu19-1.drl, task  0  0 [2047546]: mask 0x1 set
-Fri May 10 10:12:20 PM EDT 2024
-Running my job on gpu19-1.drl
-/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/util/check_latest_version.py:32: UserWarning: A newer version of deeplake (3.9.5) is available. It's recommended that you update to the latest version using `pip install -U deeplake`.
-  warnings.warn(
-/ - \ | / - \ | / - \ | / - \ | / - \ | / - \ | SETTING DEVICE AS cuda
-Opening dataset in read-only mode as you don't have write permissions.
-This dataset can be visualized in Jupyter Notebook by ds.visualize() or at https://app.activeloop.ai/activeloop/wiki-art
-
-/ - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | hub://activeloop/wiki-art loaded successfully.
-
-/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/integrations/pytorch/common.py:137: UserWarning: Decode method for tensors ['images'] is defaulting to numpy. Please consider specifying a decode_method in .pytorch() that maximizes the data preprocessing speed based on your transformation.
-  warnings.warn(
-Please wait, filling up the shuffle buffer with samples.:   0%|          | 0.00/2.00G [00:00<?, ?B/s]Please wait, filling up the shuffle buffer with samples.:   0%|          | 2.59M/2.00G [00:05<1:15:11, 475kB/s]Please wait, filling up the shuffle buffer with samples.:   9%|▉         | 189M/2.00G [00:08<01:11, 27.3MB/s]  Please wait, filling up the shuffle buffer with samples.:  10%|█         | 210M/2.00G [00:09<01:08, 28.3MB/s]Please wait, filling up the shuffle buffer with samples.:  22%|██▏       | 454M/2.00G [00:09<00:18, 90.0MB/s]Please wait, filling up the shuffle buffer with samples.:  27%|██▋       | 543M/2.00G [00:10<00:14, 105MB/s] Please wait, filling up the shuffle buffer with samples.:  30%|██▉       | 607M/2.00G [00:10<00:14, 102MB/s]Please wait, filling up the shuffle buffer with samples.:  42%|████▏     | 857M/2.00G [00:11<00:06, 179MB/s]Please wait, filling up the shuffle buffer with samples.:  50%|█████     | 1.00G/2.00G [00:15<00:12, 88.8MB/s]Please wait, filling up the shuffle buffer with samples.:  64%|██████▎   | 1.27G/2.00G [00:15<00:04, 157MB/s] Please wait, filling up the shuffle buffer with samples.:  76%|███████▌  | 1.52G/2.00G [00:15<00:02, 237MB/s]Please wait, filling up the shuffle buffer with samples.:  90%|█████████ | 1.81G/2.00G [00:20<00:01, 115MB/s]Please wait, filling up the shuffle buffer with samples.:  95%|█████████▌| 1.91G/2.00G [00:20<00:00, 133MB/s]Please wait, filling up the shuffle buffer with samples.:  98%|█████████▊| 1.96G/2.00G [00:20<00:00, 102MB/s]
-Shuffle buffer filling is complete.
-Traceback (most recent call last):
-  File "/data/scratch/amini/sadhana/2024/crypto-final-project/src/data_generation.py", line 343, in <module>
-    content_img = torch.tensor(np.asarray(batch))
-  File "/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py", line 78, in __torch_function__
-    return func(*args, **kwargs)
-TypeError: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint64, uint32, uint16, uint8, and bool.

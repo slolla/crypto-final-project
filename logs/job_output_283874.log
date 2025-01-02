@@ -1,1178 +1,0 @@
-cpu-bind=MASK - gpu19-2.drl, task  0  0 [2202396]: mask 0x1 set
-Sat May 11 12:27:55 AM EDT 2024
-Running my job on gpu19-2.drl
-Defaulting to user installation because normal site-packages is not writeable
-Requirement already satisfied: deeplake in /tmp/home/amini/.local/lib/python3.10/site-packages (3.9.5)
-Requirement already satisfied: pillow~=10.2.0 in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (10.2.0)
-Requirement already satisfied: libdeeplake==0.0.128 in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (0.0.128)
-Requirement already satisfied: click in /usr/lib/python3/dist-packages (from deeplake) (8.0.3)
-Requirement already satisfied: tqdm in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (4.66.4)
-Requirement already satisfied: numpy in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (1.26.4)
-Requirement already satisfied: boto3 in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (1.34.69)
-Requirement already satisfied: pathos in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (0.3.2)
-Requirement already satisfied: pydantic in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (2.7.1)
-Requirement already satisfied: lz4 in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (4.3.3)
-Requirement already satisfied: nest-asyncio in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (1.6.0)
-Requirement already satisfied: aioboto3>=10.4.0 in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (12.4.0)
-Requirement already satisfied: pyjwt in /usr/lib/python3/dist-packages (from deeplake) (2.3.0)
-Requirement already satisfied: humbug>=0.3.1 in /tmp/home/amini/.local/lib/python3.10/site-packages (from deeplake) (0.3.2)
-Requirement already satisfied: dill in /tmp/home/amini/.local/lib/python3.10/site-packages (from libdeeplake==0.0.128->deeplake) (0.3.8)
-Requirement already satisfied: aiobotocore[boto3]==2.12.3 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aioboto3>=10.4.0->deeplake) (2.12.3)
-Requirement already satisfied: aioitertools<1.0.0,>=0.5.1 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (0.11.0)
-Requirement already satisfied: aiohttp<4.0.0,>=3.7.4.post0 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (3.9.5)
-Requirement already satisfied: botocore<1.34.70,>=1.34.41 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (1.34.69)
-Requirement already satisfied: wrapt<2.0.0,>=1.10.10 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (1.16.0)
-Requirement already satisfied: s3transfer<0.11.0,>=0.10.0 in /tmp/home/amini/.local/lib/python3.10/site-packages (from boto3->deeplake) (0.10.1)
-Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in /tmp/home/amini/.local/lib/python3.10/site-packages (from boto3->deeplake) (1.0.1)
-Requirement already satisfied: requests in /tmp/home/amini/.local/lib/python3.10/site-packages (from humbug>=0.3.1->deeplake) (2.31.0)
-Requirement already satisfied: pox>=0.3.4 in /tmp/home/amini/.local/lib/python3.10/site-packages (from pathos->deeplake) (0.3.4)
-Requirement already satisfied: multiprocess>=0.70.16 in /tmp/home/amini/.local/lib/python3.10/site-packages (from pathos->deeplake) (0.70.16)
-Requirement already satisfied: ppft>=1.7.6.8 in /tmp/home/amini/.local/lib/python3.10/site-packages (from pathos->deeplake) (1.7.6.8)
-Requirement already satisfied: pydantic-core==2.18.2 in /tmp/home/amini/.local/lib/python3.10/site-packages (from pydantic->deeplake) (2.18.2)
-Requirement already satisfied: typing-extensions>=4.6.1 in /tmp/home/amini/.local/lib/python3.10/site-packages (from pydantic->deeplake) (4.11.0)
-Requirement already satisfied: annotated-types>=0.4.0 in /tmp/home/amini/.local/lib/python3.10/site-packages (from pydantic->deeplake) (0.6.0)
-Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in /tmp/home/amini/.local/lib/python3.10/site-packages (from botocore<1.34.70,>=1.34.41->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (2.9.0.post0)
-Requirement already satisfied: urllib3!=2.2.0,<3,>=1.25.4 in /tmp/home/amini/.local/lib/python3.10/site-packages (from botocore<1.34.70,>=1.34.41->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (2.2.1)
-Requirement already satisfied: certifi>=2017.4.17 in /tmp/home/amini/.local/lib/python3.10/site-packages (from requests->humbug>=0.3.1->deeplake) (2024.2.2)
-Requirement already satisfied: charset-normalizer<4,>=2 in /tmp/home/amini/.local/lib/python3.10/site-packages (from requests->humbug>=0.3.1->deeplake) (3.3.2)
-Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3/dist-packages (from requests->humbug>=0.3.1->deeplake) (3.3)
-Requirement already satisfied: frozenlist>=1.1.1 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aiohttp<4.0.0,>=3.7.4.post0->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (1.4.1)
-Requirement already satisfied: multidict<7.0,>=4.5 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aiohttp<4.0.0,>=3.7.4.post0->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (6.0.5)
-Requirement already satisfied: aiosignal>=1.1.2 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aiohttp<4.0.0,>=3.7.4.post0->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (1.3.1)
-Requirement already satisfied: yarl<2.0,>=1.0 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aiohttp<4.0.0,>=3.7.4.post0->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (1.9.4)
-Requirement already satisfied: async-timeout<5.0,>=4.0 in /tmp/home/amini/.local/lib/python3.10/site-packages (from aiohttp<4.0.0,>=3.7.4.post0->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (4.0.3)
-Requirement already satisfied: attrs>=17.3.0 in /usr/lib/python3/dist-packages (from aiohttp<4.0.0,>=3.7.4.post0->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (21.2.0)
-Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil<3.0.0,>=2.1->botocore<1.34.70,>=1.34.41->aiobotocore[boto3]==2.12.3->aioboto3>=10.4.0->deeplake) (1.16.0)
-/ - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - SETTING DEVICE AS cuda
-Opening dataset in read-only mode as you don't have write permissions.
-This dataset can be visualized in Jupyter Notebook by ds.visualize() or at https://app.activeloop.ai/activeloop/wiki-art
-
-\ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - hub://activeloop/wiki-art loaded successfully.
-
-/tmp/home/amini/.local/lib/python3.10/site-packages/deeplake/integrations/pytorch/common.py:137: UserWarning: Decode method for tensors ['images'] is defaulting to numpy. Please consider specifying a decode_method in .pytorch() that maximizes the data preprocessing speed based on your transformation.
-  warnings.warn(
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
-  return func(*args, **kwargs)
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([1, 64, 64])) that is different to the input size (torch.Size([16, 64, 64])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
-  return func(*args, **kwargs)
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([1, 128, 128])) that is different to the input size (torch.Size([16, 128, 128])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
-  return func(*args, **kwargs)
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([16, 128, 128, 128])) that is different to the input size (torch.Size([1, 128, 128, 128])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
-  return func(*args, **kwargs)
-/tmp/home/amini/.local/lib/python3.10/site-packages/torch/utils/_device.py:78: UserWarning: Using a target size (torch.Size([1, 256, 256])) that is different to the input size (torch.Size([16, 256, 256])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
-  return func(*args, **kwargs)
-/tmp/home/amini/.local/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
-  warnings.warn(
-/tmp/home/amini/.local/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=VGG16_Weights.IMAGENET1K_V1`. You can also use `weights=VGG16_Weights.DEFAULT` to get the most up-to-date weights.
-  warnings.warn(msg)
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 2.993800 Content Loss: 11.909834
-
-60
-80
-run [100]:
-Style Loss : 2.348417 Content Loss: 11.253901
-
-100
-120
-140
-run [150]:
-Style Loss : 3.022308 Content Loss: 11.802551
-
-160
-180
-run [200]:
-Style Loss : 2.396579 Content Loss: 11.013794
-
-200
-220
-240
-run [250]:
-Style Loss : 2.314101 Content Loss: 11.238342
-
-260
-280
-run [300]:
-Style Loss : 2.346989 Content Loss: 11.328987
-
-300
-Optimizing..
-run [25]:
-Loss : 0.039570, Floss: 0.039555, Mloss 0.000015
-
-run [50]:
-Loss : 0.012048, Floss: 0.012028, Mloss 0.000021
-
-run [75]:
-Loss : 0.006484, Floss: 0.006459, Mloss 0.000025
-
-run [100]:
-Loss : 0.004113, Floss: 0.004085, Mloss 0.000028
-
-run [125]:
-Loss : 0.002858, Floss: 0.002828, Mloss 0.000030
-
-run [150]:
-Loss : 0.002112, Floss: 0.002079, Mloss 0.000032
-
-run [175]:
-Loss : 0.001630, Floss: 0.001596, Mloss 0.000034
-
-run [200]:
-Loss : 0.001314, Floss: 0.001279, Mloss 0.000035
-
-run [225]:
-Loss : 0.001082, Floss: 0.001046, Mloss 0.000036
-
-run [250]:
-Loss : 0.000915, Floss: 0.000877, Mloss 0.000038
-
-run [275]:
-Loss : 0.000785, Floss: 0.000746, Mloss 0.000039
-
-run [300]:
-Loss : 0.000676, Floss: 0.000636, Mloss 0.000040
-
-run [325]:
-Loss : 0.000596, Floss: 0.000555, Mloss 0.000041
-
-run [350]:
-Loss : 0.000530, Floss: 0.000489, Mloss 0.000041
-
-run [375]:
-Loss : 0.000480, Floss: 0.000438, Mloss 0.000042
-
-run [400]:
-Loss : 0.000434, Floss: 0.000391, Mloss 0.000043
-
-saved decrypt_dataset/vangogh/vangogh_0_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_1_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_2_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_3_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_4_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_5_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_6_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_7_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_8_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_9_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_10_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_11_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_12_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_13_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_14_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_15_encrypted.jpg
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 2.932413 Content Loss: 12.145384
-
-60
-80
-run [100]:
-Style Loss : 2.368081 Content Loss: 11.221186
-
-100
-120
-140
-run [150]:
-Style Loss : 2.204428 Content Loss: 10.951718
-
-160
-180
-run [200]:
-Style Loss : 2.150838 Content Loss: 10.826889
-
-200
-220
-240
-run [250]:
-Style Loss : 2.129954 Content Loss: 10.751268
-
-260
-280
-run [300]:
-Style Loss : 2.110764 Content Loss: 10.769062
-
-300
-Optimizing..
-run [25]:
-Loss : 0.028098, Floss: 0.028088, Mloss 0.000010
-
-run [50]:
-Loss : 0.009208, Floss: 0.009194, Mloss 0.000014
-
-run [75]:
-Loss : 0.005008, Floss: 0.004992, Mloss 0.000016
-
-run [100]:
-Loss : 0.003235, Floss: 0.003217, Mloss 0.000018
-
-run [125]:
-Loss : 0.002313, Floss: 0.002293, Mloss 0.000020
-
-run [150]:
-Loss : 0.001742, Floss: 0.001721, Mloss 0.000021
-
-run [175]:
-Loss : 0.001364, Floss: 0.001342, Mloss 0.000022
-
-run [200]:
-Loss : 0.001112, Floss: 0.001089, Mloss 0.000023
-
-run [225]:
-Loss : 0.000921, Floss: 0.000898, Mloss 0.000024
-
-run [250]:
-Loss : 0.000776, Floss: 0.000751, Mloss 0.000025
-
-run [275]:
-Loss : 0.000667, Floss: 0.000641, Mloss 0.000025
-
-run [300]:
-Loss : 0.000578, Floss: 0.000552, Mloss 0.000026
-
-run [325]:
-Loss : 0.000507, Floss: 0.000480, Mloss 0.000027
-
-run [350]:
-Loss : 0.000449, Floss: 0.000422, Mloss 0.000027
-
-run [375]:
-Loss : 0.000401, Floss: 0.000373, Mloss 0.000028
-
-run [400]:
-Loss : 0.000361, Floss: 0.000333, Mloss 0.000028
-
-saved decrypt_dataset/vangogh/vangogh_0_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_1_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_2_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_3_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_4_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_5_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_6_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_7_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_8_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_9_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_10_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_11_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_12_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_13_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_14_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_15_encrypted.jpg
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 3.301772 Content Loss: 12.766137
-
-60
-80
-run [100]:
-Style Loss : 2.565035 Content Loss: 11.860950
-
-100
-120
-140
-run [150]:
-Style Loss : 2.379012 Content Loss: 11.613665
-
-160
-180
-run [200]:
-Style Loss : 2.396302 Content Loss: 11.848266
-
-200
-220
-240
-run [250]:
-Style Loss : 2.393022 Content Loss: 11.769295
-
-260
-280
-run [300]:
-Style Loss : 2.564222 Content Loss: 12.299376
-
-300
-Optimizing..
-run [25]:
-Loss : 0.030881, Floss: 0.030869, Mloss 0.000012
-
-run [50]:
-Loss : 0.010212, Floss: 0.010193, Mloss 0.000018
-
-run [75]:
-Loss : 0.005666, Floss: 0.005644, Mloss 0.000023
-
-run [100]:
-Loss : 0.003647, Floss: 0.003621, Mloss 0.000026
-
-run [125]:
-Loss : 0.002617, Floss: 0.002589, Mloss 0.000028
-
-run [150]:
-Loss : 0.001966, Floss: 0.001936, Mloss 0.000030
-
-run [175]:
-Loss : 0.001551, Floss: 0.001519, Mloss 0.000032
-
-run [200]:
-Loss : 0.001257, Floss: 0.001223, Mloss 0.000034
-
-run [225]:
-Loss : 0.001041, Floss: 0.001006, Mloss 0.000035
-
-run [250]:
-Loss : 0.000884, Floss: 0.000848, Mloss 0.000036
-
-run [275]:
-Loss : 0.000755, Floss: 0.000717, Mloss 0.000038
-
-run [300]:
-Loss : 0.000656, Floss: 0.000617, Mloss 0.000039
-
-run [325]:
-Loss : 0.000578, Floss: 0.000538, Mloss 0.000040
-
-run [350]:
-Loss : 0.000515, Floss: 0.000474, Mloss 0.000041
-
-run [375]:
-Loss : 0.000463, Floss: 0.000421, Mloss 0.000042
-
-run [400]:
-Loss : 0.000421, Floss: 0.000378, Mloss 0.000042
-
-saved decrypt_dataset/vangogh/vangogh_0_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_1_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_2_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_3_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_4_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_5_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_6_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_7_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_8_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_9_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_10_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_11_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_12_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_13_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_14_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_15_encrypted.jpg
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 2.817382 Content Loss: 10.349068
-
-60
-80
-run [100]:
-Style Loss : 2.301852 Content Loss: 9.466677
-
-100
-120
-140
-run [150]:
-Style Loss : 2.161886 Content Loss: 9.298384
-
-160
-180
-run [200]:
-Style Loss : 2.222066 Content Loss: 9.804462
-
-200
-220
-240
-run [250]:
-Style Loss : 2.505028 Content Loss: 9.869509
-
-260
-280
-run [300]:
-Style Loss : 2.288122 Content Loss: 10.129574
-
-300
-Optimizing..
-run [25]:
-Loss : 0.031169, Floss: 0.031157, Mloss 0.000011
-
-run [50]:
-Loss : 0.009870, Floss: 0.009855, Mloss 0.000016
-
-run [75]:
-Loss : 0.005202, Floss: 0.005184, Mloss 0.000018
-
-run [100]:
-Loss : 0.003228, Floss: 0.003208, Mloss 0.000020
-
-run [125]:
-Loss : 0.002188, Floss: 0.002166, Mloss 0.000023
-
-run [150]:
-Loss : 0.001609, Floss: 0.001585, Mloss 0.000024
-
-run [175]:
-Loss : 0.001251, Floss: 0.001226, Mloss 0.000026
-
-run [200]:
-Loss : 0.001014, Floss: 0.000987, Mloss 0.000027
-
-run [225]:
-Loss : 0.000838, Floss: 0.000810, Mloss 0.000028
-
-run [250]:
-Loss : 0.000703, Floss: 0.000674, Mloss 0.000029
-
-run [275]:
-Loss : 0.000601, Floss: 0.000571, Mloss 0.000030
-
-run [300]:
-Loss : 0.000522, Floss: 0.000492, Mloss 0.000031
-
-run [325]:
-Loss : 0.000462, Floss: 0.000431, Mloss 0.000031
-
-run [350]:
-Loss : 0.000412, Floss: 0.000379, Mloss 0.000032
-
-run [375]:
-Loss : 0.000372, Floss: 0.000340, Mloss 0.000033
-
-run [400]:
-Loss : 0.000338, Floss: 0.000305, Mloss 0.000033
-
-saved decrypt_dataset/vangogh/vangogh_0_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_1_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_2_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_3_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_4_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_5_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_6_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_7_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_8_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_9_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_10_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_11_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_12_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_13_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_14_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_15_encrypted.jpg
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 3.146180 Content Loss: 11.565277
-
-60
-80
-run [100]:
-Style Loss : 2.550569 Content Loss: 10.798311
-
-100
-120
-140
-run [150]:
-Style Loss : 2.282601 Content Loss: 10.639467
-
-160
-180
-run [200]:
-Style Loss : 3.138487 Content Loss: 11.646744
-
-200
-220
-240
-run [250]:
-Style Loss : 2.437885 Content Loss: 11.435269
-
-260
-280
-run [300]:
-Style Loss : 2.351607 Content Loss: 10.995991
-
-300
-Optimizing..
-run [25]:
-Loss : 0.030793, Floss: 0.030781, Mloss 0.000011
-
-run [50]:
-Loss : 0.009761, Floss: 0.009743, Mloss 0.000017
-
-run [75]:
-Loss : 0.005086, Floss: 0.005064, Mloss 0.000022
-
-run [100]:
-Loss : 0.003303, Floss: 0.003278, Mloss 0.000025
-
-run [125]:
-Loss : 0.002321, Floss: 0.002294, Mloss 0.000027
-
-run [150]:
-Loss : 0.001732, Floss: 0.001702, Mloss 0.000030
-
-run [175]:
-Loss : 0.001360, Floss: 0.001329, Mloss 0.000031
-
-run [200]:
-Loss : 0.001103, Floss: 0.001070, Mloss 0.000033
-
-run [225]:
-Loss : 0.000906, Floss: 0.000872, Mloss 0.000034
-
-run [250]:
-Loss : 0.000766, Floss: 0.000730, Mloss 0.000036
-
-run [275]:
-Loss : 0.000656, Floss: 0.000619, Mloss 0.000037
-
-run [300]:
-Loss : 0.000570, Floss: 0.000533, Mloss 0.000038
-
-run [325]:
-Loss : 0.000504, Floss: 0.000466, Mloss 0.000038
-
-run [350]:
-Loss : 0.000452, Floss: 0.000413, Mloss 0.000039
-
-run [375]:
-Loss : 0.000409, Floss: 0.000369, Mloss 0.000040
-
-run [400]:
-Loss : 0.000373, Floss: 0.000333, Mloss 0.000040
-
-saved decrypt_dataset/vangogh/vangogh_0_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_1_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_2_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_3_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_4_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_5_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_6_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_7_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_8_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_9_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_10_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_11_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_12_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_13_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_14_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_15_encrypted.jpg
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 2.540477 Content Loss: 10.254626
-
-60
-80
-run [100]:
-Style Loss : 2.077758 Content Loss: 9.450480
-
-100
-120
-140
-run [150]:
-Style Loss : 1.938358 Content Loss: 9.207783
-
-160
-180
-run [200]:
-Style Loss : 1.885401 Content Loss: 9.139502
-
-200
-220
-240
-run [250]:
-Style Loss : 1.882814 Content Loss: 9.164203
-
-260
-280
-run [300]:
-Style Loss : 1.951059 Content Loss: 9.453361
-
-300
-Optimizing..
-run [25]:
-Loss : 0.020394, Floss: 0.020389, Mloss 0.000005
-
-run [50]:
-Loss : 0.007406, Floss: 0.007398, Mloss 0.000008
-
-run [75]:
-Loss : 0.004074, Floss: 0.004064, Mloss 0.000010
-
-run [100]:
-Loss : 0.002680, Floss: 0.002669, Mloss 0.000011
-
-run [125]:
-Loss : 0.001927, Floss: 0.001915, Mloss 0.000013
-
-run [150]:
-Loss : 0.001448, Floss: 0.001433, Mloss 0.000014
-
-run [175]:
-Loss : 0.001140, Floss: 0.001125, Mloss 0.000015
-
-run [200]:
-Loss : 0.000916, Floss: 0.000900, Mloss 0.000016
-
-run [225]:
-Loss : 0.000751, Floss: 0.000734, Mloss 0.000017
-
-run [250]:
-Loss : 0.000626, Floss: 0.000609, Mloss 0.000018
-
-run [275]:
-Loss : 0.000537, Floss: 0.000518, Mloss 0.000018
-
-run [300]:
-Loss : 0.000463, Floss: 0.000444, Mloss 0.000019
-
-run [325]:
-Loss : 0.000406, Floss: 0.000386, Mloss 0.000020
-
-run [350]:
-Loss : 0.000359, Floss: 0.000339, Mloss 0.000020
-
-run [375]:
-Loss : 0.000321, Floss: 0.000300, Mloss 0.000021
-
-run [400]:
-Loss : 0.000290, Floss: 0.000268, Mloss 0.000021
-
-saved decrypt_dataset/vangogh/vangogh_0_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_1_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_2_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_3_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_4_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_5_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_6_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_7_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_8_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_9_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_10_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_11_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_12_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_13_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_14_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_15_encrypted.jpg
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 2.672822 Content Loss: 7.585069
-
-60
-80
-run [100]:
-Style Loss : 2.023636 Content Loss: 6.918341
-
-100
-120
-140
-run [150]:
-Style Loss : 1.704122 Content Loss: 6.751345
-
-160
-180
-run [200]:
-Style Loss : 1.565819 Content Loss: 6.728462
-
-200
-220
-240
-run [250]:
-Style Loss : 1.574488 Content Loss: 7.144989
-
-260
-280
-run [300]:
-Style Loss : 1.526001 Content Loss: 6.676152
-
-300
-Optimizing..
-run [25]:
-Loss : 0.016963, Floss: 0.016957, Mloss 0.000006
-
-run [50]:
-Loss : 0.006711, Floss: 0.006702, Mloss 0.000009
-
-run [75]:
-Loss : 0.003922, Floss: 0.003911, Mloss 0.000011
-
-run [100]:
-Loss : 0.002646, Floss: 0.002633, Mloss 0.000013
-
-run [125]:
-Loss : 0.001912, Floss: 0.001897, Mloss 0.000015
-
-run [150]:
-Loss : 0.001458, Floss: 0.001442, Mloss 0.000016
-
-run [175]:
-Loss : 0.001152, Floss: 0.001135, Mloss 0.000018
-
-run [200]:
-Loss : 0.000939, Floss: 0.000920, Mloss 0.000019
-
-run [225]:
-Loss : 0.000780, Floss: 0.000760, Mloss 0.000020
-
-run [250]:
-Loss : 0.000661, Floss: 0.000640, Mloss 0.000021
-
-run [275]:
-Loss : 0.000572, Floss: 0.000550, Mloss 0.000022
-
-run [300]:
-Loss : 0.000502, Floss: 0.000479, Mloss 0.000023
-
-run [325]:
-Loss : 0.000444, Floss: 0.000420, Mloss 0.000024
-
-run [350]:
-Loss : 0.000395, Floss: 0.000370, Mloss 0.000025
-
-run [375]:
-Loss : 0.000356, Floss: 0.000331, Mloss 0.000025
-
-run [400]:
-Loss : 0.000323, Floss: 0.000297, Mloss 0.000026
-
-saved decrypt_dataset/vangogh/vangogh_0_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_1_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_2_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_3_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_4_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_5_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_6_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_7_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_8_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_9_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_10_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_11_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_12_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_13_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_14_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_15_encrypted.jpg
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 3.110585 Content Loss: 11.746999
-
-60
-80
-run [100]:
-Style Loss : 2.645936 Content Loss: 10.994294
-
-100
-120
-140
-run [150]:
-Style Loss : 2.496841 Content Loss: 10.814356
-
-160
-180
-run [200]:
-Style Loss : 2.426818 Content Loss: 10.723745
-
-200
-220
-240
-run [250]:
-Style Loss : 2.388158 Content Loss: 10.665352
-
-260
-280
-run [300]:
-Style Loss : 2.362238 Content Loss: 10.625557
-
-300
-Optimizing..
-run [25]:
-Loss : 0.016978, Floss: 0.016972, Mloss 0.000006
-
-run [50]:
-Loss : 0.005926, Floss: 0.005917, Mloss 0.000009
-
-run [75]:
-Loss : 0.003095, Floss: 0.003084, Mloss 0.000011
-
-run [100]:
-Loss : 0.001932, Floss: 0.001920, Mloss 0.000013
-
-run [125]:
-Loss : 0.001323, Floss: 0.001309, Mloss 0.000014
-
-run [150]:
-Loss : 0.000957, Floss: 0.000942, Mloss 0.000015
-
-run [175]:
-Loss : 0.000749, Floss: 0.000733, Mloss 0.000016
-
-run [200]:
-Loss : 0.000594, Floss: 0.000577, Mloss 0.000017
-
-run [225]:
-Loss : 0.000483, Floss: 0.000466, Mloss 0.000018
-
-run [250]:
-Loss : 0.000397, Floss: 0.000378, Mloss 0.000019
-
-run [275]:
-Loss : 0.000336, Floss: 0.000316, Mloss 0.000019
-
-run [300]:
-Loss : 0.000290, Floss: 0.000270, Mloss 0.000020
-
-run [325]:
-Loss : 0.000251, Floss: 0.000231, Mloss 0.000020
-
-run [350]:
-Loss : 0.000221, Floss: 0.000200, Mloss 0.000021
-
-run [375]:
-Loss : 0.000198, Floss: 0.000176, Mloss 0.000021
-
-run [400]:
-Loss : 0.000178, Floss: 0.000156, Mloss 0.000022
-
-saved decrypt_dataset/vangogh/vangogh_0_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_1_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_2_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_3_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_4_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_5_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_6_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_7_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_8_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_9_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_10_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_11_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_12_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_13_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_14_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_15_encrypted.jpg
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 2.902278 Content Loss: 10.022705
-
-60
-80
-run [100]:
-Style Loss : 2.286041 Content Loss: 9.081430
-
-100
-120
-140
-run [150]:
-Style Loss : 2.073482 Content Loss: 8.840047
-
-160
-180
-run [200]:
-Style Loss : 1.983733 Content Loss: 8.771084
-
-200
-220
-240
-run [250]:
-Style Loss : 1.976019 Content Loss: 8.909912
-
-260
-280
-run [300]:
-Style Loss : 1.972948 Content Loss: 8.915836
-
-300
-Optimizing..
-run [25]:
-Loss : 0.021157, Floss: 0.021151, Mloss 0.000007
-
-run [50]:
-Loss : 0.006828, Floss: 0.006818, Mloss 0.000010
-
-run [75]:
-Loss : 0.003598, Floss: 0.003586, Mloss 0.000012
-
-run [100]:
-Loss : 0.002272, Floss: 0.002258, Mloss 0.000013
-
-run [125]:
-Loss : 0.001596, Floss: 0.001581, Mloss 0.000015
-
-run [150]:
-Loss : 0.001180, Floss: 0.001164, Mloss 0.000016
-
-run [175]:
-Loss : 0.000911, Floss: 0.000893, Mloss 0.000017
-
-run [200]:
-Loss : 0.000729, Floss: 0.000711, Mloss 0.000018
-
-run [225]:
-Loss : 0.000596, Floss: 0.000577, Mloss 0.000019
-
-run [250]:
-Loss : 0.000501, Floss: 0.000481, Mloss 0.000020
-
-run [275]:
-Loss : 0.000424, Floss: 0.000403, Mloss 0.000021
-
-run [300]:
-Loss : 0.000365, Floss: 0.000344, Mloss 0.000021
-
-run [325]:
-Loss : 0.000319, Floss: 0.000297, Mloss 0.000022
-
-run [350]:
-Loss : 0.000283, Floss: 0.000260, Mloss 0.000023
-
-run [375]:
-Loss : 0.000253, Floss: 0.000230, Mloss 0.000023
-
-run [400]:
-Loss : 0.000227, Floss: 0.000204, Mloss 0.000023
-
-saved decrypt_dataset/vangogh/vangogh_0_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_1_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_2_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_3_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_4_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_5_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_6_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_7_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_8_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_9_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_10_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_11_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_12_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_13_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_14_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_15_encrypted.jpg
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 3.261329 Content Loss: 12.154835
-
-60
-80
-run [100]:
-Style Loss : 2.520869 Content Loss: 10.930424
-
-100
-120
-140
-run [150]:
-Style Loss : 2.272021 Content Loss: 10.644897
-
-160
-180
-run [200]:
-Style Loss : 2.187851 Content Loss: 10.553955
-
-200
-220
-240
-run [250]:
-Style Loss : 2.154287 Content Loss: 10.622793
-
-260
-280
-run [300]:
-Style Loss : 2.162403 Content Loss: 10.866030
-
-300
-Optimizing..
-run [25]:
-Loss : 0.025657, Floss: 0.025650, Mloss 0.000007
-
-run [50]:
-Loss : 0.009260, Floss: 0.009250, Mloss 0.000010
-
-run [75]:
-Loss : 0.005147, Floss: 0.005135, Mloss 0.000012
-
-run [100]:
-Loss : 0.003430, Floss: 0.003417, Mloss 0.000013
-
-run [125]:
-Loss : 0.002448, Floss: 0.002433, Mloss 0.000015
-
-run [150]:
-Loss : 0.001811, Floss: 0.001795, Mloss 0.000016
-
-run [175]:
-Loss : 0.001403, Floss: 0.001386, Mloss 0.000017
-
-run [200]:
-Loss : 0.001123, Floss: 0.001105, Mloss 0.000018
-
-run [225]:
-Loss : 0.000921, Floss: 0.000902, Mloss 0.000019
-
-run [250]:
-Loss : 0.000777, Floss: 0.000757, Mloss 0.000020
-
-run [275]:
-Loss : 0.000669, Floss: 0.000649, Mloss 0.000021
-
-run [300]:
-Loss : 0.000583, Floss: 0.000562, Mloss 0.000021
-
-run [325]:
-Loss : 0.000516, Floss: 0.000494, Mloss 0.000022
-
-run [350]:
-Loss : 0.000459, Floss: 0.000437, Mloss 0.000022
-
-run [375]:
-Loss : 0.000411, Floss: 0.000388, Mloss 0.000023
-
-run [400]:
-Loss : 0.000371, Floss: 0.000348, Mloss 0.000023
-
-saved decrypt_dataset/vangogh/vangogh_0_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_1_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_2_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_3_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_4_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_5_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_6_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_7_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_8_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_9_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_10_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_11_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_12_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_13_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_14_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_15_encrypted.jpg
-Building the style transfer model..
-Optimizing..
-0
-20
-40
-run [50]:
-Style Loss : 2.738818 Content Loss: 10.599133
-
-60
-80
-run [100]:
-Style Loss : 2.229802 Content Loss: 9.829899
-
-100
-120
-140
-run [150]:
-Style Loss : 2.299443 Content Loss: 9.606237
-
-160
-180
-run [200]:
-Style Loss : 2.091221 Content Loss: 9.921734
-
-200
-220
-240
-run [250]:
-Style Loss : 2.159860 Content Loss: 10.042710
-
-260
-280
-run [300]:
-Style Loss : 2.983844 Content Loss: 11.017784
-
-300
-Optimizing..
-run [25]:
-Loss : 0.030206, Floss: 0.030197, Mloss 0.000009
-
-run [50]:
-Loss : 0.010783, Floss: 0.010769, Mloss 0.000014
-
-run [75]:
-Loss : 0.005866, Floss: 0.005849, Mloss 0.000017
-
-run [100]:
-Loss : 0.003753, Floss: 0.003733, Mloss 0.000019
-
-run [125]:
-Loss : 0.002602, Floss: 0.002581, Mloss 0.000022
-
-run [150]:
-Loss : 0.001932, Floss: 0.001909, Mloss 0.000024
-
-run [175]:
-Loss : 0.001487, Floss: 0.001462, Mloss 0.000025
-
-run [200]:
-Loss : 0.001178, Floss: 0.001152, Mloss 0.000026
-
-run [225]:
-Loss : 0.000966, Floss: 0.000939, Mloss 0.000028
-
-run [250]:
-Loss : 0.000810, Floss: 0.000782, Mloss 0.000029
-
-run [275]:
-Loss : 0.000693, Floss: 0.000663, Mloss 0.000030
-
-run [300]:
-Loss : 0.000600, Floss: 0.000569, Mloss 0.000031
-
-run [325]:
-Loss : 0.000520, Floss: 0.000489, Mloss 0.000032
-
-run [350]:
-Loss : 0.000459, Floss: 0.000426, Mloss 0.000033
-
-run [375]:
-Loss : 0.000410, Floss: 0.000377, Mloss 0.000033
-
-run [400]:
-Loss : 0.000372, Floss: 0.000338, Mloss 0.000034
-
-saved decrypt_dataset/vangogh/vangogh_0_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_1_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_2_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_3_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_4_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_5_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_6_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_7_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_8_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_9_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_10_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_11_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_12_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_13_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_14_encrypted.jpg
-saved decrypt_dataset/vangogh/vangogh_15_encrypted.jpg
