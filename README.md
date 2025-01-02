@@ -19,11 +19,9 @@ The rise of style mimicry models has posed significant challenges for artists, l
 - **Evaluation**: Pipelines to test encryption against style mimicry models and gather user feedback.
 
 ## Repository Structure
-'''
-├── encryption/          # Code for the RECAP encryption algorithm
+```├── encryption/          # Code for the RECAP encryption algorithm
 ├── decryption/          # Code for the RECAP decryption algorithm
 ├── style_library/       # Sample datasets and style libraries
 ├── encrypted_data/      # Sample encrypted data to run decryption algorithm
 ├── images/              # Data used for generating paper figures
-└── README.md            # Project overview and instructions
-'''
+└── README.md            # Project overview and instructions```
